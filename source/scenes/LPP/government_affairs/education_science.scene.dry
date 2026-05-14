@@ -109,7 +109,6 @@ Are you sure about this? The Weimar Coalition had an agreement to not touch reli
 
 - @secularize_2: Yes, do it.
 - @ed_menu: No, do not touch religious education.
-- @cancel_advisor_action
 
 @secularize_2
 on-arrival: secularized = 1; catholics_spd -= 15; z_relation -= 15; dvp_relation += 6*(1-dissent); ddp_relation += 6*(1-dissent); kpd_relation += 6*(1-dissent); new_middle_spd += 3*(1-dissent); workers_spd += 3*(1-dissent); education_science += 0.5; new_middle_ddp += 4; new_middle_dvp += 4
