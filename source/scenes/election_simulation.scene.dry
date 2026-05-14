@@ -16,7 +16,7 @@ Q.unemployed = 8.6;
 Q.christians = 30;
 
 Q.classes = ['workers', 'business', 'middle', 'rural', 'unemployed', 'christians'];
-Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['cpa', 'asr', 'asm', 'sdp', 'lpp', 'app', 'crem', 'napfp'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
