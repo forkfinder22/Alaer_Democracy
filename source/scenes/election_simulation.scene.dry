@@ -107,7 +107,7 @@ The electoral system is essentially proportional, with the proportion of Reichst
 **Election results:**
 
 # 1928: 30, 1930: 25, 1932: 22
-CPA: [+ CPA_r +]
+CPA: [+ cpa_r +]
 
 # 1928: 15, 1930: 15, 1932: 
 AS-R: [+ asr_r +]
