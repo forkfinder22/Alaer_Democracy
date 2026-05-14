@@ -28,7 +28,6 @@ A constitutional reform requires either a two-thirds supermajority in the Reichs
 - @presidential_powers: Reduce presidential powers.
 - @as_is: Do not pursue constitutional reform.
 - @easy_discard
-- @cancel_advisor_action
 #- @constitutional_bans: Allow the banning of anti-constitutional parties.
 
 @vote_threshold

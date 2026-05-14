@@ -38,7 +38,6 @@ view-if: not last_advisor_action
 - @curriculum
 - @return: Do not enact any policies for now.
 - @easy_discard
-- @cancel_advisor_action
 
 
 @increase_science

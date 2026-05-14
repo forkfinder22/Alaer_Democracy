@@ -18,7 +18,6 @@ As with the state police units and the Reichswehr, the internal police tends to 
 - @domestic_enemies: Investigate or ban our domestic enemies.
 - @root: Take no action for now.
 - @easy_discard
-- @cancel_advisor_action
 
 @loyalty
 on-arrival: interior_police_loyalty += 0.1
