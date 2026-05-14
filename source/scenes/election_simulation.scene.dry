@@ -2,243 +2,78 @@ title: Election Simulation
 set-jump: post_election
 
 
-- @1928: 1928 historical scenario
-- @1930: 1930 historical scenario
-- @1932: 1932 (July) historical scenario
+- @1928: Example
 
 @1928
 on-arrival: {!
 Q.workers = 46; // industry and trade
-Q.old_middle = 13; // "old mittelstand"
+Q.business = 13; // "old mittelstand"
 // 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.new_middle = 14; // "new mittelstand"
+Q.middle = 14; // "new mittelstand"
 Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
 Q.unemployed = 8.6;
-Q.catholics = 30;
+Q.christians = 30;
 
-Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
+Q.classes = ['workers', 'business', 'middle', 'rural', 'unemployed', 'christians'];
 Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 65;
-Q.workers_kpd = 20;
-Q.workers_z = 5;
-Q.workers_ddp = 0;
-Q.workers_dvp = 0;
-Q.workers_dnvp = 5;
-Q.workers_nsdap = 0;
-Q.workers_other = 10;
+Q.workers_cpa = 85;
+Q.workers_asr = 60;
+Q.workers_asm = 50;
+Q.workers_sdp = 65;
+Q.workers_lpp = 30;
+Q.workers_app = 20;
+Q.workers_crem = 5;
+Q.workers_napfp = 3;
 
-Q.old_middle_spd = 5;
-Q.old_middle_kpd = 0;
-Q.old_middle_z = 5;
-Q.old_middle_ddp= 10;
-Q.old_middle_dvp = 25;
-Q.old_middle_dnvp = 25;
-Q.old_middle_nsdap = 10;
-Q.old_middle_other = 10;
+Q.business_cpa = 0;
+Q.business_asr = 0;
+Q.business_asm = 1;
+Q.business_sdp = 5;
+Q.business_lpp = 20;
+Q.business_app = 40;
+Q.business_crem = 15;
+Q.business_napfp = 2;
 
-Q.new_middle_spd = 5;
-Q.new_middle_kpd = 0;
-Q.new_middle_z = 10;
-Q.new_middle_ddp= 25;
-Q.new_middle_dvp = 25;
-Q.new_middle_dnvp = 10;
-Q.new_middle_nsdap = 5;
-Q.new_middle_other = 15;
+Q.middle_cpa = 2;
+Q.middle_asr = 5;
+Q.middle_asm = 7;
+Q.middle_sdp = 23;
+Q.middle_lpp = 50;
+Q.middle_app = 28;
+Q.middle_crem = 6;
+Q.middle_napfp = 2;
 
-Q.rural_spd = 10;
-Q.rural_kpd = 0;
-Q.rural_z = 5;
-Q.rural_ddp= 5;
-Q.rural_dvp = 15;
-Q.rural_dnvp = 45;
-Q.rural_nsdap = 5;
-Q.rural_other = 10;
 
-Q.unemployed_spd = 25;
-Q.unemployed_kpd = 55;
-Q.unemployed_z = 1;
-Q.unemployed_ddp = 0;
-Q.unemployed_dvp = 0;
-Q.unemployed_dnvp = 5;
-Q.unemployed_nsdap = 15;
-Q.unemployed_other = 9;
+Q.rural_cpa = 1;
+Q.rural_asr = 1;
+Q.rural_asm = 14;
+Q.rural_sdp = 3;
+Q.rural_lpp = 2;
+Q.rural_app = 28;
+Q.rural_crem = 60;
+Q.rural_napfp = 1;
 
-Q.catholics_spd = 15;
-Q.catholics_kpd = 5;
-Q.catholics_z = 50;
-Q.catholics_ddp = 0;
-Q.catholics_dvp = 5;
-Q.catholics_dnvp = 5;
-Q.catholics_nsdap = 0;
-Q.catholics_other = 10;
-!}
-go-to: election_algorithm
-set-jump: post_election
+Q.unemployed_cpa = 65;
+Q.unemployed_asr = 55;
+Q.unemployed_asm = 30;
+Q.unemployed_sdp = 30;
+Q.unemployed_lpp = 20;
+Q.unemployed_app = 5;
+Q.unemployed_crem = 1;
+Q.unemployed_napfp = 9;
 
-@1930
-on-arrival: {!
-Q.workers = 46; // industry and trade
-Q.old_middle = 13; // "old mittelstand"
-// 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.new_middle = 14; // "new mittelstand"
-Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
-Q.unemployed = 20;
-Q.catholics = 30;
-
-Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
-
-// Support for party by social group
-// they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 60;
-Q.workers_kpd = 20;
-Q.workers_z = 5;
-Q.workers_ddp = 0;
-Q.workers_dvp = 0;
-Q.workers_dnvp = 0;
-Q.workers_nsdap = 10;
-Q.workers_other = 15;
-
-Q.old_middle_spd = 5;
-Q.old_middle_kpd = 0;
-Q.old_middle_z = 5;
-Q.old_middle_ddp= 5;
-Q.old_middle_dvp = 10;
-Q.old_middle_dnvp = 20;
-Q.old_middle_nsdap = 30;
-Q.old_middle_other = 15;
-
-Q.new_middle_spd = 5;
-Q.new_middle_kpd = 0;
-Q.new_middle_z = 5;
-Q.new_middle_ddp = 10;
-Q.new_middle_dvp = 20;
-Q.new_middle_dnvp = 10;
-Q.new_middle_nsdap = 25;
-Q.new_middle_other = 15;
-
-Q.rural_spd = 5;
-Q.rural_kpd = 0;
-Q.rural_z = 5;
-Q.rural_ddp= 5;
-Q.rural_dvp = 10;
-Q.rural_dnvp = 20;
-Q.rural_nsdap = 25;
-Q.rural_other = 15;
-
-Q.unemployed_spd = 20;
-Q.unemployed_kpd = 50;
-Q.unemployed_z = 0;
-Q.unemployed_ddp = 0;
-Q.unemployed_dvp = 0;
-Q.unemployed_dnvp = 5;
-Q.unemployed_nsdap = 25;
-Q.unemployed_other = 5;
-
-Q.catholics_spd = 10;
-Q.catholics_kpd = 5;
-Q.catholics_z = 50;
-Q.catholics_ddp = 0;
-Q.catholics_dvp = 5;
-Q.catholics_dnvp = 5;
-Q.catholics_nsdap = 10;
-Q.catholics_other = 5;
-
-Q.spd_r = 25;
-Q.kpd_r = 10;
-Q.z_r = 15;
-Q.ddp_r = 10;
-Q.dvp_r = 10;
-Q.dnvp_r = 14;
-Q.nsdap_r = 10;
-Q.other_r = 5;
-!}
-go-to: election_algorithm
-set-jump: post_election
-
-@1932
-on-arrival: {!
-Q.workers = 46; // industry and trade
-Q.old_middle = 13; // "old mittelstand"
-// 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.new_middle = 14; // "new mittelstand"
-Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
-Q.unemployed = 33;
-Q.catholics = 30;
-
-Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
-
-// Support for party by social group
-// they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 55;
-Q.workers_kpd = 20;
-Q.workers_z = 5;
-Q.workers_ddp = 0;
-Q.workers_dvp = 0;
-Q.workers_dnvp = 0;
-Q.workers_nsdap = 15;
-Q.workers_other = 5;
-
-Q.old_middle_spd = 0;
-Q.old_middle_kpd = 0;
-Q.old_middle_z = 5;
-Q.old_middle_ddp = 4;
-Q.old_middle_dvp = 4;
-Q.old_middle_dnvp = 15;
-Q.old_middle_nsdap = 70;
-Q.old_middle_other = 5;
-
-Q.new_middle_spd = 5;
-Q.new_middle_kpd = 0;
-Q.new_middle_z = 5;
-Q.new_middle_ddp = 10;
-Q.new_middle_dvp = 10;
-Q.new_middle_dnvp = 10;
-Q.new_middle_nsdap = 60;
-Q.new_middle_other = 5;
-
-Q.rural_spd = 0;
-Q.rural_kpd = 0;
-Q.rural_z = 5;
-Q.rural_ddp = 0;
-Q.rural_dvp = 5;
-Q.rural_dnvp = 15;
-Q.rural_nsdap = 65;
-Q.rural_other = 5;
-
-Q.unemployed_spd = 20;
-Q.unemployed_kpd = 40;
-Q.unemployed_z = 0;
-Q.unemployed_ddp = 0;
-Q.unemployed_dvp = 0;
-Q.unemployed_dnvp = 0;
-Q.unemployed_nsdap = 50;
-Q.unemployed_other = 5;
-
-Q.catholics_spd = 10;
-Q.catholics_kpd = 5;
-Q.catholics_z = 60;
-Q.catholics_ddp = 0;
-Q.catholics_dvp = 5;
-Q.catholics_dnvp = 5;
-Q.catholics_nsdap = 10;
-Q.catholics_other = 5;
-
-Q.spd_r = 25;
-Q.kpd_r = 10;
-Q.z_r = 15;
-Q.ddp_r = 10;
-Q.dvp_r = 10;
-Q.dnvp_r = 14;
-Q.nsdap_r = 10;
-Q.other_r = 5;
+Q.catholics_cpa = 0;
+Q.catholics_asr = 0;
+Q.catholics_asm = 4;
+Q.catholics_sdp = 7;
+Q.catholics_lpp = 3;
+Q.catholics_app = 10;
+Q.catholics_crem = 70;
+Q.catholics_napfp = 5;
 !}
 go-to: election_algorithm
 set-jump: post_election
@@ -246,14 +81,14 @@ set-jump: post_election
 @post_election
 on-arrival: {!
 // set congress proportion to votes
-Q.spd_r = Q.spd_votes;
-Q.z_r = Q.z_votes;
-Q.kpd_r = Q.kpd_votes;
-Q.ddp_r = Q.ddp_votes;
-Q.dvp_r = Q.dvp_votes;
-Q.dnvp_r = Q.dnvp_votes;
-Q.nsdap_r = Q.nsdap_votes;
-Q.other_r = Q.other_votes;
+Q.cpa_r = Q.cpa_votes;
+Q.asr_r = Q.asr_votes;
+Q.asm_r = Q.asm_votes;
+Q.sdp_r = Q.sdp_votes;
+Q.lpp_r = Q.lpp_votes;
+Q.app_r = Q.app_votes;
+Q.crem_r = Q.crem_votes;
+Q.napfp_r = Q.napfp_votes;
 
 // The largest party can only be the NSDAP or the SPD.
 Q.largest_party = 'SPD';
@@ -265,18 +100,6 @@ if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
 }
 
 // coalitions
-Q.weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r - 3;
-Q.grand_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r;
-Q.bourgeois_coalition = Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
-Q.center_right_coalition = Q.z_r + Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.right_coalition = Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.far_right_coalition = Q.dnvp_r + Q.nsdap_r;
-Q.left_coalition = Q.spd_r + Q.kpd_r;
-// this is an absurd concept lol
-Q.united_front_coalition = Q.spd_r + Q.kpd_r + Q.z_r + Q.ddp_r - 3;
-Q.anti_democratic_coalition = Q.kpd_r + Q.nsdap_r;
-// aka everyone except nazi, kpd, dnvp
-Q.neo_weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 !}
 
 The electoral system is essentially proportional, with the proportion of Reichstag seats roughly equal to the proportion of votes.
@@ -284,36 +107,29 @@ The electoral system is essentially proportional, with the proportion of Reichst
 **Election results:**
 
 # 1928: 30, 1930: 25, 1932: 22
-SPD: [+ spd_r +]
+CPA: [+ CPA_r +]
 
 # 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_r +]
+AS-R: [+ asr_r +]
 
 # 1928: 10, 1930: 13
-KPD: [+ kpd_r +]
+AS-M: [+ asm_r +]
 
 # 1928: 5, 1930: 4 (as DstP)
-DDP: [+ ddp_r +]
+SDP: [+ sdp_r +]
 
 # 1928: 9, 1930: 5
-DVP: [+ dvp_r +]
+LPP: [+ lpp_r +]
 
 # 1928: 14, 1930: 7
-DNVP: [+ dnvp_r +]
+APP: [+ app_r +]
 
 # 1928: 3, 1930: 18
-NSDAP: [+ nsdap_r +]
+CREM: [+ crem_r +]
 
 # 1928: 9, 1930: 10
-Other: [+ other_r +]
+NAPFP: [+ napfp_r +]
 
 **Potential coalitions:**
 
-Weimar Coalition (SPD + Z + DDP): [+ weimar_coalition +]
-
-Grand Coalition (SPD + Z + BVP + DDP + DVP): [+ grand_coalition +]
-
-Bourgeois Coalition (Z + BVP + DDP + DVP + Others): [+ bourgeois_coalition +]
-
-Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]
 
