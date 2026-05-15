@@ -178,9 +178,9 @@ NAPFP: [+ napfp_votes +]%
 
 Workers: CPA: [+ workers_cpa_display +]%, AS-R: [+ workers_asr_display +]%, AS-M: [+ workers_asm_display +]%, SDP: [+ workers_sdp_display +]%, LPP: [+ workers_lpp_display +]%; APP: [+ workers_app_display +]%, CREM: [+ workers_nsdap_display +]%, NAPFP: [+ workers_other_display +]% 
 
-Middle Class: SPD: [+ new_middle_spd_display +]%, Z: [+ new_middle_z_display +]%, KPD: [+ new_middle_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ new_middle_ddp_display +]%, DVP: [+ new_middle_dvp_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+Middle Class: CPA: [+ middle_cpa_display +]%, AS-R: [+ middle_asr_display +]%, AS-M: [+ new_middle_asm_display +]%, SDP: [+ new_middle_sdp_display +]%, LPP: [+ new_middle_lpp_display +]%; APP: [+ new_middle_app_display +]%, CREM: [+ new_middle_crem_display +]%, NAPFP: [+ new_middle_napfp_display +]% 
 
-Business Class: SPD: [+ old_middle_spd_display +]%, Z: [+ old_middle_z_display +]%, KPD: [+ old_middle_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ old_middle_ddp_display +]%, DVP: [+ old_middle_dvp_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Business Class: CPA: [+ middle_cpa_display +]%, AS-R: [+ middle_asr_display +]%, AS-M: [+ old_middle_asm_display +]%, SDP: [+ old_middle_sdp_display +]%, LPP: [+ old_middle_lpp_display +]%; APP: [+ old_middle_app_display +]%, CREM: [+ old_middle_crem_display +]%, NAPFP: [+ old_middle_napfp_display +]% 
 
 Rural: SPD: [+ rural_spd_display +]%, Z: [+ rural_z_display +]%, KPD: [+ rural_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ rural_ddp_display +]%, DVP: [+ rural_dvp_display +]%; DNVP: [+ rural_dnvp_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
 
