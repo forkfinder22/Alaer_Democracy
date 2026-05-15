@@ -16,16 +16,29 @@ if (Q.economic_growth) {
 
 = Status
 
-[+ month : month +] [+ year +]
+Month: [+ month +] Year : [+ year +]
 
 Resources available: [+ resources +]
 
-SPD position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
-[? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: SPD majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
+Party position: 
 
-[? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
+Coalition: (Party + Party + ...)
 
-[? if spd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
+[? if cpa_in_gov : CPA Dissent: [+ coal_dissent : coal_dissent +] ?][? if not cpa_in_gov : The CPA is not in government ?]
+
+[? if asr_in_gov : AS-R Dissent: [+ coal_dissent : coal_dissent +] ?][? if not asr_in_gov : The AS-R is not in government ?]
+
+[? if asm_in_gov : AS-M Dissent: [+ coal_dissent : coal_dissent +] ?][? if not asm_in_gov : The AS-M is not in government ?]
+
+[? if sdp_in_gov : SDP Dissent: [+ coal_dissent : coal_dissent +] ?][? if not sdp_in_gov : The SDP is not in government ?]
+
+[? if lpp_in_gov : LPP Dissent: [+ coal_dissent : coal_dissent +] ?][? if not lpp_in_gov : The LPP is not in government ?]
+
+[? if app_in_gov : APP Dissent: [+ coal_dissent : coal_dissent +] ?][? if not app_in_gov : The APP is not in government ?]
+
+[? if crem_in_gov : CREM Dissent: [+ coal_dissent : coal_dissent +] ?][? if not crem_in_gov : The CREM is not in government ?]
+
+[? if napfp_in_gov : NAPFP Dissent: [+ coal_dissent : coal_dissent +] ?][? if not napfp_in_gov : The NAPFP is not in government ?]
 
 Internal dissent: [+ dissent_percent : dissent +]
 
@@ -63,10 +76,15 @@ Next election: [+ next_election_month : month +] [+ next_election_year +]
 
 Inflation: [+ inflation_2 +]%
 
-[? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
+Unemployment: [+ unemployed_2 +]% 
 
 Economic growth: [+ economic_growth_2 +]%
 
+Homelessness: [ homeless : homeless ]
+
+Violent Crime: [ vcrime : vcrime ]
+
+Victimless Crime [ nvcrime : nvcrime ]
 
 
 # = Public Opinion
@@ -76,30 +94,61 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-{!<span class="tooltip-text" title="Center Party">Z</span>!}: [+ z_relation : relationships +]
+CPA: [+ cpa_relation : relationships +]
 
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_relation : relationships +]
+AS-R: [+ asr_relation : relationships +]
 
-{!<span class="tooltip-text" title="German People's Party">DVP</span>!}: [+ dvp_relation : relationships +]
+AS-M: [+ asm_relation : relationships +]
 
-{!<span class="tooltip-text" title="Communist Party of Germany">KPD</span>!}: [+ kpd_relation : relationships +]
+SDP: [+ sdp_relation : relationships +]
 
-{!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_relation : relationships +]
+LPP: [+ lpp_relation : relationships +]
 
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_relation : relationships +]
+APP: [+ app_relation : relationships +]
 
-= Internal Factions of the SPD
+CREM: [+ crem_relation : relationships +]
 
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+NAPFP: [+ napfp_relation : relationships +]
 
-{!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+= Internal Factions of the [+ party +]
 
-{!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
+[? if party == "CPA" : Left-Communism ?]
 
-{!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+[? if party == "CPA" : Right-Communism ?]
 
-[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
+[? if party == "CPA" : Orthodox-Marxism ?]
 
+[? if party == "CPA" : Internationalist Communism ?]
+
+[? if party == "CPA" and cpa_special_faction : National Communism ?]
+
+[? if party == "AS-R" : Right-Communism ?]
+
+[? if party == "AS-R" : Democratic Socialism ?]
+
+[? if party == "AS-R" : Radical Labourism ?]
+
+[? if party == "AS-R" : Marxist Social Democracy ?]
+
+[? if party == "AS-R" and asr_special_faction : Popular-Front Antifascists ?]
+
+[? if party == "AS-M" : Democratic Socialism ?]
+
+[? if party == "AS-M" : Marxist Social Democracy ?]
+
+[? if party == "AS-M" : Market Socialism ?]
+
+[? if party == "AS-M" : Non-Marxist Social Democracy ?]
+
+[? if party == "AS-M" and asm_special_faction : Environmentalism ?]
+
+[? if party == "LPP" : Left Liberalism ?]
+
+[? if party == "LPP" : Centre Liberalism ?]
+
+[? if party == "LPP" : Neo-Liberalism ?]
+
+[? if party == "LPP" : Classical Liberalism ?]
 
 @paramilitaries
 on-arrival: {!
