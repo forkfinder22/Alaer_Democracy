@@ -178,12 +178,12 @@ NAPFP: [+ napfp_votes +]%
 
 Workers: CPA: [+ workers_cpa_display +]%, AS-R: [+ workers_asr_display +]%, AS-M: [+ workers_asm_display +]%, SDP: [+ workers_sdp_display +]%, LPP: [+ workers_lpp_display +]%; APP: [+ workers_app_display +]%, CREM: [+ workers_nsdap_display +]%, NAPFP: [+ workers_other_display +]% 
 
-Middle Class: CPA: [+ middle_cpa_display +]%, AS-R: [+ middle_asr_display +]%, AS-M: [+ new_middle_asm_display +]%, SDP: [+ new_middle_sdp_display +]%, LPP: [+ new_middle_lpp_display +]%; APP: [+ new_middle_app_display +]%, CREM: [+ new_middle_crem_display +]%, NAPFP: [+ new_middle_napfp_display +]% 
+Middle Class: CPA: [+ middle_cpa_display +]%, AS-R: [+ middle_asr_display +]%, AS-M: [+ middle_asm_display +]%, SDP: [+ middle_sdp_display +]%, LPP: [+ middle_lpp_display +]%; APP: [+ middle_app_display +]%, CREM: [+ middle_crem_display +]%, NAPFP: [+ middle_napfp_display +]% 
 
-Business Class: CPA: [+ middle_cpa_display +]%, AS-R: [+ middle_asr_display +]%, AS-M: [+ old_middle_asm_display +]%, SDP: [+ old_middle_sdp_display +]%, LPP: [+ old_middle_lpp_display +]%; APP: [+ old_middle_app_display +]%, CREM: [+ old_middle_crem_display +]%, NAPFP: [+ old_middle_napfp_display +]% 
+Business Class: CPA: [+ business_cpa_display +]%, AS-R: [+ business_asr_display +]%, AS-M: [+ business_asm_display +]%, SDP: [+ business_sdp_display +]%, LPP: [+ business_lpp_display +]%; APP: [+ business_app_display +]%, CREM: [+ business_crem_display +]%, NAPFP: [+ business_napfp_display +]% 
 
-Rural: CPA: [+ rural_cpa_display +]%, AS-R: [+ rural_asr_display +]%, AS-M: [+ rural_asm_display +]%, SDP: [+ rural_sdp_display +]%, LPP: [+ rural_dvp_display +]%; APP: [+ rural_dnvp_display +]%, CREM: [+ rural_nsdap_display +]%, NAPFP: [+ rural_other_display +]% 
+Rural: CPA: [+ rural_cpa_display +]%, AS-R: [+ rural_asr_display +]%, AS-M: [+ rural_asm_display +]%, SDP: [+ rural_sdp_display +]%, LPP: [+ rural_lpp_display +]%; APP: [+ rural_app_display +]%, CREM: [+ rural_crem_display +]%, NAPFP: [+ rural_napfp_display +]% 
 
-Unemployed: CPA: [+ unemployed_cpa_display +]%, AS-R: [+ unemployed_asr_display +]%, AS-M: [+ unemployed_asm_display +]%, SDP: [+ unemployed_sdp_display +]%, LPP: [+ unemployed_dvp_display +]%; APP: [+ unemployed_dnvp_display +]%, CREM: [+ unemployed_nsdap_display +]%, NAPFP: [+ unemployed_other_display +]%
+Unemployed: CPA: [+ unemployed_cpa_display +]%, AS-R: [+ unemployed_asr_display +]%, AS-M: [+ unemployed_asm_display +]%, SDP: [+ unemployed_sdp_display +]%, LPP: [+ unemployed_lpp_display +]%; APP: [+ unemployed_app_display +]%, CREM: [+ unemployed_crem_display +]%, NAPFP: [+ unemployed_napfp_display +]%
 
-Christian: CPA: [+ christians_cpa_display +]%, AS-R: [+ christians_asr_display +]%, AS-M: [+ christians_asm_display +]%, SDP: [+ christians_sdp_display +]%, LPP: [+ christians_dvp_display +]%; APP: [+ christians_dnvp_display +]%, CREM: [+ christians_nsdap_display +]%, NAPFP: [+ christians_other_display +]% 
+Christian: CPA: [+ christians_cpa_display +]%, AS-R: [+ christians_asr_display +]%, AS-M: [+ christians_asm_display +]%, SDP: [+ christians_sdp_display +]%, LPP: [+ christians_lpp_display +]%; APP: [+ christians_app_display +]%, CREM: [+ christians_crem_display +]%, NAPFP: [+ christians_napfp_display +]% 
