@@ -150,49 +150,149 @@ NAPFP: [+ napfp_relation : relationships +]
 
 [? if party == "LPP" : Classical Liberalism ?]
 
+[? if party == "LPP" and lpp_special_faction : Green Liberalism ?]
+
+[? if party == "APP" : Fiscal Conservatism ?]
+
+[? if party == "APP" : Green Conservatism ?]
+
+[? if party == "APP" : Neo-Conservatism ?]
+
+[? if party == "APP" : Agrarian Conservatism ?]
+
+[? if party == "APP" and app_special_faction: Liberal-Conservatism ?]
+
+[? if party == "CREM" : Religious Fiscal Coservatism ?]
+
+[? if party == "CREM" : Religious Green Conservatism ?]
+
+[? if party == "CREM" : Religious Conservatism ?]
+
+[? if party == "CREM" : Religious Agrarian Conservatism ?]
+
+[? if party == "CREM" and crem_special_faction : Constitutional Monarchism ?]
+
+[? if party == "NAPFP" : National Conservatism ?]
+
+[? if party == "NAPFP" : Authoritarian Conservatism ?]
+
+[? if party == "NAPFP" : Monarchism ?]
+
+[? if party == "NAPFP" : Fascism ?]
+
+[? if party == "NAPFP" and napfp_special_faction: National Bolshevism ?]
+
 @paramilitaries
 on-arrival: {!
-if (Q.rb_strength) {
-    Q.rb_strength_2 = Q.rb_strength.toFixed(1);
+if (Q.wla_strength) {
+    Q.wla_strenth_2 = 0;
+    Q.wla_strength_2 += Q.wla_strength.toFixed(1);
+    Q.wla_strength_2 += Q.ywl_strength.toFixed(1)
+    Q.wla_strength_2 = Q.wla_strength_2.toFixed(1);
 }
-if (Q.rfb_strength) {
-    Q.rfb_strength_2 = Q.rfb_strength.toFixed(1);
+if (Q.pf_strength) {
+    Q.pf_strength_2 = 0;
+    Q.pf_strength_2 += Q.pf_strength.toFixed(1);
+    Q.pf_strength_2 += Q.cag_strength.toFixed(1);
+    Q.pf_strength_2 = Q.pf_strength_2.toFixed(1);
 }
-if (Q.sh_strength) {
-    Q.sh_strength_2 = Q.sh_strength.toFixed(1);
+if (Q.acl_strength) {
+    Q.acl_strength_2 = 0;
+    Q.acl_strength_2 += Q.acl_strength.toFixed(1);
+    Q.acl_strength_2 += Q.ccf_strength.toFixed(1);
+    Q.acl_strength_2 = Q.acl_strength_2.toFixed(1);
 }
-if (Q.sa_strength) {
-    Q.sa_strength_2 = Q.sa_strength.toFixed(1);
+if (Q.al_strength) {
+    Q.al_strength_2 = 0;
+    Q.al_strength_2 += Q.al_strength.toFixed(1);
+    Q.al_strength_2 += Q.yn_strength.toFixed(1);
+    Q.al_strength_2 += Q.wnl_strength.toFixed(1);
+    Q.al_strength_2 = Q.al_strength_2.toFixed(1);
 }
 !}
 
-= Paramilitaries
+= Organizations
 
-{!<span class="tooltip-text" title="The Reichsbanner Schwarz-Rot-Gold is a popular organization for defending democracy, mostly affiliated with the SPD.">Reichsbanner</span>!} Strength: [+ rb_strength_2 +] thousand
+Young Workers League (YWL) + Workers Liberation Army (WLA) - (CPA)
 
-Reichsbanner Militarization: [+ rb_militancy : militancy +]
+YWL + WLA Militarization: [+ wla_militancy : militancy +]
 
-{!<span class="tooltip-text" title="The RFB (Rotfrontkämpferbund) is a communist group associated with the KPD.">RFB</span>!} Strength: [+ rfb_strength_2 +] thousand
+YWL + WLA Strength: [+ wla_strength_2 +] thousand
 
-RFB Militarization: [+ rfb_militancy : militancy +]
+Children's Activity Group (CAG) + Popular Front (PF) - (ASR-ASM-SDP-LPP)
 
-{!<span class="tooltip-text" title="The Stahlhelm is a right-wing organization of war veterans associated with the DNVP.">Stahlhelm</span>!} Strength: [+ sh_strength_2 +] thousand
+CAG + PF Militarization: [+ pf_militancy : militancy +]
 
-Stahlhelm Militarization: [+ sh_militancy : militancy +]
+CAG + PF Strength: [+ pf_strength_2 +] thousand
 
-{!<span class="tooltip-text" title="The SA (Sturmabteilung) is the Nazi paramilitary.">SA</span>!} Strength: [+ sa_strength_2 +] thousand
+Christian Children's Foundation (CCF) + Alaerian Christian League (ACL) (APP-CREM)
 
-SA Militarization: [+ sa_militancy : militancy +]
+CCF + ACL Militarization: [+ acl_militancy : militancy +]
 
-= Official military/paramilitaries
+CCF + ACL Strength: [+ acl_strength_2 +]
 
-Reichswehr: [+ reichswehr_strength +] thousand troops.
+Young Nationalists (YN) + Women's National League (WNL) + Alaerian Legion (AL) (NAPFP) 
 
-Reichswehr Loyalty: [+ reichswehr_loyalty : loyalty +]
+YN + WNL + AL Militarization: [+ al_militancy : militancy +]
 
-Prussian police: [+ prussian_police_strength +] thousand members.
+YN + WNL + AL Strength [+ al_strength_2 +]
 
-Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
+= Army
+
+Army: [+ army_strength +] thousand troops.
+
+Army Loyalty: [+ army_loyalty : loyalty +]
+
+Army Branches: [+ army_branch_amount +]
+
+Branches: Infantry[? if never:, engineers, medics, artillery, snipers, terrain specialists ?]
+
+= Navy
+
+Navy: [+ navy_strength +] thousand troops
+
+Navy Loyalty: [+ navy_loyalty : loyalty +]
+
+Ships
+[+ +] Submarines
+[+ +] Destroyers
+[+ +] Cruisers
+[+ +] Battleships
+[+ +] Mega-Battleships
+[+ +] Aircraft Carriers
+
+Navy Branches: [+ navy_branch_amount +]
+
+Branches: Sailors[? if never :, Marines ?]
+
+= Air Force
+
+Air Force: [+ air_strength +] thousand pilots
+
+Air Force Loyalty: [+ air_loyalty : loyalty +]
+
+Planes
+[+ bombers +] Bombers - Skill: [+ bom_skill : skill +]
+[+ cas +] Close Air Support - Skill: [+ cas_skill : skill +]
+[+ fighters +] Fighters - Skill: [+ figh_skill : skill +]
+[+ mult_pur +] Multi-purpose - Skill: [+ mult_skill : skill +]
+[+ navbom +] Naval Bombers - Skill: [+ navbom_skill : skill +]
+[+ navcas +] Naval Close Air Support - Skill [+ navcas_skill : skill +]
+[+ navfigh +] Naval Fighters - Skill [+ navfigh_skill : skill +]
+
+Air Force Branches: [+ air_branch_amount +]
+
+Branches: Pilots[? if never :, Paratroopers ?]
+
+= Police
+
+Police: [+ prussian_police_strength +] thousand members.
+
+Police loyalty: [+ prussian_police_loyalty : loyalty +]
+
+[? if never : Civilian Special Forces: High-danger Emergency Response ([+ swat_strength +] units), Mounted/Motorized Police ([+ rcmp_strength +] members), Military Police ([+ mp_strnegth +] members), Health & Safety Inspection ([+ osha_strength +] thousand members), Transit Police ([+ trans_strength +] thousand members) ?]
+
+[? if never: Civilian Special Forces Loyalty: [+ special_police_loyalty : loyalty +]
 
 [? if spd_in_government : Interior police loyalty: [+ interior_police_loyalty : loyalty +] ?]
 
