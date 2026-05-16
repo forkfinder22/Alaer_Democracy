@@ -106,10 +106,6 @@ if (Q.month_actions >= 1) {
     if (Q.month >= 13) {
         Q.month = 1;
         Q.year += 1;
-        if (Q.historical_mode) {
-            Q.resources += 2;
-        }
-    }
     // decrement timers
     for (timer of Q.timers) {
         if (Q[timer+'_timer'] && Q[timer+'_timer'] > 0) {
@@ -257,22 +253,26 @@ if (Q.month_actions >= 1) {
     }
 
     ///////////////////////////// change party support based on pro_republic
-    // if pro_republic is less than the support of the Weimar coalition, reduce SPD support...
-    if (Q.pro_republic < (Q.spd_votes + Q.ddp_votes + Q.z_votes - 3)) {
-        if (Q.new_middle_spd > 0) {
-            Q.new_middle_spd -= 5/12;
-            Q.new_middle_nsdap += 3/12;
+    // if pro_republic is less than the support of the Weimar coalition, reduce Democratic party support... ASM takes 10% of the hit, SDP takes 20%, LPP takes 50%, APP takes 10%, CREM takes 10%
+    if (Q.pro_republic < (Q.asm_votes + Q.sdp_votes + Q.lpp_votes + Q.app_votes + Q.crem_votes) 
+        if (Q.middle_asm > 0) {
+            Q.middle_asm -= 3/10/12;
+            Q.middle_cpa += 1/10/12;
+            Q.middle_napfp += 2/10/12;
         }
-        if (Q.old_middle_spd > 0) {
-            Q.old_middle_spd -= 5/12;
-            Q.old_middle_nsdap += 3/12;
+        if (Q.old_middle_asm > 0) {
+            Q.business_asm -= 3/10/12;
+            Q.old_middle_nsdap += 3/10/12;
         }
-        if (Q.rural_spd > 0) {
-            Q.rural_spd -= 5/12;
-            Q.rural_nsdap += 3/12;
+        if (Q.rural_asm > 0) {
+            Q.rural_asm -= 3/10/12;
+            Q.middle_cpa += 2/10/12;
+            Q.rural_napfp += 1/10/12;
         }
         if (Q.workers_spd_normalized > 30) {
-            Q.workers_spd -= 4/12;
+            Q.workers_asm -= 4/10/12;
+            Q.workers_cpa += 3/10/12;
+            Q.workers_napfp += 1/10/12
         }
         if (Q.catholics_spd > 0) {
             Q.catholics_spd -= 4/12;
