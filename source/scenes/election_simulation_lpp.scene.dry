@@ -149,15 +149,27 @@ NAPFP: [+ napfp_r +]
 **Potential coalitions:**
 
 Moderate Coalition: [+ moderate_coalition +]%
+
 Grand Coalition: [+ grand_coalition +]%
+
 Democratic Coalition: [+ democratic_coalition +]%
+
 Anti-Democratic Coalition: [+ antidemocratic_coalition +]%
+
 Bourgeois Coalition: [+ bourgeois_coalition +]%
+
 Popular Front Coalition: [+ popular_front_coalition +]%
+
 True Popular Front Coalition: [+ true_popular_front_coalition +]%
+
 Left Front Coalition: [+ left_front_coalition +]%
+
 True Left Front Coalition: [+ true_left_front_coalition +]%
+
 Grand Left Front Coalition: [+ grand_left_front_coalition +]%
+
 Conservative Coalition: [+ conservative_coalition +]%
+
 Right Coalition: [+ right_coalition +]%
+
 Far-Right Coalition: [+ far_right_coalition +]%
