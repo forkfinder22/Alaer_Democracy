@@ -78,8 +78,71 @@ unavailable-subtitle: Unavailable for Demo
 wip
 
 @start3
-choose-if: never
-unavailable-subtitle: Unavailable for Demo
+Subtitle: Now available for Demo
+on-arrival: {! 
+
+Q.started = 1
+Q.month = 1
+Q.year = 0
+Q.time = 1
+
+Q.workers_lpp = 30
+Q.middle_lpp = 40
+Q.business_lpp = 30
+Q.rural_lpp = 7
+Q.unemployed_lpp = 20
+Q.christians_lpp = 12
+
+Q.workers_sdp = 50
+Q.middle_sdp = 10
+Q.business_sdp = 0
+Q.rural_sdp = 20
+Q.unemployed_sdp = 30
+Q.christians_sdp = 3
+
+Q.workers_app = 5
+Q.middle_app = 20
+Q.business_app = 50
+Q.rural_app = 50
+Q.unemployed_app = 20
+Q.christians_app = 50
+
+Q.workers_asm = 7
+Q.middle_asm = 10
+Q.business_asm = 0
+Q.rural_asm = 3
+Q.unemployed_asm = 9
+Q.christians_asm = 5
+
+Q.workers_asr = 3
+Q.middle_asr = 1
+Q.business_asr = 0
+Q.rural_asr = 0
+Q.unemployed_asr = 8
+Q.christians_asr = 3
+
+Q.workers_crem = 3
+Q.middle_crem = 9
+Q.business_crem = 15
+Q.rural_crem = 15
+Q.unemployed_crem = 7
+Q.christians_crem = 20
+
+Q.workers_cpa = 2
+Q.middle_cpa = 2
+Q.business_cpa = 0
+Q.rural_cpa = 0
+Q.unemployed_cpa = 5
+Q.christians_cpa = 2
+
+Q.workers_napfp = 0
+Q.middle_napfp = 8
+Q.business_napfp = 5
+Q.rural_napfp = 5
+Q.unemployed_napfp = 1
+Q.christians_napfp = 5
+
+!}
 
 wip
 
