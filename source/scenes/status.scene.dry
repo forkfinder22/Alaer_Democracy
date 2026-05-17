@@ -24,7 +24,7 @@ if (Q.population) {
 }
 
 Q.rcp_pop = 0;
-if (Q.population) and (Q.rcp_mil) {
+if (Q.population and Q.rcp_mil) {
     Q.rcp_pop = (Q.population*rcp_mil);
 }
 !}
