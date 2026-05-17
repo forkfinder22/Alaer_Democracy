@@ -226,6 +226,13 @@ Q.rural = 26;
 Q.unemployed = 1.2;
 Q.christians = 30;
 
+//// Moderate support is considered to be the AS-M, SDP, LPP, APP, and parts of the AS-R and CREM. if the core three are more than this variable, their support gets reduced, starting with the SDP and APP, then the LPP
+Q.moderate_support = 82;
+//// Communist-Socialist support is the CPA, AS-(R/M) and SDP. The support of these parties are decreases with the radical parties first
+Q.communist_socialist_support = 30;
+//// CREM and NAPFP. NAPFP then CREM support decrease
+Q.far_right_support = 20;
+
 !}
 
 - @main
