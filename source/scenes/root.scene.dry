@@ -79,7 +79,7 @@ wip
 
 @start3
 Subtitle: Now available for Demo
-go-to: main_lpp
+go-to: main
 on-arrival: {! 
 
 Q.started = 1
