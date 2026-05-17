@@ -329,6 +329,8 @@ Police loyalty: [+ prussian_police_loyalty : loyalty +]
 
 @polls
 on-arrival: {!
+Q.classes = ['workers', 'business', 'middle', 'rural', 'unemployed', 'christians'];
+Q.parties = ['cpa', 'asr', 'asm', 'sdp', 'lpp', 'app', 'crem', 'napfp'];
 // calculate normalized class voting amounts (0 to 100)
 for (var c of Q.classes) {
     var class_votes = 0;
