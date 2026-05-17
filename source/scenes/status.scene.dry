@@ -192,7 +192,7 @@ on-arrival: {!
 if (Q.wla_strength) {
     Q.wla_strenth_2 = 0;
     Q.wla_strength_2 += Q.wla_strength.toFixed(1);
-    Q.wla_strength_2 += Q.ywl_strength.toFixed(1)
+    Q.wla_strength_2 += Q.ywl_strength.toFixed(1);
     Q.wla_strength_2 = Q.wla_strength_2.toFixed(1);
 }
 if (Q.pf_strength) {
@@ -216,19 +216,19 @@ if (Q.al_strength) {
 }
 if (Q.wla_militancy) {
     Q.wla_militancy_2 = 0;
-    Q.wla_militancy_2 = ((Q.wla_militancy + Q.ywl_militancy)/2)
+    Q.wla_militancy_2 = ((Q.wla_militancy + Q.ywl_militancy)/2);
 }
 if (Q.pf_militancy) {
     Q.pf_militancy_2 = 0;
-    Q.pf_militancy_2 = ((Q.pf_militancy + cag_militancy)/2)
+    Q.pf_militancy_2 = ((Q.pf_militancy + cag_militancy)/2);
 }
 if (Q.acl_militancy) {
     Q.acl_militancy_2 = 0;
-    Q.acl_militancy_2 = ((Q.acl_militancy + Q.ccf_militancy)/2)
+    Q.acl_militancy_2 = ((Q.acl_militancy + Q.ccf_militancy)/2);
 }
 if (Q.al_militancy) {
     Q.al_militancy_2 = 0; 
-    Q.al_militancy_2 = ((Q.al_militancy + yn_militancy + wnl_militancy)/3)
+    Q.al_militancy_2 = ((Q.al_militancy + yn_militancy + wnl_militancy)/3);
 }
 !}
 
