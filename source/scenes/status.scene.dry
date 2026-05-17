@@ -12,6 +12,21 @@ Q.economic_growth_2 = '0';
 if (Q.economic_growth) {
     Q.economic_growth_2 = Q.economic_growth.toFixed(1);
 }
+Q.vcrime = 0;
+Q.nvcrime = 0;
+if (Q.crime) {
+    Q.vcrime = (Q.crime*0.25)
+    Q.nvcrime = (Q.crime*0.75)
+}
+Q.population_disp = 0;
+if (Q.population) {
+    Q.population_disp = Q.population.toFixed(0)
+}
+
+Q.rcp_pop = 0;
+if (Q.population) and (Q.rcp_mil) {
+    Q.rcp_pop = (Q.population*rcp_mil)
+}
 !}
 
 = Status
@@ -22,33 +37,33 @@ Resources available: [+ resources +]
 
 Party position: 
 
-Coalition: (Party + Party + ...)
+Coalition: [+ coalition_parties +]
 
-[? if cpa_in_gov : CPA Dissent: [ coal_dissent : coal_dissent ] ?][? if not cpa_in_gov : The CPA is not in government ?]
+[? if cpa_in_gov and not party == "CPA": CPA Dissent: [+ cpa_gov_dissent : coalition_dissent +] ?][? if not cpa_in_gov : The CPA is not in government ?]
 
-[? if asr_in_gov : AS-R Dissent: [ coal_dissent : coal_dissent ] ?][? if not asr_in_gov : The AS-R is not in government ?]
+[? if asr_in_gov and not party == "AS-R": AS-R Dissent: [+ asr_gov_dissent : coalition_dissent +] ?][? if not asr_in_gov : The AS-R is not in government ?]
 
-[? if asm_in_gov : AS-M Dissent: [ coal_dissent : coal_dissent ] ?][? if not asm_in_gov : The AS-M is not in government ?]
+[? if asm_in_gov and not party == "AS-M": AS-M Dissent: [+ asm_gov_dissent : coalition_dissent +] ?][? if not asm_in_gov : The AS-M is not in government ?]
 
-[? if sdp_in_gov : SDP Dissent: [ coal_dissent : coal_dissent ] ?][? if not sdp_in_gov : The SDP is not in government ?]
+[? if sdp_in_gov and not party == "SDP" : SDP Dissent: [+ sdp_gov_dissent : coalition_dissent +] ?][? if not sdp_in_gov : The SDP is not in government ?]
 
-[? if lpp_in_gov : LPP Dissent: [ coal_dissent : coal_dissent ] ?][? if not lpp_in_gov : The LPP is not in government ?]
+[? if lpp_in_gov and not party == "LPP" : LPP Dissent: [+ lpp_gov_dissent : coalition_dissent +] ?][? if not lpp_in_gov : The LPP is not in government ?]
 
-[? if app_in_gov : APP Dissent: [ coal_dissent : coal_dissent ] ?][? if not app_in_gov : The APP is not in government ?]
+[? if app_in_gov and not party == "APP" : APP Dissent: [+ app_gov_dissent : coalition_dissent +] ?][? if not app_in_gov : The APP is not in government ?]
 
-[? if crem_in_gov : CREM Dissent: [ coal_dissent : coal_dissent ] ?][? if not crem_in_gov : The CREM is not in government ?]
+[? if crem_in_gov and not party == "CREM": CREM Dissent: [+ crem_gov_dissent : coalition_dissent +] ?][? if not crem_in_gov : The CREM is not in government ?]
 
-[? if napfp_in_gov : NAPFP Dissent: [ coal_dissent : coal_dissent ] ?][? if not napfp_in_gov : The NAPFP is not in government ?]
+[? if napfp_in_gov and not party == "NAPFP" : NAPFP Dissent: [+ napfp_gov_dissent : coalition_dissent +] ?][? if not napfp_in_gov : The NAPFP is not in government ?]
 
 Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-Mayor: [+ president +]
+Mayor: [+ mayor +]
 
-Speaker: [+ chancellor +] ([+ chancellor_party +])
+Speaker: [+ speaker +]
 
-Reichstag composition:
+Council composition:
 
 CPA: [+ cpa_r +]%
 AS-R: [+ asr_r +]%
@@ -59,9 +74,9 @@ APP [+ app_r +]%
 CREM [+ crem_r +]%
 NAPFP: [+ napfp_r +]%
 
-[? if spd_in_government = 1 : Budget: [+ budget +] ?]
+[? if (lpp_in_gov = 1 and party == "LPP") or (app_in_gov = 1 and party == "APP") or (sdp_in_gov = 1 and party == "SDP"): Budget: [+ budget +] ?]
 
-Next election: Motnt : [+ next_election_month +], Year: [+ next_election_year +]
+Next election: Month [+ next_election_month +], Year [+ next_election_year +]
 
 = Economics
 
@@ -71,19 +86,18 @@ Unemployment: [+ unemployed_2 +]%
 
 Economic growth: [+ economic_growth_2 +]%
 
-Homelessness: [ homeless : homeless ]
+Homelessness: [+ homeless : homeless +]([+ homeless +]%)
 
-Violent Crime: [ vcrime : vcrime ]
+Violent Crime: [+ vcrime : crime +]
 
-Victimless Crime [ nvcrime : nvcrime ]
+Victimless Crime [+ nvcrime : crime +]
 
-
-# = Public Opinion
+Population: [+ population_disp +] 
+Recruitable Population Percentage (RCP): [+ rcp_mil +]([+ rcp_pop +])
 
 @politics
 
 = Inter-party Relations
-
 
 CPA: [+ cpa_relation : relationships +]
 
@@ -200,31 +214,47 @@ if (Q.al_strength) {
     Q.al_strength_2 += Q.wnl_strength.toFixed(1);
     Q.al_strength_2 = Q.al_strength_2.toFixed(1);
 }
+if (Q.wla_militancy) {
+    Q.wla_militancy_2 = 0;
+    Q.wla_militancy_2 = ((Q.wla_militancy + Q.ywl_militancy)/2)
+}
+if (Q.pf_militancy) {
+    Q.pf_militancy_2 = 0;
+    Q.pf_militancy_2 = ((Q.pf_militancy + cag_militancy)/2)
+}
+if (Q.acl_militancy) {
+    Q.acl_militancy_2 = 0;
+    Q.acl_militancy_2 = ((Q.acl_militancy + Q.ccf_militancy)/2)
+}
+if (Q.al_militancy) {
+    Q.al_militancy_2 = 0; 
+    Q.al_militancy_2 = ((Q.al_militancy + yn_militancy + wnl_militancy)/3)
+}
 !}
 
 = Organizations
 
 Young Workers League (YWL) + Workers Liberation Army (WLA) - (CPA)
 
-YWL + WLA Militarization: [+ wla_militancy : militancy +]
+YWL + WLA Militarization: [+ wla_militancy_2 : militancy +]
 
 YWL + WLA Strength: [+ wla_strength_2 +] thousand
 
 Children's Activity Group (CAG) + Popular Front (PF) - (ASR-ASM-SDP-LPP)
 
-CAG + PF Militarization: [+ pf_militancy : militancy +]
+CAG + PF Militarization: [+ pf_militancy_2 : militancy +]
 
 CAG + PF Strength: [+ pf_strength_2 +] thousand
 
 Christian Children's Foundation (CCF) + Alaerian Christian League (ACL) (APP-CREM)
 
-CCF + ACL Militarization: [+ acl_militancy : militancy +]
+CCF + ACL Militarization: [+ acl_militancy_2 : militancy +]
 
 CCF + ACL Strength: [+ acl_strength_2 +]
 
 Young Nationalists (YN) + Women's National League (WNL) + Alaerian Legion (AL) (NAPFP) 
 
-YN + WNL + AL Militarization: [+ al_militancy : militancy +]
+YN + WNL + AL Militarization: [+ al_militancy_2 : militancy +]
 
 YN + WNL + AL Strength [+ al_strength_2 +]
 
@@ -288,11 +318,6 @@ Police loyalty: [+ prussian_police_loyalty : loyalty +]
 [? if spd_in_government : Interior police loyalty: [+ interior_police_loyalty : loyalty +] ?]
 
 @polls
-on-arrival: {!
-Q.pro_republic_disp = Math.round(Q.pro_republic);
-Q.nationalism_disp = Math.round(Q.nationalism);
-Q.socialism_disp = Math.round(Q.socialism);
-!}
 
 = Projected election results
 

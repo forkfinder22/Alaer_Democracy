@@ -79,6 +79,7 @@ wip
 
 @start3
 Subtitle: Now available for Demo
+go-to: main_lpp
 on-arrival: {! 
 
 Q.started = 1
@@ -98,6 +99,25 @@ Q.asr_r = 5
 Q.cpa_r = 1
 Q.crem_r = 12
 Q.napfp_r = 4
+
+Q.wla_strength = 0.5
+Q.ywl_strength = 0.75
+Q.pf_strength = 6
+Q.cag_strength = 1
+Q.acl_strength = 4
+Q.ccf_strength = 4
+Q.al_strength = 1
+Q.wnl_strength = 1
+Q.yn_strength = 1
+Q.wla_militancy = 0.5
+Q.ywl_militancy = 0.3
+Q.cag_militancy = 0
+Q.pf_militancy = 0.15
+Q.ccf_militancy = 0.1
+Q.acl_militancy = 0.1
+Q.yn_militancy = 0.5
+Q.wnl_militancy = 0.4
+Q.al_militancy = 0.7
 
 Q.workers_lpp = 30
 Q.middle_lpp = 40
@@ -154,6 +174,9 @@ Q.business_napfp = 5
 Q.rural_napfp = 5
 Q.unemployed_napfp = 1
 Q.christians_napfp = 5
+
+Q.population = 50.000
+Q.rcp_mil = 0.01 
 
 !}
 
