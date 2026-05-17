@@ -254,7 +254,7 @@ if (Q.month_actions >= 1) {
 
     ///////////////////////////// change party support based on pro_republic
     // if pro_republic is less than the support of the Weimar coalition, reduce Democratic party support... ASM takes 15% of the hit, SDP takes 30%, LPP takes 20%, APP takes 20%, CREM takes 15%
-    if (Q.pro_republic) < (Q.asm_votes + Q.sdp_votes + Q.lpp_votes + Q.app_votes + Q.crem_votes) {
+    if ((Q.pro_republic) < (Q.asm_votes + Q.sdp_votes + Q.lpp_votes + Q.app_votes + Q.crem_votes)) {
         if (Q.middle_asm > 0) {
             Q.middle_asm -= (3*0.15)/12;
             Q.middle_cpa += (1*0.15)/12;
