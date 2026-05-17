@@ -147,6 +147,16 @@ NAPFP: [+ napfp_relation : relationships +]
 
 [? if party == "AS-M" and asm_special_faction : Environmentalism ?]
 
+[? if party == "SDP" : Left Non-Marxist Social Democracy ?]
+
+[? if party == "SDP" : Trade Unionism ?
+
+[? if party == "SDP" : Social Democracy ?]
+
+[? if party == "SDP" : Social Liberal ?]
+
+[? if party == "SDP and sdp_special_faction : Green Social Democracy ?]
+
 [? if party == "LPP" : Left Liberalism ?]
 
 [? if party == "LPP" : Centre Liberalism ?]

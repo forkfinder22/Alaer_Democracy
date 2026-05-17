@@ -82,101 +82,142 @@ Subtitle: Now available for Demo
 go-to: main
 on-arrival: {! 
 
-Q.started = 1
-Q.month = 1
-Q.year = 0
-Q.time = 1
-Q.party = "LPP"
-Q.mayor = "LPP"
-Q.speaker = "SDP"
-Q.coalition = "Moderate"
-Q.coalition_parties = "SDP + LPP + APP"
-Q.sdp_r = 16
-Q.lpp_r = 33
-Q.app_r = 21
-Q.asm_r = 8
-Q.asr_r = 5
-Q.cpa_r = 1
-Q.crem_r = 12
-Q.napfp_r = 4
+Q.started = 1;
+Q.month = 1;
+Q.year = 0;
+Q.time = 1;
+Q.month_actions = 0;
 
-Q.wla_strength = 0.5
-Q.ywl_strength = 0.75
-Q.pf_strength = 6
-Q.cag_strength = 1
-Q.acl_strength = 4
-Q.ccf_strength = 4
-Q.al_strength = 1
-Q.wnl_strength = 1
-Q.yn_strength = 1
-Q.wla_militancy = 0.5
-Q.ywl_militancy = 0.3
-Q.cag_militancy = 0
-Q.pf_militancy = 0.15
-Q.ccf_militancy = 0.1
-Q.acl_militancy = 0.1
-Q.yn_militancy = 0.5
-Q.wnl_militancy = 0.4
-Q.al_militancy = 0.7
+Q.party = "LPP";
+Q.mayor = "LPP";
+Q.speaker = "SDP";
+Q.coalition = "Moderate";
+Q.coalition_parties = "SDP + LPP + APP";
+Q.sdp_r = 16;
+Q.lpp_r = 33;
+Q.app_r = 21;
+Q.asm_r = 8;
+Q.asr_r = 5;
+Q.cpa_r = 1;
+Q.crem_r = 12;
+Q.napfp_r = 4;
 
-Q.workers_lpp = 30
-Q.middle_lpp = 40
-Q.business_lpp = 30
-Q.rural_lpp = 7
-Q.unemployed_lpp = 20
-Q.christians_lpp = 12
+Q.wla_strength = 0.5;
+Q.ywl_strength = 0.75;
+Q.pf_strength = 6;
+Q.cag_strength = 1;
+Q.acl_strength = 4;
+Q.ccf_strength = 4;
+Q.al_strength = 1;
+Q.wnl_strength = 1;
+Q.yn_strength = 1;
+Q.wla_militancy = 0.5;
+Q.ywl_militancy = 0.3;
+Q.cag_militancy = 0;
+Q.pf_militancy = 0.15;
+Q.ccf_militancy = 0.1;
+Q.acl_militancy = 0.1;
+Q.yn_militancy = 0.5;
+Q.wnl_militancy = 0.4;
+Q.al_militancy = 0.7;
 
-Q.workers_sdp = 50
-Q.middle_sdp = 10
-Q.business_sdp = 0
-Q.rural_sdp = 20
-Q.unemployed_sdp = 30
-Q.christians_sdp = 3
+Q.workers_lpp = 30;
+Q.middle_lpp = 40;
+Q.business_lpp = 30;
+Q.rural_lpp = 7;
+Q.unemployed_lpp = 20;
+Q.christians_lpp = 12;
 
-Q.workers_app = 5
-Q.middle_app = 20
-Q.business_app = 50
-Q.rural_app = 50
-Q.unemployed_app = 20
-Q.christians_app = 50
+Q.workers_sdp = 50;
+Q.middle_sdp = 10;
+Q.business_sdp = 0;
+Q.rural_sdp = 20;
+Q.unemployed_sdp = 30;
+Q.christians_sdp = 3;
 
-Q.workers_asm = 7
-Q.middle_asm = 10
-Q.business_asm = 0
-Q.rural_asm = 3
-Q.unemployed_asm = 9
-Q.christians_asm = 5
+Q.workers_app = 5;
+Q.middle_app = 20;
+Q.business_app = 50;
+Q.rural_app = 50;
+Q.unemployed_app = 20;
+Q.christians_app = 50;
 
-Q.workers_asr = 3
-Q.middle_asr = 1
-Q.business_asr = 0
-Q.rural_asr = 0
-Q.unemployed_asr = 8
-Q.christians_asr = 3
+Q.workers_asm = 7;
+Q.middle_asm = 10;
+Q.business_asm = 0;
+Q.rural_asm = 3;
+Q.unemployed_asm = 9;
+Q.christians_asm = 5;
 
-Q.workers_crem = 3
-Q.middle_crem = 9
-Q.business_crem = 15
-Q.rural_crem = 15
-Q.unemployed_crem = 7
-Q.christians_crem = 20
+Q.workers_asr = 3;
+Q.middle_asr = 1;
+Q.business_asr = 0;
+Q.rural_asr = 0;
+Q.unemployed_asr = 8;
+Q.christians_asr = 3;
 
-Q.workers_cpa = 2
-Q.middle_cpa = 2
-Q.business_cpa = 0
-Q.rural_cpa = 0
-Q.unemployed_cpa = 5
-Q.christians_cpa = 2
+Q.workers_crem = 3;
+Q.middle_crem = 9;
+Q.business_crem = 15;
+Q.rural_crem = 15;
+Q.unemployed_crem = 7;
+Q.christians_crem = 20;
 
-Q.workers_napfp = 0
-Q.middle_napfp = 8
-Q.business_napfp = 5
-Q.rural_napfp = 5
-Q.unemployed_napfp = 1
-Q.christians_napfp = 5
+Q.workers_cpa = 2;
+Q.middle_cpa = 2;
+Q.business_cpa = 0;
+Q.rural_cpa = 0;
+Q.unemployed_cpa = 5;
+Q.christians_cpa = 2;
 
-Q.population = 50.000
-Q.rcp_mil = 0.01 
+Q.workers_napfp = 0;
+Q.middle_napfp = 8;
+Q.business_napfp = 5;
+Q.rural_napfp = 5;
+Q.unemployed_napfp = 1;
+Q.christians_napfp = 5;
+
+Q.population = 50000;
+Q.rcp_mil = 0.01;
+
+Q.cpa_in_gov = 0;
+Q.asr_in_gov = 0;
+Q.asm_in_gov = 0;
+Q.sdp_in_gov = 1;
+Q.lpp_in_gov = 1;
+Q.app_in_gov = 1;
+Q.crem_in_gov = 0;
+Q.napfp_in_gov = 0;
+
+Q.cpa_special_faction = 0;
+Q.asr_special_faction = 0;
+Q.asm_special_faction = 0;
+Q.sdp_special_faction = 0;
+Q.lpp_special_faction = 0;
+Q.app_special_faction = 0;
+Q.crem_special_faction = 0;
+Q.napfp_special_faction = 0;
+
+Q.resources = 3;
+Q.lobbyist_dues = 2;
+Q.dues = 2;
+
+Q.factions = ['left', 'cenleft', 'cenright', 'right', 'special'];
+Q.left_strength = 15;
+Q.left_dissent = 20;
+Q.cenleft_strength = 30;
+Q.cenleft_dissent = 0;
+Q.cenright_strength = 25;
+Q.cenright_dissent = 5;
+Q.right_strength = 25;
+Q.right_dissent = 5;
+Q.special_strength = 5;
+Q.special_dissent = 10;
+Q.left_fac_name = "Left Liberalism";
+Q.cenleft_fac_name = "Centre Liberalism";
+Q.cenright_fac_name = "Neo-Liberalism";
+Q.right_fac_name = "Classical Liberalism";
+Q.special_fac_name = "Green Liberalism";
 
 !}
 
