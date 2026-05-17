@@ -155,7 +155,7 @@ NAPFP: [+ napfp_relation : relationships +]
 
 [? if party == "SDP" : Social Liberal ?]
 
-[? if party == "SDP and sdp_special_faction : Green Social Democracy ?]
+[? if party == "SDP" and sdp_special_faction : Green Social Democracy ?]
 
 [? if party == "LPP" : Left Liberalism ?]
 
