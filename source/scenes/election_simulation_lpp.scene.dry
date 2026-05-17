@@ -6,13 +6,13 @@ set-jump: post_election
 
 @1928
 on-arrival: {!
-Q.workers = 46; // industry and trade
+Q.workers = 50; // industry and trade
 Q.business = 13; // "old mittelstand"
 // 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.middle = 14; // "new mittelstand"
-Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
+Q.middle = 16; // "new mittelstand"
+Q.rural = 26; // agriculture and forestry employment... but many of those are proletarians so...
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
-Q.unemployed = 8.6;
+Q.unemployed = 1.2;
 Q.christians = 30;
 
 Q.classes = ['workers', 'business', 'middle', 'rural', 'unemployed', 'christians'];
