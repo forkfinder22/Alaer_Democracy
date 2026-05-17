@@ -11,12 +11,12 @@ tags: party_affairs
 
 Whether or not we are in an electoral campaign, the party is always trying to broaden its voter base. Who should we focus our campaign efforts on?
 
-- @workers: The urban working class, [? if party == ("CPA" or "AS-R" or "AS-M" or "SDP") : a traditional support base. ?][? if party == ("LPP" or "APP" or "CREM" or "NAPFP") : a non-traditional support base. ?]
-- @middle: The middle class, [? if party == ("CPA" or "AS-R" or "AS-M" or "SDP") : a non-traditional support base. ?][? if party == ("LPP" or "APP" or "CREM" or "NAPFP") : a traditional support base. ?] 
-- @business: The business class, [? if party == ("CPA" or "AS-R" or "AS-M" or "SDP") : a non-traditional support base. ?][? if party == ("LPP" or "APP" or "CREM" or "NAPFP") : a non-traditional support base. ?]
-- @rural: Rural workers and small farmers, [? if party == ("CPA" or "AS-R" or "AS-M" or "LPP") : a non-traditional support base. ?][? if party == ("SDP" or "APP" or "CREM" or "NAPFP") : a traditional support base. ?]
+- @workers: The urban working class, [? if party == "CPA" or party == "AS-R" or party == "AS-M" or party == "SDP" : a traditional support base. ?][? if party == "LPP" or party == "APP" or party == "CREM" or party == "NAPFP" : a non-traditional support base. ?]
+- @middle: The middle class, [? if party == "CPA" or party == "AS-R" or party == "AS-M" or party == "SDP" : a non-traditional support base. ?][? if party == "LPP" or party == "APP" or party == "CREM" or party == "NAPFP" : a traditional support base. ?] 
+- @business: The business class, [? if party == "CPA" or party == "AS-R" or party == "AS-M" or party == "SDP" : a non-traditional support base. ?][? if party == "LPP" or party == "APP" or party == "CREM" or party == "NAPFP" : a non-traditional support base. ?]
+- @rural: Rural workers and small farmers, [? if party == "CPA" or party == "AS-R" or party == "AS-M" or party == "LPP" : a non-traditional support base. ?][? if party == "SDP" or party == "APP" or party == "CREM" or party == "NAPFP" : a traditional support base. ?]
 - @unemployed: The unemployed, who are generally non-partisan, except in times of crisis
-- @christians: Christians, [? if party != ("CREM" or "APP") : who typically support the CREM and APP. ?][? if party == ("CREM or "APP") : a traditional support base ?]
+- @christians: Christians, [? if party != "CREM" and party != "APP") : who typically support the CREM and APP. ?][? if party == "CREM or party == "APP" : a traditional support base ?]
 - @root: We either don't want to or cannot campaign right now.
 - @easy_discard
 
