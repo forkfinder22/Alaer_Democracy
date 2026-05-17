@@ -29,70 +29,70 @@ In our media and campaign materials, who should we consider as our main opponent
 
 @far_left
 choose-if: party != "CPA" and party != "AS-R" and (party != "AS-M" and (left_strength + cenleft_strength + cenright_strength) > right_strength)
-on-arrival: enemies = "CPA and AS-R"
+on-arrival: enemies = "CPA and AS-R"; workers_cpa -= 1; workers_asr -= 1; middle_cpa -= 3; middle_asr -= 3; communist_socialist_support -= 3; 
 
 text
 
 @left
 choose-if: party != "CPA" and party != "AS-R" and party != "AS-M" and party != "SDP"
-on-arrival: enemies = "CPA, AS-R, and AS-M"
+on-arrival: enemies = "CPA, AS-R, and AS-M"; workers_cpa -= 1; workers_asr -= 1; middle_cpa -= 3; middle_asr -= 2; middle_asm -= 1; rural_asm -= 1;
 
 text
 
 @centre-left
 choose-if: (party != "AS-R" and (right_strength + cenleft_strength + cenright_strength) > left_strength) and party != "AS-M" and party != "SDP" and (party != "LPP" and (left_strength + cenleft_strength + cenright_strength) > right_strength)
-on-arrival: enemies = "CPA, AS-R, AS-M, and SDP"
+on-arrival: enemies = "CPA, AS-R, AS-M, and SDP"; workers_cpa -= 1; workers_asr -= 1; workers_asm -= 1; workers_sdp -= 1; middle_cpa -= 1; middle_asr -= 1; middle_asm -= 1; middle_sdp -= 1
 
 text
 
 @true_cenleft
 choose-if: party != "AS-R" and party != "AS-M" and party != "SDP" and party != "LPP"
-on-arrival: enemies = "AS-M and SDP"
+on-arrival: enemies = "AS-M and SDP"; workers_asm -= 2; middle_asm -= 2; workers_sdp -= 2; middle_sdp -= 2; moderate_support -= 1
 
 @centre
 choose-if: party != "AS-M" and party != "SDP" and party != "LPP" and party != "APP"
-on-arrival: enemies = "SDP, LPP, and APP"
+on-arrival: enemies = "SDP, LPP, and APP"; workers_sdp -= 3; middle_lpp -= 1; business_app -= 3; moderate_support -= 2
 
 text
 
 @conservative
 choose-if: party != "APP" and party != "CREM"
-on-arrival: enemies = "APP and CREM"
+on-arrival: enemies = "APP and CREM"; business_app -= 2; rural_app -= 1; business_crem -= 1; rural_crem -= 2
 
 text
 
 @right
 choose-if: party != "APP" and party != "CREM" and party != "NAPFP"
-on-arrival: enemies = "APP, CREM, and NAPFP"
+on-arrival: enemies = "APP, CREM, and NAPFP"; business_app -= 2; rural_crem -= 2; middle_napfp -= 2
 
 text
 
 @anti_dem
 choose-if: party != "CPA" and party != "NAPFP"
-on-arrival: enemies = "CPA and NAPFP"
+on-arrival: enemies = "CPA and NAPFP"; workers_cpa -= 3; middle_napfp -= 3; rural_cpa -= 1; rural_napfp -= 1
 
 Attacking the far right and left is popular among all but the left wing of our party, who would prefer to be fighting the bourgeois parties. This might also hamper our ability to reconcile with the KPD in the future.
 
 @far_right
 choose-if: party != "CREM" and party != "NAPFP"
-on-arrival: enemies = "CREM and NAPFP"
+on-arrival: enemies = "CREM and NAPFP"; rural_crem -= 3; middle_napfp -= 2; far_right -= 3
 
 Attacking the far right is popular among the entire party, although the left considers the bourgeois parties to be just as dangerous, while the right is critical of our lack of response to the KPD. Our bourgeois coalition partners are also skeptical of our lack of commitment to anti-communism.
 
 @napfp_alone
 choose-if: party != "NAPFP"
-on-arrival: enemies = "NAPFP"
+on-arrival: enemies = "NAPFP"; business_napfp -= 2; middle_napfp -= 2; unemployed_napfp -= 2; rural_napfp -= 2
 
 [? if nazi_urgency == 0 or nsdap_r < 10 : The NSDAP is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and nsdap_r >= 10 : The Nazis are the most urgent problem for us to deal with. ?]
 
 @cpa_alone
 choose-if: party != "CPA"
-on-arrival: enemies = "CPA"
+on-arrival: enemies = "CPA"; workers_cpa -= 4; rural_cpa -= 2; unemployed_cpa -= 2
 
 Attacking the KPD is supported by all but the most left-wing socialists, and wins us some measure of approval among the bourgeois parties. However, If we are to reconcile with the KPD, this may not be the best choice.
 
 @bourgeois
 choose-if: party != "LPP" and party != "APP"
-on-arrival: enemies = "LPP and APP"
+on-arrival: enemies = "LPP and APP"; middle_lpp -= 3; business_app -= 3; moderate_support -= 2;
 
 Our anti-bourgeois rhetoric is popular among the left, but may make it harder to build the coalitions that are necessary for government in the future.
