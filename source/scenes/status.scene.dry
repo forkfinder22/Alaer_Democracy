@@ -199,7 +199,7 @@ NAPFP: [+ napfp_relation : relationships +]
 
 = Internal Affairs
 
-Enemies: [+ enemies +]
+Enemies: The [+ enemies +]
 
 @paramilitaries
 on-arrival: {!

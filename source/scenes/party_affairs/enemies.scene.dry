@@ -46,7 +46,7 @@ on-arrival: enemies = "CPA, AS-R, AS-M, and SDP"
 text
 
 @true_cenleft
-choose-if: party != "AS-R" and party != "AS-M" and party != "SDP"
+choose-if: party != "AS-R" and party != "AS-M" and party != "SDP" and party != "LPP"
 on-arrival: enemies = "AS-M and SDP"
 
 @centre
