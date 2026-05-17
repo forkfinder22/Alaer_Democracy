@@ -92,7 +92,7 @@ on-arrival: enemies = "CPA"
 Attacking the KPD is supported by all but the most left-wing socialists, and wins us some measure of approval among the bourgeois parties. However, If we are to reconcile with the KPD, this may not be the best choice.
 
 @bourgeois
-choose-if: party != "LPP" and party != "APP
+choose-if: party != "LPP" and party != "APP"
 on-arrival: enemies = "LPP and APP"
 
 Our anti-bourgeois rhetoric is popular among the left, but may make it harder to build the coalitions that are necessary for government in the future.
