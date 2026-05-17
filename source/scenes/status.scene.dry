@@ -15,17 +15,17 @@ if (Q.economic_growth) {
 Q.vcrime = 0;
 Q.nvcrime = 0;
 if (Q.crime) {
-    Q.vcrime = (Q.crime*0.25)
-    Q.nvcrime = (Q.crime*0.75)
+    Q.vcrime = (Q.crime*0.25);
+    Q.nvcrime = (Q.crime*0.75);
 }
 Q.population_disp = 0;
 if (Q.population) {
-    Q.population_disp = Q.population.toFixed(0)
+    Q.population_disp = Q.population.toFixed(0);
 }
 
 Q.rcp_pop = 0;
 if (Q.population) and (Q.rcp_mil) {
-    Q.rcp_pop = (Q.population*rcp_mil)
+    Q.rcp_pop = (Q.population*rcp_mil);
 }
 !}
 
