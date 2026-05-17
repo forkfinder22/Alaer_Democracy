@@ -219,6 +219,14 @@ Q.cenright_fac_name = "Neo-Liberalism";
 Q.right_fac_name = "Classical Liberalism";
 Q.special_fac_name = "Green Liberalism";
 
+Q.workers = 46; 
+Q.business = 13; 
+Q.middle = 14;
+Q.rural = 25;
+Q.unemployed = 8.6;
+Q.christians = 30;
+
+
 !}
 
 wip
