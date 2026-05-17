@@ -197,6 +197,10 @@ NAPFP: [+ napfp_relation : relationships +]
 
 [? if party == "NAPFP" and napfp_special_faction: National Bolshevism ?]
 
+= Internal Affairs
+
+Enemies: [+ enemies +]
+
 @paramilitaries
 on-arrival: {!
 if (Q.wla_strength) {
