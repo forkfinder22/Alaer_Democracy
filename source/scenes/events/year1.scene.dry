@@ -1,0 +1,36 @@
+title: Year 1
+subtitle: A new year
+on-arrival: {!
+Q.special_faction_unlocked = 1;
+Q.opposition_bills_unlocked = 1;
+Q.party_congresses_unlockeed = 1;
+!}
+tags: event
+view-if: year = 1 and month = 1
+priority: 2
+max-visits: 1
+go-to: year1menu
+
+A new year begins. The populace is still filled with idealism and hope for the future. Three new mechanics have been unlocked
+
+@year1menu
+
+- @special_faction: A new, special interest faction has been unlocked
+- @opposition_bills: The opposition can now present bills to the council - Which you or other coalition parties can also vote for, and can increase coalition dissent (Or decrease it, depending on the coalition parties)
+- @party_congresses: Parties now hold internal congresses. These can change the ideology of the party, and make the closer or farther to your party. Parties are more likely to adopt ideological stances similar to yours if you have good relations, are in coalition with them, or aren't competing for the same voterbases
+- @root: Back to main
+
+@special_faction
+go-to: year1menu
+
+Wip text telling you what faction is unlocked
+
+@opposition_bills
+go-to: year1menu
+
+Wip text telling you about bills proposed by the opposition
+
+@party_congresses
+go-to: year1menu
+
+Wip texts telling you when party congresses happen, and the structure of each party's congress

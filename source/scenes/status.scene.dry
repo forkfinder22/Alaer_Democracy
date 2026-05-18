@@ -99,19 +99,19 @@ Recruitable Population Percentage (RCP): [+ rcp_mil +]([+ rcp_pop +])
 
 = Inter-party Relations
 
-CPA: [+ cpa_relation : relationships +]
+<span class="backing-wrap"><span style="color: #6d0000;">CPA</span><span class="backing-tip">: [+ cpa_relation : relationships +]
 
-AS-R: [+ asr_relation : relationships +]
+<span class="backing-wrap"><span style="color: #bb0000;">AS-R</span><span class="backing-tip">: [+ asr_relation : relationships +]
 
-AS-M: [+ asm_relation : relationships +]
+<span class="backing-wrap"><span style="color: #ff0000;">AS-M</span><span class="backing-tip">: [+ asm_relation : relationships +]
 
-SDP: [+ sdp_relation : relationships +]
+<span class="backing-wrap"><span style="color: #ff6600;">SDP</span><span class="backing-tip">: [+ sdp_relation : relationships +]
 
-LPP: [+ lpp_relation : relationships +]
+<span class="backing-wrap"><span style="color: #fdd000;">LPP</span><span class="backing-tip">: [+ lpp_relation : relationships +]
 
-APP: [+ app_relation : relationships +]
+<span class="backing-wrap"><span style="color: #040050;">APP</span><span class="backing-tip">: [+ app_relation : relationships +]
 
-CREM: [+ crem_relation : relationships +]
+<span class="backing-wrap"><span style="color: #bbb0ff;">CREM</span><span class="backing-tip">: [+ crem_relation : relationships +]
 
 NAPFP: [+ napfp_relation : relationships +]
 
