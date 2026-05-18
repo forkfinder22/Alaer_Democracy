@@ -99,21 +99,21 @@ Recruitable Population Percentage (RCP): [+ rcp_mil +]([+ rcp_pop +])
 
 = Inter-party Relations
 
-<span class="state-tip-wrap"><span style="color: #6d0000;">CPA</span><span class="state-tip">Collection of dues and donations from party members.</span></span>: [+ cpa_relation : relationships +]
+<span class="state-tip-wrap"><span style="color: #6d0000;">**CPA**</span><span class="state-tip">Collection of dues and donations from party members.</span></span>: [+ cpa_relation : relationships +]
 
-<span class="state-tip-wrap"><span style="color: #bb0000;">AS-R</span><span class="state-tip">Party relations description here.</span></span>: [+ asr_relation : relationships +]
+<span class="state-tip-wrap"><span style="color: #bb0000;">**AS-R**</span><span class="state-tip">Party relations description here.</span></span>: [+ asr_relation : relationships +]
 
-<span class="state-tip-wrap"><span style="color: #ff0000;">AS-M</span><span class="state-tip">Party relations description here.</span></span>: [+ asm_relation : relationships +]
+<span class="state-tip-wrap"><span style="color: #ff0000;">**AS-M**</span><span class="state-tip">Party relations description here.</span></span>: [+ asm_relation : relationships +]
 
-<span class="state-tip-wrap"><span style="color: #ff6600;">SDP</span><span class="state-tip">Party relations description here.</span></span>: [+ sdp_relation : relationships +]
+<span class="state-tip-wrap"><span style="color: #ff6600;">**SDP**</span><span class="state-tip">Party relations description here.</span></span>: [+ sdp_relation : relationships +]
 
-<span class="state-tip-wrap"><span style="color: #fdd000;">LPP</span><span class="state-tip">Party relations description here.</span></span>: [+ lpp_relation : relationships +]
+<span class="state-tip-wrap"><span style="color: #fdd000;">**LPP**</span><span class="state-tip">Party relations description here.</span></span>: [+ lpp_relation : relationships +]
 
-<span class="state-tip-wrap"><span style="color: #040050;">APP</span><span class="state-tip">Party relations description here.</span></span>: [+ app_relation : relationships +]
+<span class="state-tip-wrap"><span style="color: #040050;">**APP**</span><span class="state-tip">Party relations description here.</span></span>: [+ app_relation : relationships +]
 
-<span class="state-tip-wrap"><span style="color: #bbb0ff;">CREM</span><span class="state-tip">Party relations description here.</span></span>: [+ crem_relation : relationships +]
+<span class="state-tip-wrap"><span style="color: #bbb0ff;">**CREM**</span><span class="state-tip">Party relations description here.</span></span>: [+ crem_relation : relationships +]
 
-<span class="state-tip-wrap"><span style="color: #300000;">NAPFP</span><span class="state-tip">Party relations description here.</span></span>: [+ napfp_relation : relationships +]
+<span class="state-tip-wrap"><span style="color: #300000;">**NAPFP**</span><span class="state-tip">Party relations description here.</span></span>: [+ napfp_relation : relationships +]
 
 = Internal Factions of the [+ party +]
 
