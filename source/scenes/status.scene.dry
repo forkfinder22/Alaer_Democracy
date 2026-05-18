@@ -99,21 +99,21 @@ Recruitable Population Percentage (RCP): [+ rcp_mil +]([+ rcp_pop +])
 
 = Inter-party Relations
 
-<span class="backing-wrap"><span style="color: #6d0000;">**CPA**</span><span class="backing-tip"><img src="img/fundraisers.jpg" style="width:100%; display:block; margin:0 auto 4px auto; border:1px solid #999;">"Collection of dues and donations from party members."</span></span>: [+ cpa_relation : relationships +]
+<span class="backing-wrap"><span style="color: #6d0000;">**CPA**</span><span class="backing-tip"><img src="img/fundraisers.jpg" style="width:100%; display:block; margin:0 auto 4px auto; border:1px solid #999;">Collection of dues and donations from party members.</span></span>: [+ cpa_relation : relationships +]
 
-<span class="backing-wrap"><span style="color: #bb0000;">**AS-R**</span><span class="backing-tip"><img src="img/fundraisers.jpg" style="width:100%; display:block; margin:0 auto 4px auto; border:1px solid #999;">"Collection of dues and donations from party members."</span></span>: [+ asr_relation : relationships +]
+<span class="backing-wrap"><span style="color: #bb0000;">**AS-R**</span><span class="backing-tip"><img src="img/fundraisers.jpg" style="width:100%; display:block; margin:0 auto 4px auto; border:1px solid #999;">Collection of dues and donations from party members.</span></span>: [+ asr_relation : relationships +]
 
-<span class="backing-wrap"><span style="color: #ff0000;">**AS-M**</span><span class="backing-tip"><img src="img/fundraisers.jpg" style="width:100%; display:block; margin:0 auto 4px auto; border:1px solid #999;">"Collection of dues and donations from party members."</span></span>: [+ asm_relation : relationships +]
+<span class="backing-wrap"><span style="color: #ff0000;">**AS-M**</span><span class="backing-tip"><img src="img/fundraisers.jpg" style="width:100%; display:block; margin:0 auto 4px auto; border:1px solid #999;">Collection of dues and donations from party members.</span></span>: [+ asm_relation : relationships +]
 
-<span class="backing-wrap"><span style="color: #ff6600;">**SDP**</span><span class="backing-tip"><img src="img/fundraisers.jpg" style="width:100%; display:block; margin:0 auto 4px auto; border:1px solid #999;">"Collection of dues and donations from party members."</span></span>: [+ sdp_relation : relationships +]
+<span class="backing-wrap"><span style="color: #ff6600;">**SDP**</span><span class="backing-tip"><img src="img/fundraisers.jpg" style="width:100%; display:block; margin:0 auto 4px auto; border:1px solid #999;">Collection of dues and donations from party members.</span></span>: [+ sdp_relation : relationships +]
 
-<span class="backing-wrap"><span style="color: #fdd000;">**LPP**</span><span class="backing-tip"><img src="img/fundraisers.jpg" style="width:100%; display:block; margin:0 auto 4px auto; border:1px solid #999;">"Collection of dues and donations from party members."</span></span>: [+ lpp_relation : relationships +]
+<span class="backing-wrap"><span style="color: #fdd000;">**LPP**</span><span class="backing-tip"><img src="img/fundraisers.jpg" style="width:100%; display:block; margin:0 auto 4px auto; border:1px solid #999;">Collection of dues and donations from party members.</span></span>: [+ lpp_relation : relationships +]
 
-<span class="backing-wrap"><span style="color: #040050;">**APP**</span><span class="backing-tip"><img src="img/fundraisers.jpg" style="width:100%; display:block; margin:0 auto 4px auto; border:1px solid #999;">"Collection of dues and donations from party members."</span></span>: [+ app_relation : relationships +]
+<span class="backing-wrap"><span style="color: #040050;">**APP**</span><span class="backing-tip"><img src="img/fundraisers.jpg" style="width:100%; display:block; margin:0 auto 4px auto; border:1px solid #999;">Collection of dues and donations from party members.</span></span>: [+ app_relation : relationships +]
 
-<span class="backing-wrap"><span style="color: #bbb0ff;">**CREM**</span><span class="backing-tip"><img src="img/fundraisers.jpg" style="width:100%; display:block; margin:0 auto 4px auto; border:1px solid #999;">"Collection of dues and donations from party members."</span></span>: [+ crem_relation : relationships +]
+<span class="backing-wrap"><span style="color: #bbb0ff;">**CREM**</span><span class="backing-tip"><img src="img/fundraisers.jpg" style="width:100%; display:block; margin:0 auto 4px auto; border:1px solid #999;">Collection of dues and donations from party members.</span></span>: [+ crem_relation : relationships +]
 
-<span class="backing-wrap"><span style="color: #300000;">**NAPFP**</span><span class="backing-tip"><img src="img/fundraisers.jpg" style="width:100%; display:block; margin:0 auto 4px auto; border:1px solid #999;">"Collection of dues and donations from party members."</span></span>: [+ napfp_relation : relationships +]
+<span class="backing-wrap"><span style="color: #300000;">**NAPFP**</span><span class="backing-tip"><img src="img/fundraisers.jpg" style="width:100%; display:block; margin:0 auto 4px auto; border:1px solid #999;">Collection of dues and donations from party members.</span></span>: [+ napfp_relation : relationships +]
 
 = Internal Factions of the [+ party +]
 
