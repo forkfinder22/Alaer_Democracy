@@ -37,63 +37,74 @@ We have declared the CPA and the AS-R as our main enemies in our campaigns [? if
 @left
 choose-if: party != "CPA" and party != "AS-R" and party != "AS-M" and party != "SDP"
 on-arrival: enemies = "CPA, AS-R, and AS-M"; workers_cpa -= 1; workers_asr -= 1; middle_cpa -= 3; middle_asr -= 2; middle_asm -= 1; rural_asm -= 1;
+[? if party == "CPA" or party == "AS-R" or party == "AS-M : Why would we attack ourselves? ?][? if party == "SDP" : Why would we attack our allies? ?]
 
 text
 
 @centre-left
-choose-if: (party != "AS-R" and (right_strength + cenleft_strength + cenright_strength) > left_strength) and party != "AS-M" and party != "SDP" and (party != "LPP" and (left_strength + cenleft_strength + cenright_strength) > right_strength)
+choose-if: party != "AS-M" and party != "SDP" and party != "LPP" and party != "CPA"
 on-arrival: enemies = "CPA, AS-R, AS-M, and SDP"; workers_cpa -= 1; workers_asr -= 1; workers_asm -= 1; workers_sdp -= 1; middle_cpa -= 1; middle_asr -= 1; middle_asm -= 1; middle_sdp -= 1
+unavailable-subtitle: [? if party == "CPA" or party == "AS-R" or party == "AS-M" or party == "SDP" : Why would we attack ourselves? ?][? if party == "LPP" : Why would we attack our allies? ?]
 
 text
 
 @true_cenleft
 choose-if: party != "AS-R" and party != "AS-M" and party != "SDP" and party != "LPP"
 on-arrival: enemies = "AS-M and SDP"; workers_asm -= 2; middle_asm -= 2; workers_sdp -= 2; middle_sdp -= 2; moderate_support -= 1
+unavailable-subtitle: [? if party == "AS-R" or party == "AS-M" or party == "SDP" : Why would we attack ourselves? ?][? if party == "LPP" : Why would we attack our allies? ?]
 
 @centre
 choose-if: party != "AS-M" and party != "SDP" and party != "LPP" and party != "APP"
 on-arrival: enemies = "SDP, LPP, and APP"; workers_sdp -= 3; middle_lpp -= 1; business_app -= 3; moderate_support -= 2
+unavailable-subtitle: [? if party == "SDP" or party == "LPP" or party == "APP: : Why would we attack ourselves? ?][? if party == "AS-M" : Why would we attack our allies? ?]
 
 text
 
 @conservative
 choose-if: party != "APP" and party != "CREM"
 on-arrival: enemies = "APP and CREM"; business_app -= 2; rural_app -= 1; business_crem -= 1; rural_crem -= 2
+unavailable-subtitle: [? if party == "APP" or party == "CREM" : Why would we attack ourselves? ?]
 
 text
 
 @right
 choose-if: party != "APP" and party != "CREM" and party != "NAPFP"
 on-arrival: enemies = "APP, CREM, and NAPFP"; business_app -= 2; rural_crem -= 2; middle_napfp -= 2
+[? if party == "APP" or party == "CREM" or party == "NAPFP" : Why would we attack ourselves? ?]
 
 text
 
 @anti_dem
 choose-if: party != "CPA" and party != "NAPFP"
 on-arrival: enemies = "CPA and NAPFP"; workers_cpa -= 3; middle_napfp -= 3; rural_cpa -= 1; rural_napfp -= 1
+unavailable-subtitle: [? if party == "CPA" or party == "NAPFP" : Why would we attack ourselves ?]
 
 Attacking the far right and left is popular among all but the left wing of our party, who would prefer to be fighting the bourgeois parties. This might also hamper our ability to reconcile with the KPD in the future.
 
 @far_right
 choose-if: party != "CREM" and party != "NAPFP"
 on-arrival: enemies = "CREM and NAPFP"; rural_crem -= 3; middle_napfp -= 2; far_right_support -= 3
+unavailable-subtitle: [? if party == "CREM" and party == "NAPFP" : Why would we attack ourselves? ?]
 
 Attacking the far right is popular among the entire party, although the left considers the bourgeois parties to be just as dangerous, while the right is critical of our lack of response to the KPD. Our bourgeois coalition partners are also skeptical of our lack of commitment to anti-communism.
 
 @napfp_alone
 choose-if: party != "NAPFP"
 on-arrival: enemies = "NAPFP"; business_napfp -= 2; middle_napfp -= 2; unemployed_napfp -= 2; rural_napfp -= 2
+unavailable-subtitle: [? if party == "NAPFP" : Why would we attack ourselves? ?]
 
 [? if nazi_urgency == 0 or nsdap_r < 10 : The NSDAP is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and nsdap_r >= 10 : The Nazis are the most urgent problem for us to deal with. ?]
 
 @cpa_alone
 choose-if: party != "CPA"
 on-arrival: enemies = "CPA"; workers_cpa -= 4; rural_cpa -= 2; unemployed_cpa -= 2
+unavailable-subtitle: [? if party == "CPA" : Why would we attack ourselves? ?]
 
 Attacking the KPD is supported by all but the most left-wing socialists, and wins us some measure of approval among the bourgeois parties. However, If we are to reconcile with the KPD, this may not be the best choice.
 
 @bourgeois
-choose-if: party != "LPP" and party != "APP"
+choose-if: party != "LPP" and party != "APP" and party != "CREM" and party != "SDP"
 on-arrival: enemies = "LPP and APP"; middle_lpp -= 3; business_app -= 3; moderate_support -= 2;
+unavailable-subtitle: [? if party == "LPP" or partyy == "APP" : Why would we attakc ourselves? ?][? if party == "SDP" or party == "CREM" : Why would we attack our allies? ?]
 
 Our anti-bourgeois rhetoric is popular among the left, but may make it harder to build the coalitions that are necessary for government in the future.
