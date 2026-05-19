@@ -177,15 +177,15 @@ Recruitable Population Percentage (RCP): [+ rcp_mil +]([+ rcp_pop +])
 
 [? if party == "APP" and app_special_faction: Liberal-Conservatism ?]
 
-[? if party == "CREM" : Religious Fiscal Coservatism ?]
+[? if party == "CREM" : Economic Movement - Fiscal Coservatism ?]
 
-[? if party == "CREM" : Religious Green Conservatism ?]
+[? if party == "CREM" : Rural Movement - Green Conservatism ?]
 
-[? if party == "CREM" : Religious Conservatism ?]
+[? if party == "CREM" : Religious Movement - Religious Conservatism ?]
 
-[? if party == "CREM" : Religious Agrarian Conservatism ?]
+[? if party == "CREM" : Religious & Rural Movement - Religious Agrarian Conservatism ?]
 
-[? if party == "CREM" and crem_special_faction : Constitutional Monarchism ?]
+[? if party == "CREM" and crem_special_faction : Religious & Economic Movement - Constitutional Monarchism ?]
 
 [? if party == "NAPFP" : National Conservatism ?]
 

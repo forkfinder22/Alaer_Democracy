@@ -211,13 +211,13 @@ Q.dues = 2;
 
 Q.factions = ['left', 'cenleft', 'cenright', 'right', 'special'];
 Q.left_strength = 15;
-Q.left_dissent = 20;
+Q.left_dissent = 5;
 Q.cenleft_strength = 30;
 Q.cenleft_dissent = 0;
 Q.cenright_strength = 25;
 Q.cenright_dissent = 5;
 Q.right_strength = 25;
-Q.right_dissent = 5;
+Q.right_dissent = 7;
 Q.special_strength = 5;
 Q.special_dissent = 10;
 Q.left_fac_name = "Left Liberalism";
