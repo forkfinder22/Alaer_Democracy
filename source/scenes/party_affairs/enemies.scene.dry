@@ -74,7 +74,7 @@ choose-if: party != "APP" and party != "CREM" and party != "NAPFP"
 on-arrival: enemies = "APP, CREM, and NAPFP"; business_app -= 2; rural_crem -= 2; middle_napfp -= 2
 unavailable-subtitle: [? if party == "APP" or party == "CREM" or party == "NAPFP" : Why would we attack ourselves? ?]
 
-We have declared the Right-wing parties to be our enemies [? if party == "SDP" or "LPP" : This will make it much harder to form coalitions with the APP, as the view it as a betrayal of the political "Friendship" that the parties of the Moderate coalition has built ?]
+We have declared the Right-wing parties to be our enemies [? if party == "SDP" or party == "LPP" : This will make it much harder to form coalitions with the APP, as the view it as a betrayal of the political "Friendship" that the parties of the Moderate coalition has built ?]
 
 @anti_dem
 choose-if: party != "CPA" and party != "NAPFP"
@@ -88,7 +88,7 @@ choose-if: party != "CREM" and party != "NAPFP"
 on-arrival: enemies = "CREM and NAPFP"; rural_crem -= 3; middle_napfp -= 2; far_right_support -= 3
 unavailable-subtitle: [? if party == "CREM" and party == "NAPFP" : Why would we attack ourselves? ?]
 
-Attacking the far right is popular among the entire party, [? if party == "AS-M" or party == "AS-R" or party == "CPA": although the left considers the bourgeois parties to be just as dangerous, while ?][? if party != "AS-R" and party != "AS-M" and party != "CPA" : although ?] the right is critical of our lack of response to the CPA. [? if party == "SDP" or "AS-M" : Our partners in the LPP and APP are also skeptical of our lack of commitment to anti-communism. ?]
+Attacking the far right is popular among the entire party, [? if party == "AS-M" or party == "AS-R" or party == "CPA": although the left considers the bourgeois parties to be just as dangerous, while ?][? if party != "AS-R" and party != "AS-M" and party != "CPA" : although ?] the right is critical of our lack of response to the CPA. [? if party == "SDP" or party == "AS-M" : Our partners in the LPP and APP are also skeptical of our lack of commitment to anti-communism. ?]
 
 @napfp_alone
 choose-if: party != "NAPFP"
