@@ -262,7 +262,7 @@ if (Q.al_militancy) {
 
 = Organizations
 
-Young Workers League (YWL) + Workers Liberation Army (WLA) - (CPA)
+<span class="state-tip-wrap">Young Workers League (YWL)<span class="state-tip"> The Young Workers League is the youth wing of the CPA. It is heavily propagandised, and has it's own militia program - Though, of course, they don't call it that.</span></span> + <span clas="state-tip-wrap">Workers Liberation Army (WLA)<span class="state-tip"> </span></span> - (CPA)
 
 YWL + WLA Militarization: [+ wla_militancy_2 : militancy +]
 
