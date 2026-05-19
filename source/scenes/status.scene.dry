@@ -209,7 +209,7 @@ Enemies: The [+ enemies +]
 
 <span class="state-tip-wrap"><span style="color: #ff0000;">**AS-M**</span><span class="state-tip"> The <span style="color: #ff0000;">**AS-M**</span>, or the <span style="color: #ff0000;">**Alaerian Socialists (Moderate)**</span> is the right-wing split of the original Alaerian Socialists. They are generally in favour of using democratic methods, are generally against extra-parliamentary tactics. Their ideological composition is both of pro-Democratic Marxists, and of non-Marxian Social Democrats. Along with the SDP, they co-lead the largest union in Alaer, the FWMU, or the Federation of Working and Middle-Class Unions. The AS-M currently tends towards a [? if asm_ideology != "Non-Marxist Social Democracy" : Marxian stance ?][? if asm_ideology == "Non-Marxist Social Democracy" : Non-Marxian stance ?]</span></span>: [+ asm_ideology +] ([+ asm_leader +])
 
-<span class="state-tip-wrap"><span style="color: #ff6600;">**SDP**</span><span class="state-tip">Party relations description here.</span></span>: [+ sdp_relation +] ([+ sdp_leader +])
+<span class="state-tip-wrap"><span style="color: #ff6600;">**SDP**</span><span class="state-tip">Party relations description here.</span></span>: [+ sdp_ideology +] ([+ sdp_leader +])
 
 <span class="state-tip-wrap"><span style="color: #fdd000;">**LPP**</span><span class="state-tip">Party relations description here.</span></span>: [+ lpp_ideology +] ([+ lpp_leader +])
 

@@ -286,14 +286,14 @@ Q.crem_ideology = "Religious Conservatism";
 Q.napfp_ideology = "Fascism";
 
 /// Leaders / CPA should be russian because Lenin; Trotsky; Stalin / AS-R should be German because Eduard Bernstein / AS-M should be French because Ferd Lasalle changed his name to be more french / SDP should be British, because of LAbour party and J. Stuart Mill / LPP Also british because Edmund Burke / APP american because Coolidge and Reagan / CREM is czech because Švehla / NAPFP is italian because Mussolini 
-cpa_leader = "Kuznetsov, Ivan"
-asr_leader = "Schmidt, Hans"
-asm_leader = "Lefebvre, Pierre"
-sdp_leader = "Jones, David"
-lpp_leader = "Brown, Margaret"
-app_leader = "Smith, Mary"
-crem_leader = "Novák, Tomáš"
-napfp_leader = "Rossi, Leonardo"
+Q.cpa_leader = "Kuznetsov, Ivan";
+Q.asr_leader = "Schmidt, Hans";
+Q.asm_leader = "Lefebvre, Pierre";
+Q.sdp_leader = "Jones, David";
+Q.lpp_leader = "Brown, Margaret";
+Q.app_leader = "Smith, Mary";
+Q.crem_leader = "Novák, Tomáš";
+Q.napfp_leader = "Rossi, Leonardo";
 
 !}
 
