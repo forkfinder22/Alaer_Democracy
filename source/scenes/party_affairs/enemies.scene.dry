@@ -72,7 +72,7 @@ We have declared the Christian parties to be our enemies [? if party == "LPP" or
 @right
 choose-if: party != "APP" and party != "CREM" and party != "NAPFP"
 on-arrival: enemies = "APP, CREM, and NAPFP"; business_app -= 2; rural_crem -= 2; middle_napfp -= 2
-[? if party == "APP" or party == "CREM" or party == "NAPFP" : Why would we attack ourselves? ?]
+unavailable-subtitle: [? if party == "APP" or party == "CREM" or party == "NAPFP" : Why would we attack ourselves? ?]
 
 We have declared the Right-wing parties to be our enemies [? if party == "SDP" or "LPP" : This will make it much harder to form coalitions with the APP, as the view it as a betrayal of the political "Friendship" that the parties of the Moderate coalition has built ?]
 
