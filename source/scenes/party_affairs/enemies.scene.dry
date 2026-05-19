@@ -39,61 +39,63 @@ choose-if: party != "CPA" and party != "AS-R" and party != "AS-M" and party != "
 on-arrival: enemies = "CPA, AS-R, and AS-M"; workers_cpa -= 1; workers_asr -= 1; middle_cpa -= 3; middle_asr -= 2; middle_asm -= 1; rural_asm -= 1;
 [? if party == "CPA" or party == "AS-R" or party == "AS-M : Why would we attack ourselves? ?][? if party == "SDP" : Why would we attack our allies? ?]
 
-text
+We have declared the Communist-Socialist parties to be our main enemies in campagining. [? if party == "LPP" or party == "APP" : This will make it harder to form coalitions with co-operative parties like the AS-R ?]
 
 @centre-left
-choose-if: party != "AS-M" and party != "SDP" and party != "LPP" and party != "CPA"
+choose-if: party != "AS-M" and party != "SDP" and party != "LPP" and party != "APP"
 on-arrival: enemies = "CPA, AS-R, AS-M, and SDP"; workers_cpa -= 1; workers_asr -= 1; workers_asm -= 1; workers_sdp -= 1; middle_cpa -= 1; middle_asr -= 1; middle_asm -= 1; middle_sdp -= 1
 unavailable-subtitle: [? if party == "CPA" or party == "AS-R" or party == "AS-M" or party == "SDP" : Why would we attack ourselves? ?][? if party == "LPP" : Why would we attack our allies? ?]
 
-text
+We have declared the the entirety of the leftist parties to be our enemies [? if party == "CREM" : This will make it harder to form coalitions with the SDP, and as a result, with the LPP, as the two are considered "Sister Parties" ?]
 
 @true_cenleft
-choose-if: party != "AS-R" and party != "AS-M" and party != "SDP" and party != "LPP"
+choose-if: party != "AS-R" and party != "AS-M" and party != "SDP" and party != "LPP" and party != "APP"
 on-arrival: enemies = "AS-M and SDP"; workers_asm -= 2; middle_asm -= 2; workers_sdp -= 2; middle_sdp -= 2; moderate_support -= 1
 unavailable-subtitle: [? if party == "AS-R" or party == "AS-M" or party == "SDP" : Why would we attack ourselves? ?][? if party == "LPP" : Why would we attack our allies? ?]
+
+We have declared specifically the centre left to be our enemies [? if party == "CPA" or party == "CREM" : This will make it harder to make coalitions with these parties, along with the LPP, considered a "Sister Party" of the SDP?]
 
 @centre
 choose-if: party != "AS-M" and party != "SDP" and party != "LPP" and party != "APP"
 on-arrival: enemies = "SDP, LPP, and APP"; workers_sdp -= 3; middle_lpp -= 1; business_app -= 3; moderate_support -= 2
 unavailable-subtitle: [? if party == "SDP" or party == "LPP" or party == "APP: : Why would we attack ourselves? ?][? if party == "AS-M" : Why would we attack our allies? ?]
 
-text
+We have declared the centre parties to be our enemies. [? if party != "NAPFP" : This will make it harder to build coalitions with these parties ?]
 
 @conservative
 choose-if: party != "APP" and party != "CREM"
 on-arrival: enemies = "APP and CREM"; business_app -= 2; rural_app -= 1; business_crem -= 1; rural_crem -= 2
 unavailable-subtitle: [? if party == "APP" or party == "CREM" : Why would we attack ourselves? ?]
 
-text
+We have declared the Christian parties to be our enemies [? if party == "LPP" or party == "SDP" : This will make it especially harder to form coalitions with the APP, as they view it as a betrayal of the political "Friendship" that the parties of the Moderate coalition has built ?]
 
 @right
 choose-if: party != "APP" and party != "CREM" and party != "NAPFP"
 on-arrival: enemies = "APP, CREM, and NAPFP"; business_app -= 2; rural_crem -= 2; middle_napfp -= 2
 [? if party == "APP" or party == "CREM" or party == "NAPFP" : Why would we attack ourselves? ?]
 
-text
+We have declared the Right-wing parties to be our enemies [? if party == "SDP" or "LPP" : This will make it much harder to form coalitions with the APP, as the view it as a betrayal of the political "Friendship" that the parties of the Moderate coalition has built ?]
 
 @anti_dem
 choose-if: party != "CPA" and party != "NAPFP"
 on-arrival: enemies = "CPA and NAPFP"; workers_cpa -= 3; middle_napfp -= 3; rural_cpa -= 1; rural_napfp -= 1
 unavailable-subtitle: [? if party == "CPA" or party == "NAPFP" : Why would we attack ourselves ?]
 
-Attacking the far right and left is popular among all but the left wing of our party, who would prefer to be fighting the bourgeois parties. This might also hamper our ability to reconcile with the KPD in the future.
+Attacking the far right and left is popular among all [? if party == "AS-R" or party == "AS-M" : but the left wing of our party, who would prefer to be fighting the bourgeois parties. ?][? if party != "AS-R" and party != "AS-M" : all wings of our party. ?] 
 
 @far_right
 choose-if: party != "CREM" and party != "NAPFP"
 on-arrival: enemies = "CREM and NAPFP"; rural_crem -= 3; middle_napfp -= 2; far_right_support -= 3
 unavailable-subtitle: [? if party == "CREM" and party == "NAPFP" : Why would we attack ourselves? ?]
 
-Attacking the far right is popular among the entire party, although the left considers the bourgeois parties to be just as dangerous, while the right is critical of our lack of response to the KPD. Our bourgeois coalition partners are also skeptical of our lack of commitment to anti-communism.
+Attacking the far right is popular among the entire party, [? if party == "AS-M" or party == "AS-R" or party == "CPA": although the left considers the bourgeois parties to be just as dangerous, while ?][? if party != "AS-R" and party != "AS-M" and party != "CPA" : although ?] the right is critical of our lack of response to the CPA. [? if party == "SDP" or "AS-M" : Our partners in the LPP and APP are also skeptical of our lack of commitment to anti-communism. ?]
 
 @napfp_alone
 choose-if: party != "NAPFP"
-on-arrival: enemies = "NAPFP"; business_napfp -= 2; middle_napfp -= 2; unemployed_napfp -= 2; rural_napfp -= 2
+on-arrival: enemies = "NAPFP"; business_napfp -= 2 if napfp_votes > 8; middle_napfp -= 2 if napfp_votes > 8; unemployed_napfp -= 2 if napfp_votes > 10; rural_napfp -= 2 if napfp_votes > 9
 unavailable-subtitle: [? if party == "NAPFP" : Why would we attack ourselves? ?]
 
-[? if nazi_urgency == 0 or nsdap_r < 10 : The NSDAP is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and nsdap_r >= 10 : The Nazis are the most urgent problem for us to deal with. ?]
+[? if nazi_urgency == 0 or napfp_r < 10 : The NAPFP is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and nsdap_r >= 10 : The Fascists are the most urgent problem for us to deal with. ?]
 
 @cpa_alone
 choose-if: party != "CPA"
