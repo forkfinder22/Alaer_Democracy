@@ -28,7 +28,7 @@ In our media and campaign materials, who should we consider as our main opponent
 - @easy_discard
 
 @far_left
-choose-if: party != "CPA" and party != "AS-R" or (party == "AS-M" and (left_strength + cenleft_strength + cenright_strength) < right_strength)
+choose-if: (party != "CPA" and party != "AS-R") or (party == "AS-M" and (left_strength + cenleft_strength + cenright_strength) < right_strength) or party == "LPP" or party == "SDP" or party == "APP" or party == "CREM" or party == "NAPFP"
 on-arrival: enemies = "CPA and AS-R"; workers_cpa -= 1; workers_asr -= 1; middle_cpa -= 3; middle_asr -= 3; communist_socialist_support -= 3; left_dissent += 10 if party == "AS-M" or party == "SDP"; cenleft_dissent += 7 if party == "AS-M"; cenright_dissent += 5 if party == "AS-M"; cenleft_dissent += 1 if party == "CREM"; right_dissent += 0.5 if party == "CREM"
 
 We have declared the CPA and the AS-R as our main enemies in our campaigns [? if party == "AS-M" : The Marxist and Socialist facions in our party are unhappy with our choice, and vocally oppose it. ?][? if party == "CREM" : The Rural Movement of our party is slightly unhappy with our choice to include the AS-R as our enemies, as the two have co-operated in party-based rural welfare events & organizations, however their objections are not loud - They are still socialists, after all ?]
