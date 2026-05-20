@@ -602,3 +602,12 @@ table {
 .state-tip-wrap:hover .state-tip {
     display: block;
 }
+
+.testing-button {
+    font-family: "Minion Pro", Georgia, serif;
+    background-color: var(--tab-color);
+    color: var(--text-color);
+    border: none;
+    outline: 5px darkblue;
+    outline-offset: 4px;
+}
