@@ -443,4 +443,4 @@ Christian: CPA: [+ christians_cpa_display +]%, AS-R: [+ christians_asr_display +
 
 <span class="box">Text</span>
 
-<button class="testing_button">Button</button>
+<button class="testing_button" onclick="window.changeTab('status.polls', 'poll_tab');">Button</button>
