@@ -79,7 +79,7 @@ wip
 
 @start3
 Subtitle: Now available for Demo
-go-to: main
+go-to: new_main
 on-arrival: {! 
 
 Q.started = 1;
@@ -296,6 +296,10 @@ Q.crem_leader = "Novák, Tomáš";
 Q.napfp_leader = "Rossi, Leonardo";
 
 !}
+
+@new_main
+new-page: true
+title: Main
 
 - @main
 
