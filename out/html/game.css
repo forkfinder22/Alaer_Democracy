@@ -11,7 +11,7 @@ body {
   --tab-color: #ddd;
   --tab-hover-color: #ececec;
   --card-border-color: #ccc; 
-  --card-bg-color: #ddd; 
+  --card-bg-color: #ddd;  
   font-family: "Minion Pro", Georgia, serif;
   background-color: var(--bg-color);
   padding: 0;
@@ -577,13 +577,13 @@ table {
 
 /* Stolen code from DNVP mod */
 
-.state-tip-wrap {
+.tip-wrap {
     position: relative;
     display: inline;
     cursor: help;
     text-decoration: underline dotted;
 }
-.state-tip-wrap .state-tip {
+.tip-wrap .tip {
     display: none;
     position: absolute;
     bottom: 125%;
@@ -599,7 +599,7 @@ table {
     box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
     color: #000;
 }
-.state-tip-wrap:hover .state-tip {
+.tip-wrap:hover .tip {
     display: block;
 }
 
@@ -657,6 +657,62 @@ table {
   transform: translateY(2px);
 }
 
-ind {
-  text-indent: 40px;
+cpa {
+  color: #cc0000;
+}
+
+su {
+  color: #8a212b;
+}
+
+sa {
+  color: #e59900;
+}
+
+dpa {
+  color: #56add0;
+}
+
+scp {
+  color: #ffac07;
+}
+
+ga {
+  color: #007000;
+}
+
+ba {
+
+}
+
+nlp {
+
+}
+
+ulcpa {
+
+}
+
+nlpa {
+
+}
+
+ncpa {
+
+}
+
+dp {
+
+}
+
+eea {
+
+}
+
+ia {
+
+}
+
+ap {
+
 }
