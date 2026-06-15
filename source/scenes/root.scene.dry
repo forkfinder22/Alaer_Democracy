@@ -15,18 +15,233 @@ go-to: start_menu_2
 
 @start
 
-- @startB: Start
+Information:
 
-@startB
+CPA: The Communist Party of Alär. Follows Zhyetovism, similar to Earth's Marxism-Leninism. Can switch to Stasio-ism (Italian Left Communism), or Mitterism (Right-Communsim). <br>
+    Under Stasio-ism, the CPA will refuse to enter government, unless it is a United Front between them and the Socialists, and only if the alternative would be a Far-Right Minority of the NCPA and allied parties. The CPA's main goal under Stasio-ism is to build up the strength of their Paramilitary, crush the right-wing Paramilitaries, and start the Revolution
+    Under Zhyetovism, the CPA will seek to enter government in a coalition with the Leftist parties, and possibly the Greens or Social Catholics, while building up their paramilitary. If it becomes clear that they will not be able to enter government after 4-5 elections where they have a stagnant or decreasing vote, they will attempt to launch the revolution. Their main goal while in government is to allow themselves to influence the military, police, and build up their paramilitary, while serving as a "watchdog" against right-wing backsliding for the other parties in govenrment. While out of government, they will seek to sow dissent within the Right-wing parties and their support bases, while building up their paramilitary <br>
+    Under Mitterism, the CPA will seek to enter government in a coalition with the Leftist parties, and the Green and Social Catholics, if possible. They will not focus on their paramilitary at all if they are in government, and will overall attempt to transition to communism through reformist means, but if a far-right coalition emerges, they will start the revolution. They will attempt to build up their military and gain as much support among Young people as possible. <br><br>
+SU: The Syndicalists-Unionists. Follows Hallism, similar to Earth's IWW Syndicalism. Can switch to Littinkism (Right Syndicalism), Tarragonism (Revolutionary Unionism), or O'Morranism (Radical Democratic Unionism). <br>
+    Under Tarragonism, the SU will refuse to enter government, and instead build up their union, launching the revolution when the time is right <br>
+    Under Hallism, the SU will attempt to enter govenrment with other Leftist Parties when possible, and increase Union & Workers Rights, while building up their union. They will tolerate centrist parties, but will call strikes when Right-wing parties do austerity or reduce workers rights, attempting to reduce their influence. If the union is ready, and centrists, or further right-wing parties are in govenrment, they will call a general strike, and demand that up to 40% of the Parliament and local councils seats are to be filled by the 5 unions with the most membership. If their union and party have more than the Constitutional threshold, they will convert the Democratic system into a Syndicalist system. <br>
+    Under Littinkism, the SU will never attempt to do a revolution or general strike in order to convert the Democratic system into a syndicalist one, unless the Far-Right is in power, preferring to do it Democratically, with popualr support. The SU's unions will be far more active, and some sort of strike will usually be happening acros at least one industry. They will focus heavily on increasing their Unions power, and forming a "One Big Union", in order to not conflcit with other unions
+    Under O'Morranism, the SU will attempt to have up to 33% of Parliament and Local Council seats represented by the 10 largest unions, and will stay with in the Democratic system. They like to work with all Leftist, and Centre-Left parties, as well as the Charterists, along with the moderate unions. They will do much more if the Right or Far-right gets into power, to destory as much power of those governments as it can, and can be considered a reliable ally of the pro-democratic parties
+
+- @section1: Leftists:
+- @start1: Start as the Communist Party of Alär (CPA) (Demonym: Communists)
+- @start2: Start as the Syndicalists-Unionists (SU) (Demonym: Unionists, Syndicalists)
+- @start3: Start as the Socialists of Alär (SA) (Demonym: Socialists)
+- @section2: Centre-Left:
+- @start4: Start as the Democratic Party of Alär (Demonym: Democrats)
+- @start5: Start as the Social-Catholic Party (SCP) (Demonym: Social Catholics)
+- @start6: Start as the Green Alliance (GA) (Demonym: Greens)
+- @section3: Centrists:
+- @start7: Start as the Blue Charter (BA) (Demonym: Blues, Charterists)
+- @start8: Start as the New Liberal Party (NLP) (Demonym: Liberals)
+- @section4: Centre-Right:
+- @start9: Start as the United Liberal-Conservative Party of Alär (ULCPA) (Demonym: Lib-Cons)
+- @section5: Rightists
+- @start10: Start as the National Liberal Party of Alär (NLPA) (Demonym: Nationals)
+- @start11: Start as the National Conservative Party of Alär (NCPA) (Demonym: Conservatives)
+- @section6: Others, Independents, Regionalists
+- @start12: Start as the Dular Party (DP) (Demonym: Dularists)
+- @start13: Start as the Economy and Employment Alliance (EEA) (Demonym: Workists)
+- @start14: Start as the Independent Alliance (IA) (Demonym: Independents)
+- @start15: Start as the Alärian Peasants (AP) (Demonym: Ruralists)
+
+@section1
+choose-if: never
+
+If you can read this, you probably encountered a bug.
+
+@section2
+choose-if: never
+
+If you can read this, you probably encountered a bug.
+
+@section3
+choose-if: never
+
+If you can read this, you probably encountered a bug.
+
+@section4
+choose-if: never
+
+If you can read this, you probably encountered a bug.
+
+@section5
+choose-if: never
+
+If you can read this, you probably encountered a bug.
+
+@section6
+choose-if: never
+
+If you can read this, you probably encountered a bug.
+
+@start1
+choose-if: never
 go-to: new_main
 on-arrival: {!
-
 Q.started = 1;
 Q.month = 1;
 Q.year = 0;
 Q.time = 1;
 Q.month_actions = 0;
+!}
 
+@start2
+choose-if: never
+go-to: new_main
+on-arrival: {!
+Q.started = 1;
+Q.month = 1;
+Q.year = 0;
+Q.time = 1;
+Q.month_actions = 0;
+!}
+
+@start3
+choose-if: never
+go-to: new_main
+on-arrival: {!
+Q.started = 1;
+Q.month = 1;
+Q.year = 0;
+Q.time = 1;
+Q.month_actions = 0;
+!}
+
+@start4
+choose-if: never
+go-to: new_main
+on-arrival: {!
+Q.started = 1;
+Q.month = 1;
+Q.year = 0;
+Q.time = 1;
+Q.month_actions = 0;
+!}
+
+@start5
+choose-if: never
+go-to: new_main
+on-arrival: {!
+Q.started = 1;
+Q.month = 1;
+Q.year = 0;
+Q.time = 1;
+Q.month_actions = 0;
+!}
+
+@start6
+choose-if: never
+go-to: new_main
+on-arrival: {!
+Q.started = 1;
+Q.month = 1;
+Q.year = 0;
+Q.time = 1;
+Q.month_actions = 0;
+!}
+
+@start7
+choose-if: never
+go-to: new_main
+on-arrival: {!
+Q.started = 1;
+Q.month = 1;
+Q.year = 0;
+Q.time = 1;
+Q.month_actions = 0;
+!}
+
+@start8
+choose-if: never
+go-to: new_main
+on-arrival: {!
+Q.started = 1;
+Q.month = 1;
+Q.year = 0;
+Q.time = 1;
+Q.month_actions = 0;
+!}
+
+@start9
+choose-if: never
+go-to: new_main
+on-arrival: {!
+Q.started = 1;
+Q.month = 1;
+Q.year = 0;
+Q.time = 1;
+Q.month_actions = 0;
+!}
+
+@start10
+choose-if: never
+go-to: new_main
+on-arrival: {!
+Q.started = 1;
+Q.month = 1;
+Q.year = 0;
+Q.time = 1;
+Q.month_actions = 0;
+!}
+
+@start11
+choose-if: never
+go-to: new_main
+on-arrival: {!
+Q.started = 1;
+Q.month = 1;
+Q.year = 0;
+Q.time = 1;
+Q.month_actions = 0;
+!}
+
+@start12
+choose-if: never
+go-to: new_main
+on-arrival: {!
+Q.started = 1;
+Q.month = 1;
+Q.year = 0;
+Q.time = 1;
+Q.month_actions = 0;
+!}
+
+@start13
+choose-if: never
+go-to: new_main
+on-arrival: {!
+Q.started = 1;
+Q.month = 1;
+Q.year = 0;
+Q.time = 1;
+Q.month_actions = 0;
+!}
+
+@start14
+choose-if: never
+go-to: new_main
+on-arrival: {!
+Q.started = 1;
+Q.month = 1;
+Q.year = 0;
+Q.time = 1;
+Q.month_actions = 0;
+!}
+
+@start15
+choose-if: never
+go-to: new_main
+on-arrival: {!
+Q.started = 1;
+Q.month = 1;
+Q.year = 0;
+Q.time = 1;
+Q.month_actions = 0;
 !}
 
 @new_main
