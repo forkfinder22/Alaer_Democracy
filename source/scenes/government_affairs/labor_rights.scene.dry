@@ -24,7 +24,6 @@ With control of the Labor Ministry, we can set national standards for labor. Our
 - @safety: Develop and enforce safety regulations.
 - @unemployment_insurance: Fund the unemployment insurance program.
 - @root: Do not enact any policies.
-- @easy_discard
 
 @working_hours
 view-if: working_hours < 2

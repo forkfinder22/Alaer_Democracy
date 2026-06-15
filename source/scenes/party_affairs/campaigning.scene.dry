@@ -18,7 +18,6 @@ Whether or not we are in an electoral campaign, the party is always trying to br
 - @unemployed: The unemployed, who are generally non-partisan, except in times of crisis
 - @christians: Christians, [? if party != "CREM" and party != "APP" : who typically support the CREM and APP. ?][? if party == "CREM" or party == "APP" : a traditional support base ?]
 - @root: We either don't want to or cannot campaign right now.
-- @easy_discard
 
 @workers
 subtitle: -1 resources

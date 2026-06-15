@@ -25,7 +25,6 @@ In our media and campaign materials, who should we consider as our main opponent
 - @napfp_alone: The NAPFP alone
 - @cpa_alone: The CPA alone
 - @anti_dem: The Anti-Democratic parties - The CPA and NAPFP
-- @easy_discard
 
 @far_left
 choose-if: (party != "CPA" and party != "AS-R") or (party == "AS-M" and (left_strength + cenleft_strength + cenright_strength) < right_strength) or party == "LPP" or party == "SDP" or party == "APP" or party == "CREM" or party == "NAPFP"

@@ -37,8 +37,6 @@ view-if: not last_advisor_action
 - @structure
 - @curriculum
 - @return: Do not enact any policies for now.
-- @easy_discard
-
 
 @increase_science
 title: Increase funding for scientific research.

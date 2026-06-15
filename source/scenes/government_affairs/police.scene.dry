@@ -17,7 +17,6 @@ As with the state police units and the Reichswehr, the internal police tends to 
 - @investigate_far_right: Investigate illegal activity among the far right.
 - @domestic_enemies: Investigate or ban our domestic enemies.
 - @root: Take no action for now.
-- @easy_discard
 
 @loyalty
 on-arrival: interior_police_loyalty += 0.1

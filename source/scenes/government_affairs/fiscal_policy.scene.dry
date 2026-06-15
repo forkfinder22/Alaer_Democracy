@@ -29,7 +29,6 @@ Lower-income tax rates: [+ lower_tax_rates : taxation +]
 - @regressive
 - @tariffs
 - @root: Do not change the tax system.
-- @easy_discard
 
 @raise_progressive
 subtitle: This does not change overall revenue. [? if lower_tax_rates < -5 : Lower-class tax rates are too low to cut anymore. ?] [? if upper_tax_rates > 5 : Upper-class tax rates are too high to increase. ?]
@@ -115,7 +114,6 @@ Current tariff level: [+ tariffs : taxation +]
 - @lower_tariffs
 - @fiscal_menu: Change domestic taxes instead of tariffs.
 - @root: Do not change tariffs or taxes.
-- @easy_discard
 
 @raise_tariffs
 title: Raise tariffs on imports.
