@@ -1,68 +1,6 @@
 title: Campaigning
 new-page: true
 on-arrival: month_actions += 1
-max-visits: 36
-is-card: true
-card-image: img/flags.jpg
-frequency: 100
 tags: party_affairs
 
-= Campaigning
-
-Whether or not we are in an electoral campaign, the party is always trying to broaden its voter base. Who should we focus our campaign efforts on?
-
-- @workers: The urban working class, [? if party == "CPA" or party == "AS-R" or party == "AS-M" or party == "SDP" : a traditional support base. ?][? if party == "LPP" or party == "APP" or party == "CREM" or party == "NAPFP" : a non-traditional support base. ?]
-- @middle: The middle class, [? if party == "CPA" or party == "AS-R" or party == "AS-M" or party == "SDP" : a non-traditional support base. ?][? if party == "LPP" or party == "APP" or party == "CREM" or party == "NAPFP" : a traditional support base. ?] 
-- @business: The business class, [? if party == "CPA" or party == "AS-R" or party == "AS-M" or party == "SDP" : a non-traditional support base. ?][? if party == "LPP" or party == "APP" or party == "CREM" or party == "NAPFP" : a non-traditional support base. ?]
-- @rural: Rural workers and small farmers, [? if party == "CPA" or party == "AS-R" or party == "AS-M" or party == "LPP" : a non-traditional support base. ?][? if party == "SDP" or party == "APP" or party == "CREM" or party == "NAPFP" : a traditional support base. ?]
-- @unemployed: The unemployed, who are generally non-partisan, except in times of crisis
-- @christians: Christians, [? if party != "CREM" and party != "APP" : who typically support the CREM and APP. ?][? if party == "CREM" or party == "APP" : a traditional support base ?]
-- @root: We either don't want to or cannot campaign right now.
-
-@workers
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: workers_cpa += 1.1*(1-dissent) if party == "CPA"; workers_asr += 1.5*(1-dissent) if party == "AS-R"; workers_asm += 2.5*(1-dissent) if party == "AS-M"; workers_sdp += 4*(1-dissent) if party == "SDP"; workers_lpp += 0.5*(1-dissent) if party == "LPP"; workers_app += 1.5*(1-dissent) if party == "APP"; christians_crem += 0.9*(1-dissent) if party == "CREM"; workers_napfp += 1*(1-dissent) if party == "NAPFP"; resources -= 1
-
-We have increased our campaigning among the workers. [? if unemployed >= 15: The high levels of unemployment make our campaign more difficult. ?][? if economic_plan = 1 : Adopting the [+ economic_plan_name +] plan gives us a new rallying point around which to attract workers. ?][? if party == "CPA" or party == "AS-R" or party == "AS-M" or party == "SDP" : As a party of the workers, we have an easier time appealing to this social group ?]
-
-@middle
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: middle_cpa += 1*(1-dissent) if party == "CPA"; middle_asr += 1.25*(1-dissent) if party == "AS-R"; middle_asm += 1.75*(1-dissent) if party == "AS-M"; middle_sdp += 2*(1-dissent) if party == "SDP"; middle_lpp += 1.5*(1-dissent) if party == "LPP"; middle_app += 4*(1-dissent) if party == "APP"; middle_crem += 3*(1-dissent) if party == "CREM"; middle_napfp += 1.1*(1-dissent) if party == "NAPFP"; resources -= 1
-
-We have increased our campaigning among the new middle class. [? if socialism <= 49 and peoples_party == 0: The popular antipathy towards socialism among this group makes our campaign more difficult. ?] [? if peoples_party > 0: As a people's party, we have an easier time increasing support among the middle class than before. ?]
-
-@business
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: business_cpa += 1*(1-dissent) if party == "CPA"; business_asr += 1*(1-dissent) if party == "AS-R"; business_asm += 1*(1-dissent) if party == "AS-M"; business_sdp += 2*(1-dissent) if party == "SDP"; business_lpp += 1.25*(1-dissent) if party == "LPP"; business_app += 5*(1-dissent) if party == "APP"; business_crem += 3*(1-dissent) if party == "CREM"; business_napfp += 1*(1-dissent) if party == "NAPFP"; resources -= 1
-
-We have increased our campaigning among the old middle class. [? if nationalism >= 51 and peoples_party == 0: The high levels of nationalism among this group make our campaign more difficult. ?] [? if peoples_party > 0: As a people's party, we have an easier time increasing support among the middle class than before. ?]
-
-@rural
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: rural_cpa += 1*(1-dissent) if party == "CPA"; rural_asr += 2*(1-dissent) if party == "AS-R"; rural_asr += 0.5 if party == "AS-R" and rural_asr_crem_welfare_timer > 0; rural_asm += 1*(1-dissent) if party == "AS-M"; rural_sdp += 2*(1-dissent) if party == "SDP"; rural_lpp += 0.75*(1-dissent) if party == "LPP"; rural_app += 2*(1-dissent) if party == "APP"; rural_crem += 4*(1-dissent) if party == "CREM"; rural_napfp += 1*(1-dissent) if party == "NAPFP"; resources -= 1
-
-We have increased our campaigning among farmers. [? if party == "LPP" or party == "AS-M" or party == "CPA" or party == "NAPFP": We have not historically campaigned much among the farmers, and they do not trust us. ?][? if party == "APP" or party == "AS-R" or party == "CREM" : As a rural party, we have an easier time increasing support among farmers than other parties. ?][? if rural_policy >= 2 : Our rural policies have made it easier for us to build support among farmers. ?]
-
-@unemployed
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: unemployed_cpa += 1*(1-dissent) if party == "CPA"; unemployed_asr += 2*(1-dissent) if party == "AS-R"; unemployed_asm += 3*(1-dissent) if party == "AS-M"; unemployed_sdp += 3*(1-dissent) if party == "SDP"; unemployed_lpp += 1*(1-dissent) if party == "LPP"; unemployed_app += 2*(1-dissent) if party == "APP"; unemployed_crem += 1*(1-dissent) if party == "CREM"; unemployed_napfp += 1*(1-dissent) if party == "NAPFP"; resources -= 1
-
-We have increased our campaigning among the unemployed. [? if welfare < 0: The welfare cuts and resultant poverty make our campaign more difficult, since we are associated with the government that enacted these cuts, and our campaign may even backfire. ?][? if wtb_adopted = 1 : Adopting the WTB plan gives us a new rallying point around which to attract support from the unemployed. ?]
-
-@christians
-subtitle: -1 resources
-choose-if: resources >= 1
-unavailable-subtitle: Not enough resources.
-on-arrival: christians_cpa += 1*(1-dissent) if party == "CPA"; christians_asr += 1*(1-dissent) if party == "AS-R"; christians_asm += 2*(1-dissent) if party == "AS-M"; christians_sdp += 2*(1-dissent) if party == "SDP"; christians_lpp += 0.75*(1-dissent) if party == "LPP"; christians_app += 5*(1-dissent) if party == "APP"; christians_crem += 6*(1-dissent) if party == "CREM"; christians_napfp += 1*(1-dissent) if party == "NAPFP"; resources -= 1
-
-We have increased our campaigning among Catholics.
+e
