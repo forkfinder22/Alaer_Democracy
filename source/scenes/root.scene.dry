@@ -238,6 +238,200 @@ Q.wc_crime = 0.0005 // 0.05%, fraud, scams, impersonation, etc
 
 // Immigration isn't a thing - The only country Alär knows of is itself, having annexed Dula (Where the Dulars are from) around 50 years from start.
 // Could space travel be a thing? Then immigration becomes an issue? Currently, Dular rights and similar are like Earth's Queer rights, the right to far right doesn't like them, so they lean left
+
+// Military 
+// Army
+Q.army_loyalty = 0.2
+// Thousands
+Q.army_active_strength = 250
+Q.army_reserve_srength = 400
+Q.army_active_training = 0.75
+// Calling on reserves adds the reserve amount to the military, but militancy is set to average of these two numbers
+Q.army_reserve_training = 0.13
+// Is conscription a thing?
+Q.conscription = 0
+// If so, how many (in thousands) are being conscripted per year?
+Q.conscription_rate = 0
+// Decimal % - How many have seen deployment - Declines overtime - Flat or Variable rate?
+Q.veteran_rate = 0.04
+
+// Specialised Corps, modeled off of the Marine corps
+// Administrative Corps
+// Is it formed?
+Q.admin_corps = 0
+// How many hundreds?
+Q.admin_strength = 0
+// How much militancy/training it adds - Why not just have the extra soldiers rather than corps? Corps trainign bonus is added after all buffs and debufs, meaning training cannot be reduced beyond the combined corps bonuses. Also, the militancy is pooled into one big pool, which is than multiplied by the largest militancy + 1, so slightly more militancy
+Q.admin_train_bonus = 0.01
+// Can be converted into actual soldiers? 0 - No; 1 - Yes, lowers training; 2 - Yes; 3 - Yes, increases training
+Q.admin_convert = 1
+
+// Intelligence
+Q.intel_corps = 0
+Q.intel_strength = 0
+Q.intel_train_bonus = 0.03
+Q.intel_convert = 3
+
+// Light Armor
+Q.ltar_corps = 1
+Q.ltar_strength = 10
+Q.ltar_train_bonus = 0.02
+Q.ltar_convert = 2
+
+// Medium Armor
+Q.mtar_corps = 1
+Q.mtar_strength = 1
+Q.mtar_train_bonus = 0.02
+Q.mtar_convert = 2
+
+// Heavy Armor
+Q.htar_corps = 0
+Q.htar_strength = 0
+Q.htar_train_bonus = 0.03
+Q.htar_convert = 2
+
+// Sniper/Marksman
+Q.sniper_corps = 1
+Q.sniper_strength = 5
+Q.sniper_train_bonus = 0.02
+Q.sniper_convert = 3
+
+// Machine Gun
+Q.mg_corps = 1
+Q.mg_strength = 20
+Q.mg_train_bonus = 0.02
+Q.mg_convert = 3
+
+// Mortar/Mobile artillery
+Q.ma_corps = 0
+Q.ma_strength = 0
+Q.ma_train_bonus = 0.01
+Q.ma_convert = 2
+
+// Logistics
+Q.lg_corps = 1
+Q.lg_strength = 15
+Q.lg_train_bonus = 0.06
+Q.ma_convert = 1
+
+// Medics
+Q.me_corps = 1
+Q.me_strength = 30
+Q.me_train_bonus = 0.05
+Q.me_convert = 0
+
+// Psyop
+Q.ps_corps = 0
+Q.ps_strength = 0
+Q.ps_train_bonus = 0.01
+Q.ps_convert = 1
+
+// Paratroopers
+Q.pa_corps = 0
+Q.pa_strength = 0
+Q.pa_train_bonus = 0.01
+Q.pa_convert = 3
+
+// Marines
+Q.mr_corps = 0
+Q.mr_strength = 0
+Q.mr_train_bonus = 0.01
+Q.mr_convert = 3
+
+// Terrain specialists
+Q.ts_corps = 0
+Q.ts_strength = 0
+Q.ts_train_bonus = 0.02
+Q.ts_convert = 3
+
+// Foreign intervention - Like Green Berets
+Q.fi_corps = 0
+Q.fi_strength = 0
+Q.fi_train_bonus = 0.01
+Q.fi_convert = 3
+
+// Communications
+Q.co_corps = 0
+Q.co_strength = 0
+Q.co_train_bonus = 0.01
+Q.co_convert = 1
+
+// Field Artillery 
+Q.fa_corps = 0
+Q.fa_strength = 0
+Q.fa_train_bonus = 0.01
+Q.fa_convert = 2
+
+// Training
+Q.ta_corps = 0
+Q.ta_strength = 0
+Q.ta_train_bonus = 0.01
+Q.ta_convert = 2
+
+// Military Utilities - Repairmen, Mechanics, Eletricians, so on
+Q.mu_corps = 0
+Q.mu_strength = 0
+Q.mu_train_bonus = 0.01
+Q.mu_convert = 2
+
+// Engineers
+Q.eg_corps = 0
+Q.eg_strength = 0
+Q.eg_train_bonus = 0.01
+Q.eg_convert = 2
+
+// Ordnance Maintenance - Keeping guns, bullets, explosives, safe for the user and repaired 
+Q.om_corps = 0
+Q.om_strength = 0
+Q.om_train_bonus = 0.01
+Q.om_convert = 2
+
+// Ordnance Disposal - Also provided a bonus towards civilian police training, for civilian bomb disposal
+Q.od_corps = 0
+Q.od_strength = 0
+Q.od_train_bonus = 0.01
+Q.od_convert = 2
+
+// Military Translators
+Q.mt_corps = 0
+Q.mt_strength = 0
+Q.mt_train_bonus = 0.01
+Q.mt_convert = 2
+
+// Supply corps - People who deal with buying the weaponry from companies
+Q.sc_corps = 0
+Q.sc_strength = 0
+Q.sc_train_bonus = 0.01
+Q.sc_convert = 2
+
+// Recruiting - Passively increases military strength - And budget cost!
+Q.re_corps = 0
+Q.re_strength = 0
+Q.re_train_bonus = 0.01
+Q.re_convert = 2
+
+// Band - Primarily for moral and such
+Q.ba_corps = 0
+Q.ba_strength = 0
+Q.ba_train_bonus = 0.01
+Q.ba_convert = 2
+
+// Chemical, Biological, and Nuclear Disposal and Coordination - Deals with civilian disposal of dangerous Chemical, Biological, and Nuclear things, as well as protecting, storing, and using the weapons of these natures that the gvmnt has 
+Q.cbm_corps = 0
+Q.cbn_strength = 0
+Q.cbn_train_bonus = 0.01
+Q.cbn_convert = 2
+
+// Military police - Incresse sloyalty like band
+Q.mp_corps = 0
+Q.mp_strength = 0
+Q.mp_train_bonus = 0.01
+Q.mp_convert = 2
+
+// Navy
+// Air Force
+
+
 !}
 
 @startsu
