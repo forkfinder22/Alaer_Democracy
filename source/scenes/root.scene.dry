@@ -569,6 +569,333 @@ Q.unemployment = 3;
 Q.budgetgrowth = 5;
 Q.budgetdecr = 4;
 Q.budget = 2;
+
+//I think I made it so that it is just workers, rural, and middle for taxes - Dulars, catholics, unemployed, are split across these, middle is technically middle and upper classes. Business taxes is budget per 1 billion profit from industry.
+Q.worker_taxes = 1;
+Q.rural_taxes = 1;
+Q.middle_taxes = 2;
+Q.business_taxes = 1;
+
+// industry revenue, expenses, in billions. every 1 billion revenue - expenses should roughly equal 1 budget from taxes
+// What should the biggest industry be? Lets go with oil. Real estate shoudn't be an industry, but soemthing you can start taxing
+Q.oil_expenses = 0.200;
+Q.oil_revenue = 1.200;
+Q.oil_profit = 1.000; // Provides 1 budget
+Q.metal_expenses = 0.300;
+Q.metal_revenue = 1.100;
+Q.metal_profit = 0.800; // No budget, despite the revvenue being higher than 1000, becuase of expenses
+Q.resources_expenses = 1.300;
+Q.resources_revenue = 2.000;
+Q.resources_profit = 0.700;
+Q.vehicles_expenses = 2.000;
+Q.vehicles_revenue = 2.900;
+Q.vehicles_profit = 0.900; // Vehicles include cars, trains, planes, etc
+Q.insurance_expenses = 0.200;
+Q.insurance_revenue = 0.600;
+Q.insurance_profit = 0.400;
+Q.tech_science_expenses = 0.700;
+Q.tech_science_revenue = 1.200;
+Q.tech_science_profit = 0.500;
+
+// Police
+// Loyalty - Percent - 1 being 100%
+Q.national_police_loyalty = 0.5;
+Q.state1_police_loyalty = 0.5;
+Q.state2_police_loyalty = 0.5;
+Q.state3_police_loyalty = 0.5;
+Q.state4_police_loyalty = 0.5;
+Q.state5_police_loyalty = 0.5;
+Q.state6_police_loyalty = 0.5;
+Q.state7_police_loyalty = 0.5;
+Q.state8_police_loyalty = 0.5;
+Q.state9_police_loyalty = 0.5;
+Q.state10_police_loyalty = 0.5;
+Q.state11_police_loyalty = 0.5;
+Q.state12_police_loyalty = 0.5;
+Q.state13_police_loyalty = 0.5;
+Q.state14_police_loyalty = 0.5;
+Q.state15_police_loyalty = 0.5;
+
+// Strength
+Q.national_police_strength = 50000;
+Q.state1_police_strength = 2500;
+Q.state2_police_strength = 2500;
+Q.state3_police_strength = 2500;
+Q.state4_police_strength = 2500;
+Q.state5_police_strength = 2500;
+Q.state6_police_strength = 2500;
+Q.state7_police_strength = 2500;
+Q.state8_police_strength = 2500;
+Q.state9_police_strength = 2500;
+Q.state10_police_strength = 2500;
+Q.state11_police_strength = 2500;
+Q.state12_police_strength = 2500;
+Q.state13_police_strength = 2500;
+Q.state14_police_strength = 2500;
+Q.state15_police_strength = 2500;
+
+// Special Police
+Q.special_police = 0;
+Q.special_police_name = "Not Formed";
+Q.special_police_loyalty = "Not Formed";
+Q.special_police_strength = "Not Formed";
+Q.special_police_training = "Not Formed";
+
+// Training & Equipment - Multiplies strength
+Q.national_police_training = 0.2;
+Q.state1_police_training = 0.1;
+Q.state2_police_training = 0.1;
+Q.state3_police_training = 0.1;
+Q.state4_police_training = 0.1;
+Q.state5_police_training = 0.1;
+Q.state6_police_training = 0.1;
+Q.state7_police_training = 0.1;
+Q.state8_police_training = 0.1;
+Q.state9_police_training = 0.1;
+Q.state10_police_training = 0.1;
+Q.state11_police_training = 0.1;
+Q.state12_police_training = 0.1;
+Q.state13_police_training = 0.1;
+Q.state14_police_training = 0.1;
+Q.state15_police_training = 0.1;
+
+// Percent that will not abuse their power, take bribes, etc - 1 being 100%
+Q.national_police_ethics = 0.3;
+Q.state1_police_ethics = 0.25;
+Q.state2_police_ethics = 0.25;
+Q.state3_police_ethics = 0.25;
+Q.state4_police_ethics = 0.25;
+Q.state5_police_ethics = 0.25;
+Q.state6_police_ethics = 0.25;
+Q.state7_police_ethics = 0.25;
+Q.state8_police_ethics = 0.25;
+Q.state9_police_ethics = 0.25;
+Q.state10_police_ethics = 0.25;
+Q.state11_police_ethics = 0.25;
+Q.state12_police_ethics = 0.25;
+Q.state13_police_ethics = 0.25;
+Q.state14_police_ethics = 0.25;
+Q.state15_police_ethics = 0.25;
+
+// Crime - Violent, Nonviolent, White Collar - Percent of the population that does each - 1 being 100%
+Q.nv_crime = 0.03; // 3%, drunk driving, illegal drugs, shoplifting, etc
+Q.v_crime = 0.001; // 0.1%, muggings, murders, etc
+Q.wc_crime = 0.0005; // 0.05%, fraud, scams, impersonation, etc
+
+// Immigration isn't a thing - The only country Alär knows of is itself, having annexed Dula (Where the Dulars are from) around 50 years from start.
+// Could space travel be a thing? Then immigration becomes an issue? Currently, Dular rights and similar are like Earth's Queer rights, the right to far right doesn't like them, so they lean left
+
+// Military 
+// Army
+Q.army_loyalty = 0.2;
+// Thousands
+Q.army_active_strength = 250;
+Q.army_reserve_srength = 400;
+Q.army_active_training = 0.75;
+// Calling on reserves adds the reserve amount to the military, but militancy is set to average of these two numbers
+Q.army_reserve_training = 0.13;
+// Is conscription a thing?
+Q.conscription = 0;
+// If so, how many (in thousands) are being conscripted per year?
+Q.conscription_rate = 0;
+// Decimal % - How many have seen deployment - Declines overtime - Flat or Variable rate?
+Q.veteran_rate = 0.04;
+
+// Specialised Corps, modeled off of the Marine corps
+// Administrative Corps
+// Is it formed?
+Q.admin_corps = 0;
+// How many hundreds?
+Q.admin_strength = 0;
+// How much militancy/training it adds - Why not just have the extra soldiers rather than corps? Corps trainign bonus is added after all buffs and debufs, meaning training cannot be reduced beyond the combined corps bonuses. Also, the militancy is pooled into one big pool, which is than multiplied by the largest militancy + 1, so slightly more militancy
+Q.admin_train_bonus = 0.01;
+// Can be converted into actual soldiers? 0 - No; 1 - Yes, lowers training; 2 - Yes; 3 - Yes, increases training
+Q.admin_convert = 1;
+
+// Intelligence
+Q.intel_corps = 0;
+Q.intel_strength = 0;
+Q.intel_train_bonus = 0.03;
+Q.intel_convert = 3;
+
+// Light Armor
+Q.ltar_corps = 1;
+Q.ltar_strength = 10;
+Q.ltar_train_bonus = 0.02;
+Q.ltar_convert = 2;
+
+// Medium Armor
+Q.mtar_corps = 1;
+Q.mtar_strength = 1;
+Q.mtar_train_bonus = 0.02;
+Q.mtar_convert = 2;
+
+// Heavy Armor
+Q.htar_corps = 0;
+Q.htar_strength = 0;
+Q.htar_train_bonus = 0.03;
+Q.htar_convert = 2;
+
+// Sniper/Marksman
+Q.sniper_corps = 1;
+Q.sniper_strength = 5;
+Q.sniper_train_bonus = 0.02;
+Q.sniper_convert = 3;
+
+// Machine Gun
+Q.mg_corps = 1;
+Q.mg_strength = 20;
+Q.mg_train_bonus = 0.02;
+Q.mg_convert = 3;
+
+// Mortar/Mobile artillery
+Q.ma_corps = 0;
+Q.ma_strength = 0;
+Q.ma_train_bonus = 0.01;
+Q.ma_convert = 2;
+
+// Logistics
+Q.lg_corps = 1;
+Q.lg_strength = 15;
+Q.lg_train_bonus = 0.06;
+Q.ma_convert = 1;
+
+// Medics
+Q.me_corps = 1;
+Q.me_strength = 30;
+Q.me_train_bonus = 0.05;
+Q.me_convert = 0;
+
+// Psyop
+Q.ps_corps = 0;
+Q.ps_strength = 0;
+Q.ps_train_bonus = 0.01;
+Q.ps_convert = 1;
+
+// Paratroopers
+Q.pa_corps = 0;
+Q.pa_strength = 0;
+Q.pa_train_bonus = 0.01;
+Q.pa_convert = 3;
+
+// Marines
+Q.mr_corps = 0;
+Q.mr_strength = 0;
+Q.mr_train_bonus = 0.01;
+Q.mr_convert = 3;
+
+// Terrain specialists
+Q.ts_corps = 0;
+Q.ts_strength = 0;
+Q.ts_train_bonus = 0.02;
+Q.ts_convert = 3;
+
+// Foreign intervention - Like Green Berets
+Q.fi_corps = 0;
+Q.fi_strength = 0;
+Q.fi_train_bonus = 0.01;
+Q.fi_convert = 3;
+
+// Communications
+Q.co_corps = 0;
+Q.co_strength = 0;
+Q.co_train_bonus = 0.04;
+Q.co_convert = 1;
+
+// Field Artillery 
+Q.fa_corps = 0;
+Q.fa_strength = 0;
+Q.fa_train_bonus = 0.02;
+Q.fa_convert = 2;
+
+// Training
+Q.ta_corps = 1;
+Q.ta_strength = 25;
+Q.ta_train_bonus = 0.05;
+Q.ta_convert = 2;
+
+// Military Utilities - Repairmen, Mechanics, Eletricians, so on
+Q.mu_corps = 0;
+Q.mu_strength = 0;
+Q.mu_train_bonus = 0.03;
+Q.mu_convert = 1;
+
+// Engineers
+Q.eg_corps = 0;
+Q.eg_strength = 0;
+Q.eg_train_bonus = 0.03;
+Q.eg_convert = 2;
+
+// Ordnance Maintenance - Keeping guns, bullets, explosives, safe for the user and repaired 
+Q.om_corps = 0;
+Q.om_strength = 0;
+Q.om_train_bonus = 0.03;
+Q.om_convert = 2;
+
+// Ordnance Disposal - Also provided a bonus towards civilian police training, for civilian bomb disposal
+Q.od_corps = 0;
+Q.od_strength = 0;
+Q.od_train_bonus = 0.02;
+Q.od_convert = 3;
+
+// Military Translators
+Q.mt_corps = 0;
+Q.mt_strength = 0;
+Q.mt_train_bonus = 0.01;
+Q.mt_convert = 2;
+
+// Supply corps - People who deal with buying the weaponry from companies
+Q.sc_corps = 0;
+Q.sc_strength = 0;
+Q.sc_train_bonus = 0.01;
+Q.sc_convert = 0;
+
+// Recruiting - Passively increases military strength - And budget cost!
+Q.re_corps = 0;
+Q.re_strength = 0;
+Q.re_train_bonus = 0.02;
+Q.re_convert = 1;
+
+// Band - Primarily for moral and such
+Q.ba_corps = 0;
+Q.ba_strength = 0;
+Q.ba_train_bonus = 0.00;
+Q.ba_convert = 1;
+
+// Chemical, Biological, and Nuclear Disposal and Coordination - Deals with civilian disposal of dangerous Chemical, Biological, and Nuclear things, as well as protecting, storing, and using the weapons of these natures that the gvmnt has 
+Q.cbm_corps = 0;
+Q.cbn_strength = 0;
+Q.cbn_train_bonus = 0.01;
+Q.cbn_convert = 3;
+
+// Military police - Incresse sloyalty like band
+Q.mp_corps = 0;
+Q.mp_strength = 0;
+Q.mp_train_bonus = 0.01;
+Q.mp_convert = 2;
+
+// Navy
+Q.navy_loyalty = 0.35;
+Q.navy_strength = 50;
+Q.navy_training = 0.5;
+Q.veteran_rate = 0.01;
+Q.submarines = 10;
+Q.small_vessels = 28;
+Q.medium_vessels = 6;
+Q.large_veseels = 14;
+Q.carriers = 2;
+Q.unarmed_vessels = 170;
+
+// Air Force
+Q.air_loyalty = 0.5;
+Q.air_strength = 25;
+Q.air_training = 0.9;
+Q.veteran_rate = 0.07;
+Q.bombers = 110;
+Q.fighters = 160;
+Q.patrol_aircraft = 230;
+Q.uavs = 450;
+
 !}
 
 @startdpa
@@ -624,6 +951,332 @@ Q.unemployment = 3;
 Q.budgetgrowth = 5;
 Q.budgetdecr = 4;
 Q.budget = 2;
+
+//I think I made it so that it is just workers, rural, and middle for taxes - Dulars, catholics, unemployed, are split across these, middle is technically middle and upper classes. Business taxes is budget per 1 billion profit from industry.
+Q.worker_taxes = 1;
+Q.rural_taxes = 1;
+Q.middle_taxes = 2;
+Q.business_taxes = 1;
+
+// industry revenue, expenses, in billions. every 1 billion revenue - expenses should roughly equal 1 budget from taxes
+// What should the biggest industry be? Lets go with oil. Real estate shoudn't be an industry, but soemthing you can start taxing
+Q.oil_expenses = 0.200;
+Q.oil_revenue = 1.200;
+Q.oil_profit = 1.000; // Provides 1 budget
+Q.metal_expenses = 0.300;
+Q.metal_revenue = 1.100;
+Q.metal_profit = 0.800; // No budget, despite the revvenue being higher than 1000, becuase of expenses
+Q.resources_expenses = 1.300;
+Q.resources_revenue = 2.000;
+Q.resources_profit = 0.700;
+Q.vehicles_expenses = 2.000;
+Q.vehicles_revenue = 2.900;
+Q.vehicles_profit = 0.900; // Vehicles include cars, trains, planes, etc
+Q.insurance_expenses = 0.200;
+Q.insurance_revenue = 0.600;
+Q.insurance_profit = 0.400;
+Q.tech_science_expenses = 0.700;
+Q.tech_science_revenue = 1.200;
+Q.tech_science_profit = 0.500;
+
+// Police
+// Loyalty - Percent - 1 being 100%
+Q.national_police_loyalty = 0.5;
+Q.state1_police_loyalty = 0.5;
+Q.state2_police_loyalty = 0.5;
+Q.state3_police_loyalty = 0.5;
+Q.state4_police_loyalty = 0.5;
+Q.state5_police_loyalty = 0.5;
+Q.state6_police_loyalty = 0.5;
+Q.state7_police_loyalty = 0.5;
+Q.state8_police_loyalty = 0.5;
+Q.state9_police_loyalty = 0.5;
+Q.state10_police_loyalty = 0.5;
+Q.state11_police_loyalty = 0.5;
+Q.state12_police_loyalty = 0.5;
+Q.state13_police_loyalty = 0.5;
+Q.state14_police_loyalty = 0.5;
+Q.state15_police_loyalty = 0.5;
+
+// Strength
+Q.national_police_strength = 50000;
+Q.state1_police_strength = 2500;
+Q.state2_police_strength = 2500;
+Q.state3_police_strength = 2500;
+Q.state4_police_strength = 2500;
+Q.state5_police_strength = 2500;
+Q.state6_police_strength = 2500;
+Q.state7_police_strength = 2500;
+Q.state8_police_strength = 2500;
+Q.state9_police_strength = 2500;
+Q.state10_police_strength = 2500;
+Q.state11_police_strength = 2500;
+Q.state12_police_strength = 2500;
+Q.state13_police_strength = 2500;
+Q.state14_police_strength = 2500;
+Q.state15_police_strength = 2500;
+
+// Special Police
+Q.special_police = 0;
+Q.special_police_name = "Not Formed";
+Q.special_police_loyalty = "Not Formed";
+Q.special_police_strength = "Not Formed";
+Q.special_police_training = "Not Formed";
+
+// Training & Equipment - Multiplies strength
+Q.national_police_training = 0.2;
+Q.state1_police_training = 0.1;
+Q.state2_police_training = 0.1;
+Q.state3_police_training = 0.1;
+Q.state4_police_training = 0.1;
+Q.state5_police_training = 0.1;
+Q.state6_police_training = 0.1;
+Q.state7_police_training = 0.1;
+Q.state8_police_training = 0.1;
+Q.state9_police_training = 0.1;
+Q.state10_police_training = 0.1;
+Q.state11_police_training = 0.1;
+Q.state12_police_training = 0.1;
+Q.state13_police_training = 0.1;
+Q.state14_police_training = 0.1;
+Q.state15_police_training = 0.1;
+
+// Percent that will not abuse their power, take bribes, etc - 1 being 100%
+Q.national_police_ethics = 0.3;
+Q.state1_police_ethics = 0.25;
+Q.state2_police_ethics = 0.25;
+Q.state3_police_ethics = 0.25;
+Q.state4_police_ethics = 0.25;
+Q.state5_police_ethics = 0.25;
+Q.state6_police_ethics = 0.25;
+Q.state7_police_ethics = 0.25;
+Q.state8_police_ethics = 0.25;
+Q.state9_police_ethics = 0.25;
+Q.state10_police_ethics = 0.25;
+Q.state11_police_ethics = 0.25;
+Q.state12_police_ethics = 0.25;
+Q.state13_police_ethics = 0.25;
+Q.state14_police_ethics = 0.25;
+Q.state15_police_ethics = 0.25;
+
+// Crime - Violent, Nonviolent, White Collar - Percent of the population that does each - 1 being 100%
+Q.nv_crime = 0.03; // 3%, drunk driving, illegal drugs, shoplifting, etc
+Q.v_crime = 0.001; // 0.1%, muggings, murders, etc
+Q.wc_crime = 0.0005; // 0.05%, fraud, scams, impersonation, etc
+
+// Immigration isn't a thing - The only country Alär knows of is itself, having annexed Dula (Where the Dulars are from) around 50 years from start.
+// Could space travel be a thing? Then immigration becomes an issue? Currently, Dular rights and similar are like Earth's Queer rights, the right to far right doesn't like them, so they lean left
+
+// Military 
+// Army
+Q.army_loyalty = 0.2;
+// Thousands
+Q.army_active_strength = 250;
+Q.army_reserve_srength = 400;
+Q.army_active_training = 0.75;
+// Calling on reserves adds the reserve amount to the military, but militancy is set to average of these two numbers
+Q.army_reserve_training = 0.13;
+// Is conscription a thing?
+Q.conscription = 0;
+// If so, how many (in thousands) are being conscripted per year?
+Q.conscription_rate = 0;
+// Decimal % - How many have seen deployment - Declines overtime - Flat or Variable rate?
+Q.veteran_rate = 0.04;
+
+// Specialised Corps, modeled off of the Marine corps
+// Administrative Corps
+// Is it formed?
+Q.admin_corps = 0;
+// How many hundreds?
+Q.admin_strength = 0;
+// How much militancy/training it adds - Why not just have the extra soldiers rather than corps? Corps trainign bonus is added after all buffs and debufs, meaning training cannot be reduced beyond the combined corps bonuses. Also, the militancy is pooled into one big pool, which is than multiplied by the largest militancy + 1, so slightly more militancy
+Q.admin_train_bonus = 0.01;
+// Can be converted into actual soldiers? 0 - No; 1 - Yes, lowers training; 2 - Yes; 3 - Yes, increases training
+Q.admin_convert = 1;
+
+// Intelligence
+Q.intel_corps = 0;
+Q.intel_strength = 0;
+Q.intel_train_bonus = 0.03;
+Q.intel_convert = 3;
+
+// Light Armor
+Q.ltar_corps = 1;
+Q.ltar_strength = 10;
+Q.ltar_train_bonus = 0.02;
+Q.ltar_convert = 2;
+
+// Medium Armor
+Q.mtar_corps = 1;
+Q.mtar_strength = 1;
+Q.mtar_train_bonus = 0.02;
+Q.mtar_convert = 2;
+
+// Heavy Armor
+Q.htar_corps = 0;
+Q.htar_strength = 0;
+Q.htar_train_bonus = 0.03;
+Q.htar_convert = 2;
+
+// Sniper/Marksman
+Q.sniper_corps = 1;
+Q.sniper_strength = 5;
+Q.sniper_train_bonus = 0.02;
+Q.sniper_convert = 3;
+
+// Machine Gun
+Q.mg_corps = 1;
+Q.mg_strength = 20;
+Q.mg_train_bonus = 0.02;
+Q.mg_convert = 3;
+
+// Mortar/Mobile artillery
+Q.ma_corps = 0;
+Q.ma_strength = 0;
+Q.ma_train_bonus = 0.01;
+Q.ma_convert = 2;
+
+// Logistics
+Q.lg_corps = 1;
+Q.lg_strength = 15;
+Q.lg_train_bonus = 0.06;
+Q.ma_convert = 1;
+
+// Medics
+Q.me_corps = 1;
+Q.me_strength = 30;
+Q.me_train_bonus = 0.05;
+Q.me_convert = 0;
+
+// Psyop
+Q.ps_corps = 0;
+Q.ps_strength = 0;
+Q.ps_train_bonus = 0.01;
+Q.ps_convert = 1;
+
+// Paratroopers
+Q.pa_corps = 0;
+Q.pa_strength = 0;
+Q.pa_train_bonus = 0.01;
+Q.pa_convert = 3;
+
+// Marines
+Q.mr_corps = 0;
+Q.mr_strength = 0;
+Q.mr_train_bonus = 0.01;
+Q.mr_convert = 3;
+
+// Terrain specialists
+Q.ts_corps = 0;
+Q.ts_strength = 0;
+Q.ts_train_bonus = 0.02;
+Q.ts_convert = 3;
+
+// Foreign intervention - Like Green Berets
+Q.fi_corps = 0;
+Q.fi_strength = 0;
+Q.fi_train_bonus = 0.01;
+Q.fi_convert = 3;
+
+// Communications
+Q.co_corps = 0;
+Q.co_strength = 0;
+Q.co_train_bonus = 0.04;
+Q.co_convert = 1;
+
+// Field Artillery 
+Q.fa_corps = 0;
+Q.fa_strength = 0;
+Q.fa_train_bonus = 0.02;
+Q.fa_convert = 2;
+
+// Training
+Q.ta_corps = 1;
+Q.ta_strength = 25;
+Q.ta_train_bonus = 0.05;
+Q.ta_convert = 2;
+
+// Military Utilities - Repairmen, Mechanics, Eletricians, so on
+Q.mu_corps = 0;
+Q.mu_strength = 0;
+Q.mu_train_bonus = 0.03;
+Q.mu_convert = 1;
+
+// Engineers
+Q.eg_corps = 0;
+Q.eg_strength = 0;
+Q.eg_train_bonus = 0.03;
+Q.eg_convert = 2;
+
+// Ordnance Maintenance - Keeping guns, bullets, explosives, safe for the user and repaired 
+Q.om_corps = 0;
+Q.om_strength = 0;
+Q.om_train_bonus = 0.03;
+Q.om_convert = 2;
+
+// Ordnance Disposal - Also provided a bonus towards civilian police training, for civilian bomb disposal
+Q.od_corps = 0;
+Q.od_strength = 0;
+Q.od_train_bonus = 0.02;
+Q.od_convert = 3;
+
+// Military Translators
+Q.mt_corps = 0;
+Q.mt_strength = 0;
+Q.mt_train_bonus = 0.01;
+Q.mt_convert = 2;
+
+// Supply corps - People who deal with buying the weaponry from companies
+Q.sc_corps = 0;
+Q.sc_strength = 0;
+Q.sc_train_bonus = 0.01;
+Q.sc_convert = 0;
+
+// Recruiting - Passively increases military strength - And budget cost!
+Q.re_corps = 0;
+Q.re_strength = 0;
+Q.re_train_bonus = 0.02;
+Q.re_convert = 1;
+
+// Band - Primarily for moral and such
+Q.ba_corps = 0;
+Q.ba_strength = 0;
+Q.ba_train_bonus = 0.00;
+Q.ba_convert = 1;
+
+// Chemical, Biological, and Nuclear Disposal and Coordination - Deals with civilian disposal of dangerous Chemical, Biological, and Nuclear things, as well as protecting, storing, and using the weapons of these natures that the gvmnt has 
+Q.cbm_corps = 0;
+Q.cbn_strength = 0;
+Q.cbn_train_bonus = 0.01;
+Q.cbn_convert = 3;
+
+// Military police - Incresse sloyalty like band
+Q.mp_corps = 0;
+Q.mp_strength = 0;
+Q.mp_train_bonus = 0.01;
+Q.mp_convert = 2;
+
+// Navy
+Q.navy_loyalty = 0.35;
+Q.navy_strength = 50;
+Q.navy_training = 0.5;
+Q.veteran_rate = 0.01;
+Q.submarines = 10;
+Q.small_vessels = 28;
+Q.medium_vessels = 6;
+Q.large_veseels = 14;
+Q.carriers = 2;
+Q.unarmed_vessels = 170;
+
+// Air Force
+Q.air_loyalty = 0.5;
+Q.air_strength = 25;
+Q.air_training = 0.9;
+Q.veteran_rate = 0.07;
+Q.bombers = 110;
+Q.fighters = 160;
+Q.patrol_aircraft = 230;
+Q.uavs = 450;
 !}
 
 @startscp
