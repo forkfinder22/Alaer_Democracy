@@ -5,7 +5,6 @@ go-to: post_event if started = 1; start_menu if started = 0
 @start_menu
 new-page: true
 go-to: start_menu_2
-on-arrival: test_var = "<nlp>NLP</nlp>"
 
 = Social Democracy: An Alternate History
 
@@ -17,8 +16,6 @@ on-arrival: test_var = "<nlp>NLP</nlp>"
 @start
 
 Information:
-
-test_var: [+ test_var +]
 
 <b> CPA: The Communist Party of Alär. Follows Zhyetovism, similar to Earth's Marxism-Leninism. Can switch to Stasio-ism (Italian Left Communism), or Mitterism (Right-Communsim). </b> <br><br><br>
     <p>Under Stasio-ism, the CPA will refuse to enter government, unless it is a United Front between them and the Socialists, and only if the alternative would be a Far-Right Minority of the NCPA and allied parties. The CPA's main goal under Stasio-ism is to build up the strength of their Paramilitary, crush the right-wing Paramilitaries, and start the Revolution </p><br><br>
