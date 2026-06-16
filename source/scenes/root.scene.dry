@@ -5,7 +5,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 @start_menu
 new-page: true
 go-to: start_menu_2
-on-arrival: test_var = "<nlp>NLP</nlp>
+on-arrival: test_var = "<nlp>NLP</nlp>"
 
 = Social Democracy: An Alternate History
 
