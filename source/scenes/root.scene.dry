@@ -353,44 +353,44 @@ Q.fi_convert = 3
 // Communications
 Q.co_corps = 0
 Q.co_strength = 0
-Q.co_train_bonus = 0.01
+Q.co_train_bonus = 0.04
 Q.co_convert = 1
 
 // Field Artillery 
 Q.fa_corps = 0
 Q.fa_strength = 0
-Q.fa_train_bonus = 0.01
+Q.fa_train_bonus = 0.02
 Q.fa_convert = 2
 
 // Training
-Q.ta_corps = 0
-Q.ta_strength = 0
-Q.ta_train_bonus = 0.01
+Q.ta_corps = 1
+Q.ta_strength = 25
+Q.ta_train_bonus = 0.05
 Q.ta_convert = 2
 
 // Military Utilities - Repairmen, Mechanics, Eletricians, so on
 Q.mu_corps = 0
 Q.mu_strength = 0
-Q.mu_train_bonus = 0.01
-Q.mu_convert = 2
+Q.mu_train_bonus = 0.03
+Q.mu_convert = 1
 
 // Engineers
 Q.eg_corps = 0
 Q.eg_strength = 0
-Q.eg_train_bonus = 0.01
+Q.eg_train_bonus = 0.03
 Q.eg_convert = 2
 
 // Ordnance Maintenance - Keeping guns, bullets, explosives, safe for the user and repaired 
 Q.om_corps = 0
 Q.om_strength = 0
-Q.om_train_bonus = 0.01
+Q.om_train_bonus = 0.03
 Q.om_convert = 2
 
 // Ordnance Disposal - Also provided a bonus towards civilian police training, for civilian bomb disposal
 Q.od_corps = 0
 Q.od_strength = 0
-Q.od_train_bonus = 0.01
-Q.od_convert = 2
+Q.od_train_bonus = 0.02
+Q.od_convert = 3
 
 // Military Translators
 Q.mt_corps = 0
@@ -402,25 +402,25 @@ Q.mt_convert = 2
 Q.sc_corps = 0
 Q.sc_strength = 0
 Q.sc_train_bonus = 0.01
-Q.sc_convert = 2
+Q.sc_convert = 0
 
 // Recruiting - Passively increases military strength - And budget cost!
 Q.re_corps = 0
 Q.re_strength = 0
-Q.re_train_bonus = 0.01
-Q.re_convert = 2
+Q.re_train_bonus = 0.02
+Q.re_convert = 1
 
 // Band - Primarily for moral and such
 Q.ba_corps = 0
 Q.ba_strength = 0
-Q.ba_train_bonus = 0.01
-Q.ba_convert = 2
+Q.ba_train_bonus = 0.00
+Q.ba_convert = 1
 
 // Chemical, Biological, and Nuclear Disposal and Coordination - Deals with civilian disposal of dangerous Chemical, Biological, and Nuclear things, as well as protecting, storing, and using the weapons of these natures that the gvmnt has 
 Q.cbm_corps = 0
 Q.cbn_strength = 0
 Q.cbn_train_bonus = 0.01
-Q.cbn_convert = 2
+Q.cbn_convert = 3
 
 // Military police - Incresse sloyalty like band
 Q.mp_corps = 0
@@ -429,8 +429,26 @@ Q.mp_train_bonus = 0.01
 Q.mp_convert = 2
 
 // Navy
-// Air Force
+Q.navy_loyalty = 0.35
+Q.navy_strength = 50
+Q.navy_training = 0.5
+Q.veteran_rate = 0.01
+Q.submarines = 10
+Q.small_vessels = 28
+Q.medium_vessels = 6
+Q.large_veseels = 14
+Q.carriers = 2
+Q.unarmed_vessels = 170
 
+// Air Force
+Q.air_loyalty = 0.5
+Q.air_strength = 25
+Q.air_training = 0.9
+Q.veteran_rate = 0.07
+Q.bombers = 110
+Q.fighters = 160
+Q.patrol_aircraft = 230
+Q.uavs = 450
 
 !}
 
