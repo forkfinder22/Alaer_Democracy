@@ -126,7 +126,7 @@ Q.old_dular = 1;
 
 Q.population_millions = 200; // Should higher population make higher taxes? Might be a bit complicated 
 Q.bd_rate = 0.01; // Multiply population by this number + 1
-Q.education_level = 0; // see... Q.displays?
+Q.education_level = 0; // -3 to +3 - nonexistent, very poor, poor, average (0), decent, very good, outstanding
 Q.inflation = 2.2; //
 Q.unemployment = 3; // young+mid+old unemployed - when this increases, the distribution should be 50% young, 35% old, 5% mid - Just based off personal experience, don't know a lot of middle aged people who don't have a job, and aren't looking for one.
 Q.budgetgrowth = 5; // Budget grows by this amount - year
@@ -150,6 +150,94 @@ Q.metal_profit = 0.800 // No budget, despite the revvenue being higher than 1000
 Q.resources_expenses = 1.300
 Q.resources_revenue = 2.000
 Q.resources_profit = 0.700
+
+// Police
+// Loyalty - Percent - 1 being 100%
+Q.national_police_loyalty = 0.5
+Q.state1_police_loyalty = 0.5
+Q.state2_police_loyalty = 0.5
+Q.state3_police_loyalty = 0.5
+Q.state4_police_loyalty = 0.5
+Q.state5_police_loyalty = 0.5
+Q.state6_police_loyalty = 0.5
+Q.state7_police_loyalty = 0.5
+Q.state8_police_loyalty = 0.5
+Q.state9_police_loyalty = 0.5
+Q.state10_police_loyalty = 0.5
+Q.state11_police_loyalty = 0.5
+Q.state12_police_loyalty = 0.5
+Q.state13_police_loyalty = 0.5
+Q.state14_police_loyalty = 0.5
+Q.state15_police_loyalty = 0.5
+
+// Strength
+Q.national_police_strength = 50000
+Q.state1_police_strength = 2500
+Q.state2_police_strength = 2500
+Q.state3_police_strength = 2500
+Q.state4_police_strength = 2500
+Q.state5_police_strength = 2500
+Q.state6_police_strength = 2500
+Q.state7_police_strength = 2500
+Q.state8_police_strength = 2500
+Q.state9_police_strength = 2500
+Q.state10_police_strength = 2500
+Q.state11_police_strength = 2500
+Q.state12_police_strength = 2500
+Q.state13_police_strength = 2500
+Q.state14_police_strength = 2500
+Q.state15_police_strength = 2500
+
+// Special Police
+Q.special_police = 0
+Q.special_police_name = "Not Formed"
+Q.special_police_loyalty = "Not Formed"
+Q.special_police_strength = "Not Formed"
+Q.special_police_training = "Not Formed"
+
+// Training & Equipment - Multiplies strength
+Q.national_police_training = 0.2
+Q.state1_police_training = 0.1
+Q.state2_police_training = 0.1
+Q.state3_police_training = 0.1
+Q.state4_police_training = 0.1
+Q.state5_police_training = 0.1
+Q.state6_police_training = 0.1
+Q.state7_police_training = 0.1
+Q.state8_police_training = 0.1
+Q.state9_police_training = 0.1
+Q.state10_police_training = 0.1
+Q.state11_police_training = 0.1
+Q.state12_police_training = 0.1
+Q.state13_police_training = 0.1
+Q.state14_police_training = 0.1
+Q.state15_police_training = 0.1
+
+// Percent that will not abuse their power, take bribes, etc - 1 being 100%
+Q.national_police_ethics = 0.3
+Q.state1_police_ethics = 0.25
+Q.state2_police_ethics = 0.25
+Q.state3_police_ethics = 0.25
+Q.state4_police_ethics = 0.25
+Q.state5_police_ethics = 0.25
+Q.state6_police_ethics = 0.25
+Q.state7_police_ethics = 0.25
+Q.state8_police_ethics = 0.25
+Q.state9_police_ethics = 0.25
+Q.state10_police_ethics = 0.25
+Q.state11_police_ethics = 0.25
+Q.state12_police_ethics = 0.25
+Q.state13_police_ethics = 0.25
+Q.state14_police_ethics = 0.25
+Q.state15_police_ethics = 0.25
+
+// Crime - Violent, Nonviolent, White Collar - Percent of the population that does each - 1 being 100%
+Q.nv_crime = 0.03 // 3%, drunk driving, illegal drugs, shoplifting, etc
+Q.v_crime = 0.001 // 0.1%, muggings, murders, etc
+Q.wc_crime = 0.0005 // 0.05%, fraud, scams, impersonation, etc
+
+// Immigration isn't a thing - The only country Alär knows of is itself, having annexed Dula (Where the Dulars are from) around 50 years from start.
+// Could space travel be a thing? Then immigration becomes an issue? Currently, Dular rights and similar are like Earth's Queer rights, the right to far right doesn't like them, so they lean left
 !}
 
 @startsu
