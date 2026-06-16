@@ -124,14 +124,32 @@ Q.young_dular = 6;
 Q.mid_dular = 1;
 Q.old_dular = 1;
 
-Q.population_millions = 200;
-Q.bd_rate = 0.01;
-Q.education_level = 0;
-Q.inflation = 2.2;
-Q.unemployment = 3;
-Q.budgetgrowth = 5;
-Q.budgetdecr = 4;
-Q.budget = 2;
+Q.population_millions = 200; // Should higher population make higher taxes? Might be a bit complicated 
+Q.bd_rate = 0.01; // Multiply population by this number + 1
+Q.education_level = 0; // see... Q.displays?
+Q.inflation = 2.2; //
+Q.unemployment = 3; // young+mid+old unemployed - when this increases, the distribution should be 50% young, 35% old, 5% mid - Just based off personal experience, don't know a lot of middle aged people who don't have a job, and aren't looking for one.
+Q.budgetgrowth = 5; // Budget grows by this amount - year
+Q.budgetdecr = 4; // Budgets decreases by this amount - year 
+Q.budget = 2; // Starter budget
+
+//I think I made it so that it is just workers, rural, and middle for taxes - Dulars, catholics, unemployed, are split across these, middle is technically middle and upper classes. Business taxes is budget per 1 billion profit from industry.
+Q.worker_taxes = 1
+Q.rural_taxes = 1
+Q.middle_taxes = 2
+Q.business_taxes = 1
+
+// industry revenue, expenses, in billions. every 1 billion revenue - expenses should roughly equal 1 budget from taxes
+// What should the biggest industry be? Lets go with oil.
+Q.oil_expenses = 0.200
+Q.oil_revenue = 1.200
+Q.oil_profit = 1.000 // Provides 1 budget
+Q.metal_expenses = 0.300
+Q.metal_revenue = 1.100
+Q.metal_profit = 0.800 // No budget, despite the revvenue being higher than 1000, becuase of expenses
+Q.resources_expenses = 1.300
+Q.resources_revenue = 2.000
+Q.resources_profit = 0.700
 !}
 
 @startsu

@@ -8,8 +8,10 @@ set-bg: img/map_2.jpg
 title: Party Affairs
 
 - #party_affairs
+- @return
 
 @govt
 title: Government Affairs
 
 - #govt_affairs
+- @return

@@ -91,30 +91,21 @@ Q.app_r = Q.app_votes;
 Q.crem_r = Q.crem_votes;
 Q.napfp_r = Q.napfp_votes;
 
-// The largest party can only be the NSDAP or the SPD.
-Q.largest_party = 'SPD';
-if (Q.nsdap_r >= Q.spd_r && Q.nsdap_r >= Q.kpd_r) {
-    Q.largest_party = 'NSDAP';
-}
-if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
-    Q.largest_party = 'KPD';
-}
-
 // coalitions
 
-Q.moderate_coalition = (Q.sdp_r + Q.lpp_r + Q.app_r)
-Q.grand_coalition = (Q.asm_r + Q.sdp_r + Q.lpp_r + Q.app_r)
-Q.democratic_coalition = ((Q.asr_r/2) + Q.sdp_r + Q.lpp_r + Q.app_r + (Q.crem_r/2))
-Q.antidemocratic_coalition = (Q.cpa_r + (Q.asr_r/2) + (Q.crem_r/2) + Q.napfp_r)
-Q.bourgeois_coalition = (Q.lpp_r + Q.app_r + Q.crem_r)
-Q.popular_front_coalition = (Q.asr_r + Q.asm_r + Q.sdp_r + Q.lpp_r)
-Q.true_popular_front_coaliton = (Q.cpa_r + Q.asr_r + Q.asm_r + Q.sdp_r + Q.lpp_r)
-Q.left_front_coalition = (Q.cpa_r + Q.asr_r + Q.asm_r)
-Q.true_left_front_coalition = (Q.cpa_r + Q.asr_r + (Q.asm_r/2))
-Q.grand_left_front_coalition = (Q.cpa_r + Q.asr_r + Q.asm_r + Q.sdp_r)
-Q.conservative_coalition = (Q.app_r + Q.crem_r)
-Q.right_coalition = (Q.app_r + Q.crem_r + Q.napfp_r)
-Q.far_right_coalition = (Q.crem_r + Q.napfp_r)
+Q.moderate_coalition = (Q.scp_r + Q.ba_r + Q.nlp_r)
+Q.grand_coalition = (Q.ga_r + Q.scp_r + Q.dpa_r + Q.ba_r + Q.nlp_r + Q.dp_r + Q.ia_r)
+Q.democratic_coalition = (Q.sa_r + Q.dpa_r + Q.scp_r + Q.ga + Q.ba + Q.nlp_r + Q.ulcpa_r + Q.dp_r + Q.ia_r + Q.ap_r)
+Q.antidemocratic_coalition = (Q.cpa_r + Q.su_r + Q.ncpa_r)
+Q.bourgeois_coalition = (Q.nlp_r + Q.nlpa_r + Q.ulcpa_r)
+Q.popular_front_coalition = (Q.cpa_r + Q.su_r + Q.sa_r + Q.dpa_r + Q.scp_r)
+Q.true_popular_front_coaliton = (Q.cpa_r + Q.sa_r + Q.su_r + Q.dpa_r + Q.scp_r + Q.ga_r)
+Q.left_front_coalition = (Q.cpa_r + Q.su_r + Q.sa_r)
+Q.true_left_front_coalition = (Q.cpa_r + Q.su_r)
+Q.grand_left_front_coalition = (Q.cpa_r + Q.su_r + Q.sa_r + Q.dpa_r)
+Q.conservative_coalition = (Q.ncpa_r + Q.nlpa_r + Q.ulcpa_r)
+Q.right_coalition = (Q.ncpa_r + Q.nlpa_r + Q.nlp_r + Q.ulcpa_r + Q.ap_r)
+Q.far_right_coalition = (Q.ncpa_r + Q.nlpa_r)
 
 !}
 
@@ -122,29 +113,33 @@ The electoral system is essentially proportional, with the proportion of Reichst
  
 **Election results:**
 
-# 1928: 30, 1930: 25, 1932: 22
 CPA: [+ cpa_r +]
 
-# 1928: 15, 1930: 15, 1932: 
-AS-R: [+ asr_r +]
+SU: [+ su_r +]
 
-# 1928: 10, 1930: 13
-AS-M: [+ asm_r +]
+SA: [+ sa_r +]
 
-# 1928: 5, 1930: 4 (as DstP)
-SDP: [+ sdp_r +]
+DPA: [+ dpa_r +]
 
-# 1928: 9, 1930: 5
-LPP: [+ lpp_r +]
+SCP: [+ scp_r +]
 
-# 1928: 14, 1930: 7
-APP: [+ app_r +]
+GA: [+ ga_r +]
 
-# 1928: 3, 1930: 18
-CREM: [+ crem_r +]
+BA: [+ ba_r +]
 
-# 1928: 9, 1930: 10
-NAPFP: [+ napfp_r +]
+NLP: [+ nlp_r +]
+
+ULCPA: [+ ulcpa_r +]
+
+NLPA: [+ nlpa_r +]
+
+NCPA: [+ ncpa_r +]
+
+DP: [+ dp_r +]
+
+IA: [+ ia_r +]
+
+AP: [+ ap_r +]
 
 **Potential coalitions:**
 
