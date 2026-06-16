@@ -1,35 +1,22 @@
 body {
-  --bg-color: #f3f3e3;
-  --border-color: #000;
-  --content-bg-color: #f3f3f3;
-  --text-color: #431;
-  --link-color: #900;
-  --link-hover-color: rgba(0, 0, 0, 0.05);
-  --unavailable-bg-color: rgba(0, 0, 0, 0.1);
-  --unavailable-color: #999;
-  --tab-bg-color: #dedede;
-  --tab-color: #ddd;
-  --tab-hover-color: #ececec;
-  --card-border-color: #ccc; 
-  --card-bg-color: #ddd;  
-  font-family: "Minion Pro", Georgia, serif;
-  background-color: var(--bg-color);
-  padding: 0;
-  line-height: 155%;
-  overflow-y: scroll;
-}
-body.dark-mode {
   --bg-color: #000;
   --border-color: #fff;
   --content-bg-color: #242424;
   --text-color: #efefef;
   --link-color: #ff8080;
   --link-hover-color: rgba(255, 255, 255, 0.06);
+  --unavailable-bg-color: rgba(221, 221, 221, 0.213);
+  --unavailable-color: #a2a2a2;
   --tab-bg-color: #555555;
   --tab-color: #505050;
   --tab-hover-color: #242424;
   --card-border-color: #4c4c4c;
   --card-bg-color: #3f3f3f;
+  font-family: "Minion Pro", Georgia, serif;
+  background-color: var(--bg-color);
+  padding: 0;
+  line-height: 155%;
+  overflow-y: scroll;
 }
 body.dark-mode #content {
   border-style: double;
