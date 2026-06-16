@@ -716,3 +716,51 @@ ia {
 ap {
   color: #226b22;
 }
+
+/* dirty way to make a ::first-letter and ::nth-letter in css */
+/* leftists | Leftist Number (X) | Lef(1) tis(2) ts(3)*/
+
+ln1 {
+  color: #cc0000;
+}
+
+ln2 {
+  color: #8a212b;
+}
+
+ln3 {
+  color: #e59900;
+}
+
+/* far-right | Far(-right) Number (X) | Far -Ri ght */
+fn1 {
+  color: #D1C371;
+}
+
+fn2 {
+  color: #7a7c52;
+}
+
+fn3 {
+  color: #0101a3;
+}
+
+/* centre-left | Social Number (X) | Cent re- left */
+
+sn1 {
+  color: #56add0;
+}
+
+sn2 {
+  color: #ffac07;
+}
+
+sn3 {
+  color: #007000;
+}
+
+/* centrists */
+/* for centre-right just use the ulcpa colors */
+/* for rightists just split it into right and ists, nlpa and ncpa respective */
+/* indpendents and others is the ia colour */
+/* regionalists is the dp colour */
