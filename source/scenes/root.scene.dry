@@ -28,26 +28,26 @@ Information:
     <p>Under O'Morranism, the SU will attempt to have up to 33% of Parliament and Local Council seats represented by the 10 largest unions, and will stay with in the Democratic system. They like to work with all Leftist, and Centre-Left parties, as well as the Charterists, along with the moderate unions. They will do much more if the Right or Far-right gets into power, to destory as much power of those governments as it can, and can be considered a reliable ally of the pro-democratic parties </p><br><br>
 
 - @section1: Leftists:
-- @start1: Start as the Communist Party of Alär (CPA) (Demonym: Communists)
-- @start2: Start as the Syndicalists-Unionists (SU) (Demonym: Unionists, Syndicalists)
-- @start3: Start as the Socialists of Alär (SA) (Demonym: Socialists)
+- @startcpa: Start as the <cpa>Communist Party of Alär</cpa> (<cpa>CPA</cpa>) (Demonym: <cpa>Communists</cpa>)
+- @startsu: Start as the <su>Syndicalists-Unionists</su> (<su>SU</su>) (Demonym: <su>Unionists</su>, <su>Syndicalists</su>)
+- @startsa: Start as the <sa>Socialists of Alär</sa> (<sa>SA</sa>) (Demonym: <sa>Socialists</sa>)
 - @section2: Centre-Left:
-- @start4: Start as the Democratic Party of Alär (DPA) (Demonym: Democrats)
-- @start5: Start as the Social-Catholic Party (SCP) (Demonym: Social Catholics)
-- @start6: Start as the Green Alliance (GA) (Demonym: Greens)
+- @startdpa: Start as the <dpa>Democratic Party of Alär</dpa> (<dpa>DPA</dpa>) (Demonym: <dpa>Democrats</dpa>)
+- @startscp: Start as the <scp>Social-Catholic Party</scp> (<scp>SCP</scp>) (Demonym: <scp>Social Catholics</scp>)
+- @startga: Start as the <ga>Green Alliance</ga> (<ga>GA</ga>) (Demonym: <ga>Greens</ga>)
 - @section3: Centrists:
-- @start7: Start as the Blue Charter (BA) (Demonym: Blues, Charterists)
-- @start8: Start as the New Liberal Party (NLP) (Demonym: Liberals)
+- @startba: Start as the <ba>Blue Charter</ba> (<ba>BA</ba>) (Demonym: <ba>Blues</ba>, <ba>Charterists</ba>)
+- @startnlp: Start as the <nlp>New Liberal Party</nlp> (<nlp>NLP</nlp>) (Demonym: <nlp>Liberals</nlp>)
 - @section4: Centre-Right:
-- @start9: Start as the United Liberal-Conservative Party of Alär (ULCPA) (Demonym: Lib-Cons)
-- @section5: Rightists
-- @start10: Start as the National Liberal Party of Alär (NLPA) (Demonym: Nationals)
-- @start11: Start as the National Conservative Party of Alär (NCPA) (Demonym: Conservatives)
-- @section6: Others, Independents, Regionalists
-- @start12: Start as the Dular Party (DP) (Demonym: Dularists)
-- @start13: Start as the Economy and Employment Alliance (EEA) (Demonym: Workists)
-- @start14: Start as the Independent Alliance (IA) (Demonym: Independents)
-- @start15: Start as the Alärian Peasants (AP) (Demonym: Ruralists)
+- @startulcpa: Start as the <ulcpa>United Liberal-Conservative Party of Alär</ulcpa> (<ulcpa>ULCPA</ulcpa>) (Demonym: <ulcpa>Lib-Cons</ulcpa>)
+- @section5: Rightists:
+- @startnlpa: Start as the <nlpa>National Liberal Party of Alär</nlpa> (<nlpa>NLPA</nlpa>) (Demonym: <nlpa>Nationals</nlpa>)
+- @startncpa: Start as the <ncpa>National Conservative Party of Alär</ncpa> (<ncpa>NCPA</ncpa>) (Demonym: <ncpa>Conservatives</ncpa>)
+- @section6: Others, Independents, Regionalists:
+- @startdp: Start as the <dp>Dular Party</dp> (<dp>DP</dp>) (Demonym: <dp>Dularists</dp>)
+- @starteea: Start as the <eea>Economy and Employment Alliance</eea> (<eea>EEA</eea>) (Demonym: <eea>Workists</eea>)
+- @startia: Start as the <ia>Independent Alliance</ia> (<ia>IA</ia>) (Demonym: <ia>Independents</ia>)
+- @startap: Start as the <ap>Alärian Peasants</ap> (<ap>AP</ap>) (Demonym: <ap>Ruralists</ap>)
 
 @section1
 choose-if: never
@@ -79,7 +79,7 @@ choose-if: never
 
 If you can read this, you probably encountered a bug.
 
-@start1
+@startcpa
 choose-if: never
 go-to: new_main
 on-arrival: {!
@@ -88,9 +88,51 @@ Q.month = 1;
 Q.year = 0;
 Q.time = 1;
 Q.month_actions = 0;
+
+Q.party = "CPA";
+Q.president_party = "EEA";
+Q.president = "";
+Q.factions = [''];
+Q.parliament_speaker = "";
+Q.parliament_speaker_party = "";
+Q.head_parliament = "";
+Q.head_parliament_party = "";
+
+Q.young_workers = 14;
+Q.mid_workers = 10;
+Q.old_workers = 7;
+
+Q.young_middle = 4;
+Q.mid_middle = 7;
+Q.old_middle = 4;
+
+Q.young_rural = 5;
+Q.mid_rural = 12;
+Q.old_rural = 7;
+
+Q.young_cath = 6;
+Q.mid_cath = 10;
+Q.old_cath = 3;
+
+Q.young_unemployed = 2;
+Q.mid_unemployed = 0;
+Q.old_unemployed = 1;
+
+Q.young_dular = 6;
+Q.mid_dular = 1;
+Q.old_dular = 1;
+
+Q.population_millions = 200;
+Q.bd_rate = 0.01;
+Q.education_level = 0;
+Q.inflation = 2.2;
+Q.unemployment = 3;
+Q.budgetgrowth = 5;
+Q.budgetdecr = 4;
+Q.budget = 2;
 !}
 
-@start2
+@startsu
 choose-if: never
 go-to: new_main
 on-arrival: {!
@@ -99,9 +141,51 @@ Q.month = 1;
 Q.year = 0;
 Q.time = 1;
 Q.month_actions = 0;
+
+Q.party = "SU";
+Q.president_party = "EEA";
+Q.president = "";
+Q.factions = [''];
+Q.parliament_speaker = "";
+Q.parliament_speaker_party = "";
+Q.head_parliament = "";
+Q.head_parliament_party = "";
+
+Q.young_workers = 14;
+Q.mid_workers = 10;
+Q.old_workers = 7;
+
+Q.young_middle = 4;
+Q.mid_middle = 7;
+Q.old_middle = 4;
+
+Q.young_rural = 5;
+Q.mid_rural = 12;
+Q.old_rural = 7;
+
+Q.young_cath = 6;
+Q.mid_cath = 10;
+Q.old_cath = 3;
+
+Q.young_unemployed = 2;
+Q.mid_unemployed = 0;
+Q.old_unemployed = 1;
+
+Q.young_dular = 6;
+Q.mid_dular = 1;
+Q.old_dular = 1;
+
+Q.population_millions = 200;
+Q.bd_rate = 0.01;
+Q.education_level = 0;
+Q.inflation = 2.2;
+Q.unemployment = 3;
+Q.budgetgrowth = 5;
+Q.budgetdecr = 4;
+Q.budget = 2;
 !}
 
-@start3
+@startsa
 choose-if: never
 go-to: new_main
 on-arrival: {!
@@ -110,9 +194,51 @@ Q.month = 1;
 Q.year = 0;
 Q.time = 1;
 Q.month_actions = 0;
+
+Q.party = "SA";
+Q.president_party = "EEA";
+Q.president = "";
+Q.factions = [''];
+Q.parliament_speaker = "";
+Q.parliament_speaker_party = "";
+Q.head_parliament = "";
+Q.head_parliament_party = "";
+
+Q.young_workers = 14;
+Q.mid_workers = 10;
+Q.old_workers = 7;
+
+Q.young_middle = 4;
+Q.mid_middle = 7;
+Q.old_middle = 4;
+
+Q.young_rural = 5;
+Q.mid_rural = 12;
+Q.old_rural = 7;
+
+Q.young_cath = 6;
+Q.mid_cath = 10;
+Q.old_cath = 3;
+
+Q.young_unemployed = 2;
+Q.mid_unemployed = 0;
+Q.old_unemployed = 1;
+
+Q.young_dular = 6;
+Q.mid_dular = 1;
+Q.old_dular = 1;
+
+Q.population_millions = 200;
+Q.bd_rate = 0.01;
+Q.education_level = 0;
+Q.inflation = 2.2;
+Q.unemployment = 3;
+Q.budgetgrowth = 5;
+Q.budgetdecr = 4;
+Q.budget = 2;
 !}
 
-@start4
+@startdpa
 choose-if: never
 go-to: new_main
 on-arrival: {!
@@ -121,9 +247,51 @@ Q.month = 1;
 Q.year = 0;
 Q.time = 1;
 Q.month_actions = 0;
+
+Q.party = "DPA";
+Q.president_party = "EEA";
+Q.president = "";
+Q.factions = [''];
+Q.parliament_speaker = "";
+Q.parliament_speaker_party = "";
+Q.head_parliament = "";
+Q.head_parliament_party = "";
+
+Q.young_workers = 14;
+Q.mid_workers = 10;
+Q.old_workers = 7;
+
+Q.young_middle = 4;
+Q.mid_middle = 7;
+Q.old_middle = 4;
+
+Q.young_rural = 5;
+Q.mid_rural = 12;
+Q.old_rural = 7;
+
+Q.young_cath = 6;
+Q.mid_cath = 10;
+Q.old_cath = 3;
+
+Q.young_unemployed = 2;
+Q.mid_unemployed = 0;
+Q.old_unemployed = 1;
+
+Q.young_dular = 6;
+Q.mid_dular = 1;
+Q.old_dular = 1;
+
+Q.population_millions = 200;
+Q.bd_rate = 0.01;
+Q.education_level = 0;
+Q.inflation = 2.2;
+Q.unemployment = 3;
+Q.budgetgrowth = 5;
+Q.budgetdecr = 4;
+Q.budget = 2;
 !}
 
-@start5
+@startscp
 choose-if: never
 go-to: new_main
 on-arrival: {!
@@ -132,9 +300,51 @@ Q.month = 1;
 Q.year = 0;
 Q.time = 1;
 Q.month_actions = 0;
+
+Q.party = "SCP";
+Q.president_party = "EEA";
+Q.president = "";
+Q.factions = [''];
+Q.parliament_speaker = "";
+Q.parliament_speaker_party = "";
+Q.head_parliament = "";
+Q.head_parliament_party = "";
+
+Q.young_workers = 14;
+Q.mid_workers = 10;
+Q.old_workers = 7;
+
+Q.young_middle = 4;
+Q.mid_middle = 7;
+Q.old_middle = 4;
+
+Q.young_rural = 5;
+Q.mid_rural = 12;
+Q.old_rural = 7;
+
+Q.young_cath = 6;
+Q.mid_cath = 10;
+Q.old_cath = 3;
+
+Q.young_unemployed = 2;
+Q.mid_unemployed = 0;
+Q.old_unemployed = 1;
+
+Q.young_dular = 6;
+Q.mid_dular = 1;
+Q.old_dular = 1;
+
+Q.population_millions = 200;
+Q.bd_rate = 0.01;
+Q.education_level = 0;
+Q.inflation = 2.2;
+Q.unemployment = 3;
+Q.budgetgrowth = 5;
+Q.budgetdecr = 4;
+Q.budget = 2;
 !}
 
-@start6
+@startga
 choose-if: never
 go-to: new_main
 on-arrival: {!
@@ -143,9 +353,51 @@ Q.month = 1;
 Q.year = 0;
 Q.time = 1;
 Q.month_actions = 0;
+
+Q.party = "GA";
+Q.president_party = "EEA";
+Q.president = "";
+Q.factions = [''];
+Q.parliament_speaker = "";
+Q.parliament_speaker_party = "";
+Q.head_parliament = "";
+Q.head_parliament_party = "";
+
+Q.young_workers = 14;
+Q.mid_workers = 10;
+Q.old_workers = 7;
+
+Q.young_middle = 4;
+Q.mid_middle = 7;
+Q.old_middle = 4;
+
+Q.young_rural = 5;
+Q.mid_rural = 12;
+Q.old_rural = 7;
+
+Q.young_cath = 6;
+Q.mid_cath = 10;
+Q.old_cath = 3;
+
+Q.young_unemployed = 2;
+Q.mid_unemployed = 0;
+Q.old_unemployed = 1;
+
+Q.young_dular = 6;
+Q.mid_dular = 1;
+Q.old_dular = 1;
+
+Q.population_millions = 200;
+Q.bd_rate = 0.01;
+Q.education_level = 0;
+Q.inflation = 2.2;
+Q.unemployment = 3;
+Q.budgetgrowth = 5;
+Q.budgetdecr = 4;
+Q.budget = 2;
 !}
 
-@start7
+@startba
 choose-if: never
 go-to: new_main
 on-arrival: {!
@@ -154,9 +406,51 @@ Q.month = 1;
 Q.year = 0;
 Q.time = 1;
 Q.month_actions = 0;
+
+Q.party = "BA";
+Q.president_party = "EEA";
+Q.president = "";
+Q.factions = [''];
+Q.parliament_speaker = "";
+Q.parliament_speaker_party = "";
+Q.head_parliament = "";
+Q.head_parliament_party = "";
+
+Q.young_workers = 14;
+Q.mid_workers = 10;
+Q.old_workers = 7;
+
+Q.young_middle = 4;
+Q.mid_middle = 7;
+Q.old_middle = 4;
+
+Q.young_rural = 5;
+Q.mid_rural = 12;
+Q.old_rural = 7;
+
+Q.young_cath = 6;
+Q.mid_cath = 10;
+Q.old_cath = 3;
+
+Q.young_unemployed = 2;
+Q.mid_unemployed = 0;
+Q.old_unemployed = 1;
+
+Q.young_dular = 6;
+Q.mid_dular = 1;
+Q.old_dular = 1;
+
+Q.population_millions = 200;
+Q.bd_rate = 0.01;
+Q.education_level = 0;
+Q.inflation = 2.2;
+Q.unemployment = 3;
+Q.budgetgrowth = 5;
+Q.budgetdecr = 4;
+Q.budget = 2;
 !}
 
-@start8
+@startnlp
 choose-if: never
 go-to: new_main
 on-arrival: {!
@@ -165,9 +459,51 @@ Q.month = 1;
 Q.year = 0;
 Q.time = 1;
 Q.month_actions = 0;
+
+Q.party = "NLP";
+Q.president_party = "EEA";
+Q.president = "";
+Q.factions = [''];
+Q.parliament_speaker = "";
+Q.parliament_speaker_party = "";
+Q.head_parliament = "";
+Q.head_parliament_party = "";
+
+Q.young_workers = 14;
+Q.mid_workers = 10;
+Q.old_workers = 7;
+
+Q.young_middle = 4;
+Q.mid_middle = 7;
+Q.old_middle = 4;
+
+Q.young_rural = 5;
+Q.mid_rural = 12;
+Q.old_rural = 7;
+
+Q.young_cath = 6;
+Q.mid_cath = 10;
+Q.old_cath = 3;
+
+Q.young_unemployed = 2;
+Q.mid_unemployed = 0;
+Q.old_unemployed = 1;
+
+Q.young_dular = 6;
+Q.mid_dular = 1;
+Q.old_dular = 1;
+
+Q.population_millions = 200;
+Q.bd_rate = 0.01;
+Q.education_level = 0;
+Q.inflation = 2.2;
+Q.unemployment = 3;
+Q.budgetgrowth = 5;
+Q.budgetdecr = 4;
+Q.budget = 2;
 !}
 
-@start9
+@startulcpa
 choose-if: never
 go-to: new_main
 on-arrival: {!
@@ -176,9 +512,51 @@ Q.month = 1;
 Q.year = 0;
 Q.time = 1;
 Q.month_actions = 0;
+
+Q.party = "ULCPA";
+Q.president_party = "EEA";
+Q.president = "";
+Q.factions = [''];
+Q.parliament_speaker = "";
+Q.parliament_speaker_party = "";
+Q.head_parliament = "";
+Q.head_parliament_party = "";
+
+Q.young_workers = 14;
+Q.mid_workers = 10;
+Q.old_workers = 7;
+
+Q.young_middle = 4;
+Q.mid_middle = 7;
+Q.old_middle = 4;
+
+Q.young_rural = 5;
+Q.mid_rural = 12;
+Q.old_rural = 7;
+
+Q.young_cath = 6;
+Q.mid_cath = 10;
+Q.old_cath = 3;
+
+Q.young_unemployed = 2;
+Q.mid_unemployed = 0;
+Q.old_unemployed = 1;
+
+Q.young_dular = 6;
+Q.mid_dular = 1;
+Q.old_dular = 1;
+
+Q.population_millions = 200;
+Q.bd_rate = 0.01;
+Q.education_level = 0;
+Q.inflation = 2.2;
+Q.unemployment = 3;
+Q.budgetgrowth = 5;
+Q.budgetdecr = 4;
+Q.budget = 2;
 !}
 
-@start10
+@startnlpa
 choose-if: never
 go-to: new_main
 on-arrival: {!
@@ -187,9 +565,51 @@ Q.month = 1;
 Q.year = 0;
 Q.time = 1;
 Q.month_actions = 0;
+
+Q.party = "NLPA";
+Q.president_party = "EEA";
+Q.president = "";
+Q.factions = [''];
+Q.parliament_speaker = "";
+Q.parliament_speaker_party = "";
+Q.head_parliament = "";
+Q.head_parliament_party = "";
+
+Q.young_workers = 14;
+Q.mid_workers = 10;
+Q.old_workers = 7;
+
+Q.young_middle = 4;
+Q.mid_middle = 7;
+Q.old_middle = 4;
+
+Q.young_rural = 5;
+Q.mid_rural = 12;
+Q.old_rural = 7;
+
+Q.young_cath = 6;
+Q.mid_cath = 10;
+Q.old_cath = 3;
+
+Q.young_unemployed = 2;
+Q.mid_unemployed = 0;
+Q.old_unemployed = 1;
+
+Q.young_dular = 6;
+Q.mid_dular = 1;
+Q.old_dular = 1;
+
+Q.population_millions = 200;
+Q.bd_rate = 0.01;
+Q.education_level = 0;
+Q.inflation = 2.2;
+Q.unemployment = 3;
+Q.budgetgrowth = 5;
+Q.budgetdecr = 4;
+Q.budget = 2;
 !}
 
-@start11
+@startncpa
 choose-if: never
 go-to: new_main
 on-arrival: {!
@@ -198,9 +618,51 @@ Q.month = 1;
 Q.year = 0;
 Q.time = 1;
 Q.month_actions = 0;
+
+Q.party = "NCPA";
+Q.president_party = "EEA";
+Q.president = "";
+Q.factions = [''];
+Q.parliament_speaker = "";
+Q.parliament_speaker_party = "";
+Q.head_parliament = "";
+Q.head_parliament_party = "";
+
+Q.young_workers = 14;
+Q.mid_workers = 10;
+Q.old_workers = 7;
+
+Q.young_middle = 4;
+Q.mid_middle = 7;
+Q.old_middle = 4;
+
+Q.young_rural = 5;
+Q.mid_rural = 12;
+Q.old_rural = 7;
+
+Q.young_cath = 6;
+Q.mid_cath = 10;
+Q.old_cath = 3;
+
+Q.young_unemployed = 2;
+Q.mid_unemployed = 0;
+Q.old_unemployed = 1;
+
+Q.young_dular = 6;
+Q.mid_dular = 1;
+Q.old_dular = 1;
+
+Q.population_millions = 200;
+Q.bd_rate = 0.01;
+Q.education_level = 0;
+Q.inflation = 2.2;
+Q.unemployment = 3;
+Q.budgetgrowth = 5;
+Q.budgetdecr = 4;
+Q.budget = 2;
 !}
 
-@start12
+@startdp
 choose-if: never
 go-to: new_main
 on-arrival: {!
@@ -209,9 +671,51 @@ Q.month = 1;
 Q.year = 0;
 Q.time = 1;
 Q.month_actions = 0;
+
+Q.party = "DP";
+Q.president_party = "EEA";
+Q.president = "";
+Q.factions = [''];
+Q.parliament_speaker = "";
+Q.parliament_speaker_party = "";
+Q.head_parliament = "";
+Q.head_parliament_party = "";
+
+Q.young_workers = 14;
+Q.mid_workers = 10;
+Q.old_workers = 7;
+
+Q.young_middle = 4;
+Q.mid_middle = 7;
+Q.old_middle = 4;
+
+Q.young_rural = 5;
+Q.mid_rural = 12;
+Q.old_rural = 7;
+
+Q.young_cath = 6;
+Q.mid_cath = 10;
+Q.old_cath = 3;
+
+Q.young_unemployed = 2;
+Q.mid_unemployed = 0;
+Q.old_unemployed = 1;
+
+Q.young_dular = 6;
+Q.mid_dular = 1;
+Q.old_dular = 1;
+
+Q.population_millions = 200;
+Q.bd_rate = 0.01;
+Q.education_level = 0;
+Q.inflation = 2.2;
+Q.unemployment = 3;
+Q.budgetgrowth = 5;
+Q.budgetdecr = 4;
+Q.budget = 2;
 !}
 
-@start13
+@starteea
 choose-if: never
 go-to: new_main
 on-arrival: {!
@@ -220,9 +724,51 @@ Q.month = 1;
 Q.year = 0;
 Q.time = 1;
 Q.month_actions = 0;
+
+Q.party = "EEA";
+Q.president_party = "EEA";
+Q.president = "";
+Q.factions = [''];
+Q.parliament_speaker = "";
+Q.parliament_speaker_party = "";
+Q.head_parliament = "";
+Q.head_parliament_party = "";
+
+Q.young_workers = 14;
+Q.mid_workers = 10;
+Q.old_workers = 7;
+
+Q.young_middle = 4;
+Q.mid_middle = 7;
+Q.old_middle = 4;
+
+Q.young_rural = 5;
+Q.mid_rural = 12;
+Q.old_rural = 7;
+
+Q.young_cath = 6;
+Q.mid_cath = 10;
+Q.old_cath = 3;
+
+Q.young_unemployed = 2;
+Q.mid_unemployed = 0;
+Q.old_unemployed = 1;
+
+Q.young_dular = 6;
+Q.mid_dular = 1;
+Q.old_dular = 1;
+
+Q.population_millions = 200;
+Q.bd_rate = 0.01;
+Q.education_level = 0;
+Q.inflation = 2.2;
+Q.unemployment = 3;
+Q.budgetgrowth = 5;
+Q.budgetdecr = 4;
+Q.budget = 2;
 !}
 
-@start14
+@startia
 choose-if: never
 go-to: new_main
 on-arrival: {!
@@ -231,9 +777,51 @@ Q.month = 1;
 Q.year = 0;
 Q.time = 1;
 Q.month_actions = 0;
+
+Q.party = "IA";
+Q.president_party = "EEA";
+Q.president = "";
+Q.factions = [''];
+Q.parliament_speaker = "";
+Q.parliament_speaker_party = "";
+Q.head_parliament = "";
+Q.head_parliament_party = "";
+
+Q.young_workers = 14;
+Q.mid_workers = 10;
+Q.old_workers = 7;
+
+Q.young_middle = 4;
+Q.mid_middle = 7;
+Q.old_middle = 4;
+
+Q.young_rural = 5;
+Q.mid_rural = 12;
+Q.old_rural = 7;
+
+Q.young_cath = 6;
+Q.mid_cath = 10;
+Q.old_cath = 3;
+
+Q.young_unemployed = 2;
+Q.mid_unemployed = 0;
+Q.old_unemployed = 1;
+
+Q.young_dular = 6;
+Q.mid_dular = 1;
+Q.old_dular = 1;
+
+Q.population_millions = 200;
+Q.bd_rate = 0.01;
+Q.education_level = 0;
+Q.inflation = 2.2;
+Q.unemployment = 3;
+Q.budgetgrowth = 5;
+Q.budgetdecr = 4;
+Q.budget = 2;
 !}
 
-@start15
+@startap
 choose-if: never
 go-to: new_main
 on-arrival: {!
@@ -242,6 +830,48 @@ Q.month = 1;
 Q.year = 0;
 Q.time = 1;
 Q.month_actions = 0;
+
+Q.party = "AP";
+Q.president_party = "EEA";
+Q.president = "";
+Q.factions = [''];
+Q.parliament_speaker = "";
+Q.parliament_speaker_party = "";
+Q.head_parliament = "";
+Q.head_parliament_party = "";
+
+Q.young_workers = 14;
+Q.mid_workers = 10;
+Q.old_workers = 7;
+
+Q.young_middle = 4;
+Q.mid_middle = 7;
+Q.old_middle = 4;
+
+Q.young_rural = 5;
+Q.mid_rural = 12;
+Q.old_rural = 7;
+
+Q.young_cath = 6;
+Q.mid_cath = 10;
+Q.old_cath = 3;
+
+Q.young_unemployed = 2;
+Q.mid_unemployed = 0;
+Q.old_unemployed = 1;
+
+Q.young_dular = 6;
+Q.mid_dular = 1;
+Q.old_dular = 1;
+
+Q.population_millions = 200;
+Q.bd_rate = 0.01;
+Q.education_level = 0;
+Q.inflation = 2.2;
+Q.unemployment = 3;
+Q.budgetgrowth = 5;
+Q.budgetdecr = 4;
+Q.budget = 2;
 !}
 
 @new_main
