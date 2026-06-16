@@ -5,6 +5,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 @start_menu
 new-page: true
 go-to: start_menu_2
+on-arrival: test_var = "<nlp>NLP</nlp>
 
 = Social Democracy: An Alternate History
 
@@ -16,6 +17,8 @@ go-to: start_menu_2
 @start
 
 Information:
+
+test_var: [+ test_var +]
 
 <b> CPA: The Communist Party of Alär. Follows Zhyetovism, similar to Earth's Marxism-Leninism. Can switch to Stasio-ism (Italian Left Communism), or Mitterism (Right-Communsim). </b> <br><br><br>
     <p>Under Stasio-ism, the CPA will refuse to enter government, unless it is a United Front between them and the Socialists, and only if the alternative would be a Far-Right Minority of the NCPA and allied parties. The CPA's main goal under Stasio-ism is to build up the strength of their Paramilitary, crush the right-wing Paramilitaries, and start the Revolution </p><br><br>
@@ -93,10 +96,12 @@ Q.party = "CPA";
 Q.president_party = "EEA";
 Q.president = "";
 Q.factions = [''];
-Q.parliament_speaker = "";
-Q.parliament_speaker_party = "";
-Q.head_parliament = "";
-Q.head_parliament_party = "";
+Q.classes = ['young_workers', 'mid_workers', 'old_workers', 'young_middle', 'mid_middle', 'old_middle', 'young_rural', 'mid_rural', 'old_rural', 'young_cath', 'mid_cath', 'old_cath', 'young_unemployed', 'mid_unemployed', 'old_unemployed', 'young_dular', 'mid_dular', 'old_dular'];
+Q.parties = ['cpa', 'su', 'sa', 'dpa', 'scp', 'ga', 'ba', 'nlp', 'ulcpa', 'nlpa', 'ncpa', 'dp', 'eea', 'ia', 'ap'];
+Q.parliament_speaker = "Heinrich Weiß";
+Q.parliament_speaker_party = "SA";
+Q.head_parliament = "Ashley Davis";
+Q.head_parliament_party = "NLP";
 
 Q.young_workers = 14;
 Q.mid_workers = 10;
@@ -146,6 +151,8 @@ Q.party = "SU";
 Q.president_party = "EEA";
 Q.president = "";
 Q.factions = [''];
+Q.classes = ['young_workers', 'mid_workers', 'old_workers', 'young_middle', 'mid_middle', 'old_middle', 'young_rural', 'mid_rural', 'old_rural', 'young_cath', 'mid_cath', 'old_cath', 'young_unemployed', 'mid_unemployed', 'old_unemployed', 'young_dular', 'mid_dular', 'old_dular'];
+Q.parties = ['cpa', 'su', 'sa', 'dpa', 'scp', 'ga', 'ba', 'nlp', 'ulcpa', 'nlpa', 'ncpa', 'dp', 'eea', 'ia', 'ap'];
 Q.parliament_speaker = "";
 Q.parliament_speaker_party = "";
 Q.head_parliament = "";
@@ -199,6 +206,8 @@ Q.party = "SA";
 Q.president_party = "EEA";
 Q.president = "";
 Q.factions = [''];
+Q.classes = ['young_workers', 'mid_workers', 'old_workers', 'young_middle', 'mid_middle', 'old_middle', 'young_rural', 'mid_rural', 'old_rural', 'young_cath', 'mid_cath', 'old_cath', 'young_unemployed', 'mid_unemployed', 'old_unemployed', 'young_dular', 'mid_dular', 'old_dular'];
+Q.parties = ['cpa', 'su', 'sa', 'dpa', 'scp', 'ga', 'ba', 'nlp', 'ulcpa', 'nlpa', 'ncpa', 'dp', 'eea', 'ia', 'ap'];
 Q.parliament_speaker = "";
 Q.parliament_speaker_party = "";
 Q.head_parliament = "";
@@ -252,6 +261,8 @@ Q.party = "DPA";
 Q.president_party = "EEA";
 Q.president = "";
 Q.factions = [''];
+Q.classes = ['young_workers', 'mid_workers', 'old_workers', 'young_middle', 'mid_middle', 'old_middle', 'young_rural', 'mid_rural', 'old_rural', 'young_cath', 'mid_cath', 'old_cath', 'young_unemployed', 'mid_unemployed', 'old_unemployed', 'young_dular', 'mid_dular', 'old_dular'];
+Q.parties = ['cpa', 'su', 'sa', 'dpa', 'scp', 'ga', 'ba', 'nlp', 'ulcpa', 'nlpa', 'ncpa', 'dp', 'eea', 'ia', 'ap'];
 Q.parliament_speaker = "";
 Q.parliament_speaker_party = "";
 Q.head_parliament = "";
@@ -305,6 +316,8 @@ Q.party = "SCP";
 Q.president_party = "EEA";
 Q.president = "";
 Q.factions = [''];
+Q.classes = ['young_workers', 'mid_workers', 'old_workers', 'young_middle', 'mid_middle', 'old_middle', 'young_rural', 'mid_rural', 'old_rural', 'young_cath', 'mid_cath', 'old_cath', 'young_unemployed', 'mid_unemployed', 'old_unemployed', 'young_dular', 'mid_dular', 'old_dular'];
+Q.parties = ['cpa', 'su', 'sa', 'dpa', 'scp', 'ga', 'ba', 'nlp', 'ulcpa', 'nlpa', 'ncpa', 'dp', 'eea', 'ia', 'ap'];
 Q.parliament_speaker = "";
 Q.parliament_speaker_party = "";
 Q.head_parliament = "";
@@ -358,6 +371,8 @@ Q.party = "GA";
 Q.president_party = "EEA";
 Q.president = "";
 Q.factions = [''];
+Q.classes = ['young_workers', 'mid_workers', 'old_workers', 'young_middle', 'mid_middle', 'old_middle', 'young_rural', 'mid_rural', 'old_rural', 'young_cath', 'mid_cath', 'old_cath', 'young_unemployed', 'mid_unemployed', 'old_unemployed', 'young_dular', 'mid_dular', 'old_dular'];
+Q.parties = ['cpa', 'su', 'sa', 'dpa', 'scp', 'ga', 'ba', 'nlp', 'ulcpa', 'nlpa', 'ncpa', 'dp', 'eea', 'ia', 'ap'];
 Q.parliament_speaker = "";
 Q.parliament_speaker_party = "";
 Q.head_parliament = "";
@@ -411,6 +426,8 @@ Q.party = "BA";
 Q.president_party = "EEA";
 Q.president = "";
 Q.factions = [''];
+Q.classes = ['young_workers', 'mid_workers', 'old_workers', 'young_middle', 'mid_middle', 'old_middle', 'young_rural', 'mid_rural', 'old_rural', 'young_cath', 'mid_cath', 'old_cath', 'young_unemployed', 'mid_unemployed', 'old_unemployed', 'young_dular', 'mid_dular', 'old_dular'];
+Q.parties = ['cpa', 'su', 'sa', 'dpa', 'scp', 'ga', 'ba', 'nlp', 'ulcpa', 'nlpa', 'ncpa', 'dp', 'eea', 'ia', 'ap'];
 Q.parliament_speaker = "";
 Q.parliament_speaker_party = "";
 Q.head_parliament = "";
@@ -464,6 +481,8 @@ Q.party = "NLP";
 Q.president_party = "EEA";
 Q.president = "";
 Q.factions = [''];
+Q.classes = ['young_workers', 'mid_workers', 'old_workers', 'young_middle', 'mid_middle', 'old_middle', 'young_rural', 'mid_rural', 'old_rural', 'young_cath', 'mid_cath', 'old_cath', 'young_unemployed', 'mid_unemployed', 'old_unemployed', 'young_dular', 'mid_dular', 'old_dular'];
+Q.parties = ['cpa', 'su', 'sa', 'dpa', 'scp', 'ga', 'ba', 'nlp', 'ulcpa', 'nlpa', 'ncpa', 'dp', 'eea', 'ia', 'ap'];
 Q.parliament_speaker = "";
 Q.parliament_speaker_party = "";
 Q.head_parliament = "";
@@ -517,6 +536,8 @@ Q.party = "ULCPA";
 Q.president_party = "EEA";
 Q.president = "";
 Q.factions = [''];
+Q.classes = ['young_workers', 'mid_workers', 'old_workers', 'young_middle', 'mid_middle', 'old_middle', 'young_rural', 'mid_rural', 'old_rural', 'young_cath', 'mid_cath', 'old_cath', 'young_unemployed', 'mid_unemployed', 'old_unemployed', 'young_dular', 'mid_dular', 'old_dular'];
+Q.parties = ['cpa', 'su', 'sa', 'dpa', 'scp', 'ga', 'ba', 'nlp', 'ulcpa', 'nlpa', 'ncpa', 'dp', 'eea', 'ia', 'ap'];
 Q.parliament_speaker = "";
 Q.parliament_speaker_party = "";
 Q.head_parliament = "";
@@ -570,6 +591,8 @@ Q.party = "NLPA";
 Q.president_party = "EEA";
 Q.president = "";
 Q.factions = [''];
+Q.classes = ['young_workers', 'mid_workers', 'old_workers', 'young_middle', 'mid_middle', 'old_middle', 'young_rural', 'mid_rural', 'old_rural', 'young_cath', 'mid_cath', 'old_cath', 'young_unemployed', 'mid_unemployed', 'old_unemployed', 'young_dular', 'mid_dular', 'old_dular'];
+Q.parties = ['cpa', 'su', 'sa', 'dpa', 'scp', 'ga', 'ba', 'nlp', 'ulcpa', 'nlpa', 'ncpa', 'dp', 'eea', 'ia', 'ap'];
 Q.parliament_speaker = "";
 Q.parliament_speaker_party = "";
 Q.head_parliament = "";
@@ -623,6 +646,8 @@ Q.party = "NCPA";
 Q.president_party = "EEA";
 Q.president = "";
 Q.factions = [''];
+Q.classes = ['young_workers', 'mid_workers', 'old_workers', 'young_middle', 'mid_middle', 'old_middle', 'young_rural', 'mid_rural', 'old_rural', 'young_cath', 'mid_cath', 'old_cath', 'young_unemployed', 'mid_unemployed', 'old_unemployed', 'young_dular', 'mid_dular', 'old_dular'];
+Q.parties = ['cpa', 'su', 'sa', 'dpa', 'scp', 'ga', 'ba', 'nlp', 'ulcpa', 'nlpa', 'ncpa', 'dp', 'eea', 'ia', 'ap'];
 Q.parliament_speaker = "";
 Q.parliament_speaker_party = "";
 Q.head_parliament = "";
@@ -676,6 +701,8 @@ Q.party = "DP";
 Q.president_party = "EEA";
 Q.president = "";
 Q.factions = [''];
+Q.classes = ['young_workers', 'mid_workers', 'old_workers', 'young_middle', 'mid_middle', 'old_middle', 'young_rural', 'mid_rural', 'old_rural', 'young_cath', 'mid_cath', 'old_cath', 'young_unemployed', 'mid_unemployed', 'old_unemployed', 'young_dular', 'mid_dular', 'old_dular'];
+Q.parties = ['cpa', 'su', 'sa', 'dpa', 'scp', 'ga', 'ba', 'nlp', 'ulcpa', 'nlpa', 'ncpa', 'dp', 'eea', 'ia', 'ap'];
 Q.parliament_speaker = "";
 Q.parliament_speaker_party = "";
 Q.head_parliament = "";
@@ -729,6 +756,8 @@ Q.party = "EEA";
 Q.president_party = "EEA";
 Q.president = "";
 Q.factions = [''];
+Q.classes = ['young_workers', 'mid_workers', 'old_workers', 'young_middle', 'mid_middle', 'old_middle', 'young_rural', 'mid_rural', 'old_rural', 'young_cath', 'mid_cath', 'old_cath', 'young_unemployed', 'mid_unemployed', 'old_unemployed', 'young_dular', 'mid_dular', 'old_dular'];
+Q.parties = ['cpa', 'su', 'sa', 'dpa', 'scp', 'ga', 'ba', 'nlp', 'ulcpa', 'nlpa', 'ncpa', 'dp', 'eea', 'ia', 'ap'];
 Q.parliament_speaker = "";
 Q.parliament_speaker_party = "";
 Q.head_parliament = "";
@@ -782,6 +811,8 @@ Q.party = "IA";
 Q.president_party = "EEA";
 Q.president = "";
 Q.factions = [''];
+Q.classes = ['young_workers', 'mid_workers', 'old_workers', 'young_middle', 'mid_middle', 'old_middle', 'young_rural', 'mid_rural', 'old_rural', 'young_cath', 'mid_cath', 'old_cath', 'young_unemployed', 'mid_unemployed', 'old_unemployed', 'young_dular', 'mid_dular', 'old_dular'];
+Q.parties = ['cpa', 'su', 'sa', 'dpa', 'scp', 'ga', 'ba', 'nlp', 'ulcpa', 'nlpa', 'ncpa', 'dp', 'eea', 'ia', 'ap'];
 Q.parliament_speaker = "";
 Q.parliament_speaker_party = "";
 Q.head_parliament = "";
@@ -835,6 +866,8 @@ Q.party = "AP";
 Q.president_party = "EEA";
 Q.president = "";
 Q.factions = [''];
+Q.classes = ['young_workers', 'mid_workers', 'old_workers', 'young_middle', 'mid_middle', 'old_middle', 'young_rural', 'mid_rural', 'old_rural', 'young_cath', 'mid_cath', 'old_cath', 'young_unemployed', 'mid_unemployed', 'old_unemployed', 'young_dular', 'mid_dular', 'old_dular'];
+Q.parties = ['cpa', 'su', 'sa', 'dpa', 'scp', 'ga', 'ba', 'nlp', 'ulcpa', 'nlpa', 'ncpa', 'dp', 'eea', 'ia', 'ap'];
 Q.parliament_speaker = "";
 Q.parliament_speaker_party = "";
 Q.head_parliament = "";
