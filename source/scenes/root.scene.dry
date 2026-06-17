@@ -464,6 +464,52 @@ Q.fighters = 160;
 Q.patrol_aircraft = 230;
 Q.uavs = 450;
 
+// Agriculure, Forestry & Fishing & Mining & Oil | Resources Ministry
+Q.agr_credit = 0; // Yes-No
+Q.agr_credit_amount = 0; // 0-5 | 0 is only for if agr_credit is false. agr_credit starts at 2, can be reduced or increased. The only way to get this back to zero is to completely dismantle the system.
+Q.state_buyer = 0; // State Buyer - Yes/No
+Q.state_buyer_size = 0; // like agr_credit_amount - 0-3, decides how many contracts, and how many products the state buyer buys. 1 is staples, 2 is all plants, and 3 is all plants + eggs, milk, and similar animal produce that isn't gotten from killing the animal
+Q.rainfall = 2; //0 is very bad, 3 months till crisis, 1 is bad, 6 months till crisis, 2 is fine, 3 is great, small reduction on how much budget you spend on farmers, 4 is amazing, and reduces budget spent on agriculture by half. Randomized every year. You can solve the crisis before it happens, which will provide a small support boost, or wait till the crisis, and receive a small support debuff when you solve it then. or big debuff if you don't solve it.
+Q.rural_coop = 0; //How prevalent are co-ops?
+Q.farm_insurance_perc = 30; // Percent of insured farmers?
+Q.insurance_cost = 2;
+Q.state_insurance = 0; // yes/no does the state provide insurance
+Q.state_insurance_cost = 0; // how much does state insurance cost - Free state insurance is a different variable. If this is higher than private insurance costs, nobody uses the gvmnt program
+Q.free_insurance = 0; // yes/no does the state provide free insurance
+Q.tsqkm_forest = 22000; //How many thousand sqkm of forest 
+Q.tsqkm_forest_cut = 109; //How many thousand sqkm of forest is cut down per year
+Q.tsqkm_forest_grow = 68; //How many thousand sqkm of forest grown per year
+Q.conserved_land = 0; //How many sqkm of land is under conservation
+Q.natural_parks = 0; //How many natural parks
+Q.natural_fishing_perc = 70; // How much of fishing is from lakes, ocean, rivers etc
+Q.farm_fishing_perc = 30; // How much of fishing is from fish farmers
+Q.fish_amnt = 2; // 0 = no fish, 1 = low fish, 2 = average fish, 3 = lots of fish, 4 = overpopulated 
+// Coalition Affairs
+// Toleration
+// Interior & Drugs | Interior Ministry
+// Economic Democracy, Subsidies, Monetary Policy | Economic Ministry
+// Taxes | Fiscal Ministry
+// Education & Health & Miscellaneous Regulations (Food, Consumer Protections) | Education & Health Ministry
+// Scienc, Green, Technology | Environment and Technology Ministry
+// Judiciary, Constitution & Executive Rights | Judiciary
+// Labour Affairs/Rights ad Welfare | Work and Welfare Ministry
+// Military Policy | Military Ministry
+// Communications & Internet | Public Communications Ministry
+// Utilities - Energy, Water, Telephone/Wifi 
+// Dulars, Catholics and Other Minority policy, Religious affairs | Social Affairs Ministry
+// Transport, Space, Aviation, & Maritime | Transport Ministry
+// Youth Affairs, Sports Intra-Alär Tourism, Arts and Tourism | Culture Ministry
+// Public Works & Urban Planning & Infrastructure & Economic Developmnet & Housing | Public Planning Ministry
+// Postal Service | Postal Ministry 
+// Crisis management | Crisis Ministry
+
+
+// President
+// Head of Parliament
+// Parliament Speaker
+// Attorney General
+// Party Variables
+
 !}
 
 @startsu
