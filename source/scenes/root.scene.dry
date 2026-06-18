@@ -85,7 +85,6 @@ choose-if: never
 If you can read this, you probably encountered a bug.
 
 @startcpa
-choose-if: never
 go-to: new_main
 on-arrival: {!
 Q.started = 1;
@@ -94,16 +93,51 @@ Q.year = 0;
 Q.time = 1;
 Q.month_actions = 0;
 
-Q.party = "CPA";
-Q.president_party = "EEA";
-Q.president = "";
-Q.factions = [''];
+Q.party = "<cpa>CPA</cpa>";
+Q.president_party = "<eea>EEA</eea>";
+Q.president = "<eea>Lieberman</eea>";
+Q.factions = ['stasio-ism', 'zhyetovism', 'mitterism'];
 Q.classes = ['young_workers', 'mid_workers', 'old_workers', 'young_middle', 'mid_middle', 'old_middle', 'young_rural', 'mid_rural', 'old_rural', 'young_cath', 'mid_cath', 'old_cath', 'young_unemployed', 'mid_unemployed', 'old_unemployed', 'young_dular', 'mid_dular', 'old_dular'];
 Q.parties = ['cpa', 'su', 'sa', 'dpa', 'scp', 'ga', 'ba', 'nlp', 'ulcpa', 'nlpa', 'ncpa', 'dp', 'eea', 'ia', 'ap'];
-Q.parliament_speaker = "Heinrich Weiß";
-Q.parliament_speaker_party = "SA";
-Q.head_parliament = "Ashley Davis";
-Q.head_parliament_party = "NLP";
+Q.parliament_speaker = "<sa>Heinrich Weiß</sa>";
+Q.parliament_speaker_party = "<sa>SA</sa>";
+Q.head_parliament = "<nlp>Ashley Davis</nlp>";
+Q.head_parliament_party = "<nlp>NLP</nlp>";
+Q.coalition = 001 // I'm going to make a list of what the coalition number sequal whence I actually make the coalitions in elections 1928. 000 is simply no coalition at all, 001 is a broad-spectrum caretkaer coalition
+Q.crisis_minister = "<na>N/A</na>"
+Q.crisis_minister_party = "<scp>SCP</scp>"
+Q.culture_minister = "N/A"
+Q.culture_minister_party = "<dpa>DPA</dpa>"
+Q.economic_minister = "N/A"
+Q.economic_minister_party = "<nlp>NLP</nlp>"
+Q.eduhel_minister = "N/A"
+Q.eduhel_minister_party = "<ba>BA</ba>"
+Q.envtec_minister = "N/A"
+Q.envtec_minister_party = "<dpa>DPA</dpa>"
+Q.fiscal_minister = "N/A"
+Q.fiscal_minister_party = "<nlp>NLP</nlp>"
+Q.interior_minister = "N/A"
+Q.interior_minister_party = "<ba>BA</ba>"
+Q.judiciary_minister = "N/A"
+Q.judiciary_minister_party = "<dp>DP</dp>"
+Q.military_minister = "N/A"
+Q.military_minister_party = "<ulcpa>ULCPA</ulcpa>"
+Q.postal_minister = "N/A"
+Q.postal_minister_party = "<ba>BA</ba>"
+Q.pubcom_minister = "N/A"
+Q.pubcom_minister_party = "<ba>BA</ba>"
+Q.pubuti_minister = "N/A"
+Q.pubuti_minister_party = "<scp>SCP</scp>"
+Q.pubpla_minister = "N/A"
+Q.pubpla_minister_party = "<sa>SA</sa>"
+Q.resources_minister = "N/A"
+Q.resources_minister_party = "<ulcpa>ULCPA</ulcpa>"
+Q.social_minister = "N/A"
+Q.social_minister_party = "<dp>DP</dp>-<scp>SCP</scp>-<ba>BA</ba>"
+Q.transport_minister = "N/A"
+Q.transport_minister_party = "<sa>SA</sa>"
+Q.worwel_minister = "N/A"
+Q.worwel_minister_party = "<dpa>DPA</dpa>"
 
 Q.young_workers = 14;
 Q.mid_workers = 10;
@@ -466,6 +500,20 @@ Q.fighters = 160;
 Q.patrol_aircraft = 230;
 Q.uavs = 450;
 
+// Coalition Affairs
+// Crisis management | Crisis Ministry
+// Youth Affairs, Sports Intra-Alär Tourism, Arts and Tourism | Culture Ministry
+// Economic Democracy, Subsidies, Monetary Policy | Economic Ministry
+// Education & Health & Miscellaneous Regulations (Food, Consumer Protections) | Education & Health Ministry
+// Scienc, Green, Technology | Environment and Technology Ministry
+// Taxes | Fiscal Ministry
+// Interior & Drugs | Interior Ministry
+// Judiciary, Constitution & Executive Rights | Judiciary
+// Military Policy | Military Ministry
+// Postal Service | Postal Ministry 
+// Communications & Internet | Public Communications Ministry
+// Utilities - Energy, Water, Telephone/Wifi | Public Utilities Ministry
+// Public Works & Urban Planning & Infrastructure & Economic Developmnet & Housing | Public Planning Ministry
 // Agriculure, Forestry & Fishing & Mining & Oil | Resources Ministry
 Q.agr_credit = 0; // Yes-No
 Q.agr_credit_amount = 0; // 0-5 | 0 is only for if agr_credit is false. agr_credit starts at 2, can be reduced or increased. The only way to get this back to zero is to completely dismantle the system.
@@ -485,29 +533,15 @@ Q.conserved_land = 0; //How many sqkm of land is under conservation
 Q.natural_parks = 0; //How many natural parks
 Q.natural_fishing_perc = 70; // How much of fishing is from lakes, ocean, rivers etc
 Q.farm_fishing_perc = 30; // How much of fishing is from fish farmers
-// Coalition Affairs
+// Dulars, Catholics and Other Minority policy, Religious affairs | Social Affairs Ministry
+// Transport, Space, Aviation, & Maritime | Transport Ministry
 // Toleration
-// Interior & Drugs | Interior Ministry
-// Economic Democracy, Subsidies, Monetary Policy | Economic Ministry
-// Taxes | Fiscal Ministry
-// Education & Health & Miscellaneous Regulations (Food, Consumer Protections) | Education & Health Ministry
-// Scienc, Green, Technology | Environment and Technology Ministry
-// Judiciary, Constitution & Executive Rights | Judiciary
 // Labour Affairs/Rights ad Welfare | Work and Welfare Ministry
 Q.min_wage = 20; // dollars/hour
 Q.working_hours = 10; // max hours/day
 Q.holidays = 9; // Mandated holidays per year
 Q.working_days_py = 303; // Workings days per year - Holidays & workweek already factored in 
 Q.avg_dpww = 6; // Days per workweek, avg
-// Military Policy | Military Ministry
-// Communications & Internet | Public Communications Ministry
-// Utilities - Energy, Water, Telephone/Wifi 
-// Dulars, Catholics and Other Minority policy, Religious affairs | Social Affairs Ministry
-// Transport, Space, Aviation, & Maritime | Transport Ministry
-// Youth Affairs, Sports Intra-Alär Tourism, Arts and Tourism | Culture Ministry
-// Public Works & Urban Planning & Infrastructure & Economic Developmnet & Housing | Public Planning Ministry
-// Postal Service | Postal Ministry 
-// Crisis management | Crisis Ministry
  
 
 // President

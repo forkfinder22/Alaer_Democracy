@@ -4,7 +4,33 @@ is-special: true
 
 = Status
 
+Player Party: [+ party +]<br>
+
 = Government
+
+President: [+ president +] - [+ president_party +] <br>
+Speaker of Parliament: [+ parliament_speaker +] - [+ parliament_speaker_party +] <br>
+Head of Parliament: [+ head_parliament +] - [+ head_parliament_party +] <br>
+Coalition: [? if coalition = 1 : N/A - <span class="tip-wrap">Broad-Spectrum<span class="tip">Technically there isn't any proper coalition with concessions or agreements towards other parties, but there is enough sympathetic Paraliment members to create a majority caretaker coaltion. Ministries are also assigned to parties, rather than people, and the internally make the decisions</span></span> ?] <br><br>
+Ministers: <br><br>
+Crisis Minister: [+ crisis_minister +] - [+ crisis_minister_party +]
+Culture Minister: [+ culture_minister +] - [+ culture_minister_party +]
+Economic Minister: [+ economic_minister +] - [+ economic_minister_party +]
+Education & Health Minister: [+ eduhel_minister +] - [+ eduhel_minister_party +]
+Environment & Technology Minister: [+ envtec_minister +] - [+ envtec_minister_party +]
+Fiscal Minister: [+ fiscal_minister +] - [+ fiscal_minister_party +]
+Interior Minister: [+ interior_minister +] - [+ interior_minister_party +]
+Judiciary Minister: [+ judiciary_minister +] - [+ judiciary_minister_party +]
+Military Minister: [+ military_minister +] - [+ military_minister_party +]
+Postal Minister: [+ postal_minister +] - [+ postal_minister_party +]
+Public Communications Minister: [+ pubcom_minister +] - [+ pubcom_minister_party +]
+Public Utility Minister: [+ pubuti_minister +] - [+ pubuti_minister_party +]
+Public Planning Minister: [+ pubpla_minister +] - [+ pubpla_minister_party +]
+Resources Minister: [+ resources_minister +] - [+ resources_minister_party +]
+Social Affairs Minister: [+ social_minister +] - [+ social_minister_party +]
+Transport Minister: [+ transport_minister +] - [+ transport_minister_party +]
+Work & Welfare Minister: [+ worwel_minister +] - [+ worwel_minister_party +]
+
 
 = Economics
 
