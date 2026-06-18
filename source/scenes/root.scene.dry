@@ -1,6 +1,6 @@
 title: Root Scene
 new-page: true
-go-to: post_event if started = 1; start_menu if started = 0
+go-to: post_event if started = 1; food_revenue if started = 0
 
 @start_menu
 new-page: true
@@ -25,7 +25,7 @@ Information:
     <p>Under Tarragonism, the SU will refuse to enter government, and instead build up their union, launching the revolution when the time is right </p><br><br>
     <p>Under Hallism, the SU will attempt to enter govenrment with other Leftist Parties when possible, and increase Union & Workers Rights, while building up their union. They will tolerate centrist parties, but will call strikes when Right-wing parties do austerity or reduce workers rights, attempting to reduce their influence. If the union is ready, and centrists, or further right-wing parties are in govenrment, they will call a general strike, and demand that up to 40% of the Parliament and local councils seats are to be filled by the 5 unions with the most membership. If their union and party have more than the Constitutional threshold, they will convert the Democratic system into a Syndicalist system. </p><br><br>
     <p>Under Littinkism, the SU will never attempt to do a revolution or general strike in order to convert the Democratic system into a syndicalist one, unless the Far-Right is in power, preferring to do it Democratically, with popualr support. The SU's unions will be far more active, and some sort of strike will usually be happening acros at least one industry. They will focus heavily on increasing their Unions power, and forming a "One Big Union", in order to not conflcit with other unions </p><br><br>
-    <p>Under O'Morranism, the SU will attempt to have up to 33% of Parliament and Local Council seats represented by the 10 largest unions, and will stay with in the Democratic system. They like to work with all Leftist, and Centre-Left parties, as well as the Charterists, along with the moderate unions. They will do much more if the Right or Far-right gets into power, to destory as much power of those governments as it can, and can be considered a reliable ally of the pro-democratic parties </p><br><br>
+    <p>Under O'Morranism, the SU will attempt to have up to 33% of Parliament and Local Council seats represented by the 10 largest unions, and will stay with in the Democratic system. They like to work with all Leftist, and Centre-Left parties, as well as the Charterists and the moderate unions. They will do much more if the Right or Far-right gets into power, to destory as much power of those governments as it can, and can be considered a reliable ally of the pro-democratic parties </p><br><br>
 <b> SA: The Socialists of Alär. Follows Ecksteinism, similar to Earth's Democratic Socialism. Can switch to Kentism (Militant Democratic Socialism), Panikkarism (Patriotic Democratic Socialism), or Chapmanism (Agrarian Democratic Socialism)</b><br><br><br>
     <p>Under </p><br><br>
     <p>Under </p><br><br>
@@ -146,24 +146,26 @@ Q.business_taxes = 1;
 
 // industry revenue, expenses, in billions. every 1 billion revenue - expenses should roughly equal 1 budget from taxes
 // What should the biggest industry be? Lets go with oil. Real estate shoudn't be an industry, but soemthing you can start taxing
-Q.oil_expenses = 0.200;
-Q.oil_revenue = 1.200;
+// Scrap the expense/revenue - Just make a microeconomy!
 Q.oil_profit = 1.000; // Provides 1 budget
-Q.metal_expenses = 0.300;
-Q.metal_revenue = 1.100;
-Q.metal_profit = 0.800; // No budget, despite the revvenue being higher than 1000, becuase of expenses
-Q.resources_expenses = 1.300;
-Q.resources_revenue = 2.000;
+Q.metal_profit = 0.800;
 Q.resources_profit = 0.700;
-Q.vehicles_expenses = 2.000;
-Q.vehicles_revenue = 2.900;
 Q.vehicles_profit = 0.900; // Vehicles include cars, trains, planes, etc
-Q.insurance_expenses = 0.200;
-Q.insurance_revenue = 0.600;
 Q.insurance_profit = 0.400;
-Q.tech_science_expenses = 0.700;
-Q.tech_science_revenue = 1.200;
 Q.tech_science_profit = 0.500;
+Q.food_profit = 0.900; // Farms, Fisheries, and Synthetic Processes
+
+// microeconomy start vars
+Q.edible_fish_m = 1500; // In tonnes, millions
+Q.fish_growth_m = 276; // Amount of growth per year
+// For economic calculations
+Q.amount_fished_py_m = 275; // Amount fished per year
+Q.fish_employment_k = 38.1; // Population employed in fisheries, thousands 
+Q.fishing_wages = 31; // Average wage per hour
+Q.fish_price = 12; // Average fish cost
+Q.fishing_boats = 300; // Amount of fishing boats 
+Q.fuel_costs_pbpd = 27; // fuel cost per boat per day, affected by oil industry - should cost 27, $10000 per year
+Q.operating_costs_pbpd = 27; // maintenance and such per boat per day - Affects by vehicle industry - Should cost 27, $10000
 
 // Police
 // Loyalty - Percent - 1 being 100%
@@ -483,7 +485,6 @@ Q.conserved_land = 0; //How many sqkm of land is under conservation
 Q.natural_parks = 0; //How many natural parks
 Q.natural_fishing_perc = 70; // How much of fishing is from lakes, ocean, rivers etc
 Q.farm_fishing_perc = 30; // How much of fishing is from fish farmers
-Q.fish_amnt = 2; // 0 = no fish, 1 = low fish, 2 = average fish, 3 = lots of fish, 4 = overpopulated 
 // Coalition Affairs
 // Toleration
 // Interior & Drugs | Interior Ministry
@@ -493,6 +494,11 @@ Q.fish_amnt = 2; // 0 = no fish, 1 = low fish, 2 = average fish, 3 = lots of fis
 // Scienc, Green, Technology | Environment and Technology Ministry
 // Judiciary, Constitution & Executive Rights | Judiciary
 // Labour Affairs/Rights ad Welfare | Work and Welfare Ministry
+Q.min_wage = 20; // dollars/hour
+Q.working_hours = 10; // max hours/day
+Q.holidays = 9; // Mandated holidays per year
+Q.working_days_py = 303; // Workings days per year - Holidays & workweek already factored in 
+Q.avg_dpww = 6; // Days per workweek, avg
 // Military Policy | Military Ministry
 // Communications & Internet | Public Communications Ministry
 // Utilities - Energy, Water, Telephone/Wifi 
@@ -502,7 +508,7 @@ Q.fish_amnt = 2; // 0 = no fish, 1 = low fish, 2 = average fish, 3 = lots of fis
 // Public Works & Urban Planning & Infrastructure & Economic Developmnet & Housing | Public Planning Ministry
 // Postal Service | Postal Ministry 
 // Crisis management | Crisis Ministry
-
+ 
 
 // President
 // Head of Parliament

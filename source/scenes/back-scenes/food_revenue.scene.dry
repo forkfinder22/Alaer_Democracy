@@ -1,0 +1,7 @@
+title: Food Revenue
+go-to: root.start_menu
+on-arrival: {! 
+    Q.amount_fished_py_m = Math.round((Q.fishing_boats*0.915)*100)/100;
+    console.log(Q.amount_fished_py_m)
+    Q.food_profit = (0.600+((((Q.amount_fished_py_m*1000000)*Q.fish_price)-(Q.fish_employment_k*1000*Q.fishing_wages*Q.working_hours*Q.working_days_py)-(Q.fishing_boats*((Q.fuel_costs_pbpd+Q.operating_costs_pbpd)*Q.working_days_py)))))/1000000000
+!}

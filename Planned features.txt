@@ -1,0 +1,12 @@
+Use Sargassum to make both fertilizer and gas
+    Use spare arsenic to reduce cost of the Metal Industry
+    Use spare arsenic to increase revenue from Healthcare Industry (its used in medicine)
+
+CPA storylines: 
+    Pre-Election:
+        Head Editor Storyline
+            Elections are held to choose the Head Editor of the newspaper. 
+            The Candidate from the Stasio-ist faction is well known for his organising ability and work ethic, but concerns are raised around how biased he is. This candidate is Stasio himself
+            The Candidate from the Zhyetovist faction is well known for his ability to settle tensions and give everyone a fair voice, but how good of a leader he is will be put into question, as the few times he has lead a committee, is has failed in its objective
+            The Candidate from the Mitterist faction is acclaimed writer and it was his skill in article-writing that catapulted Mitterism from a small faction in the capital branch of the CPA to the second-largest faction. However, opponents argue even if he is one of the best writers within the CPA, such writings do not reflect his personality, which is rather timid and careful.
+            The candidate chosen by the Player gets a small boost, but faciton strength and endorsements will truly determine the election. The chosen faction will get a boost to faction strength, and recieve extra points when determining endorsements.
