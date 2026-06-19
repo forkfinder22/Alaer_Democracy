@@ -163,6 +163,310 @@ Q.young_dular = 6;
 Q.mid_dular = 1;
 Q.old_dular = 1;
 
+// Leans mid- to far-left.
+Q.young_workers_cpa = 22; // CPA
+Q.young_workers_su = 0;
+Q.young_workers_sa = 0;
+Q.young_workers_dpa = 0;
+Q.young_workers_scp = 0;
+Q.young_workers_ga = 0;
+Q.young_workers_ba = 0;
+Q.young_workers_nlp = 0;
+Q.young_workers_ulcpa = 0;
+Q.young_workers_nlpa = 0;
+Q.young_workers_ncpa = 0;
+Q.young_workers_dp = 0;
+Q.young_workers_eea = 0;
+Q.young_workers_ia = 0;
+Q.young_workers_ap = 0;
+
+// I don't have any lore for this group. I'll make them a very "average" group for their class. Slight bias towards the left and BA
+Q.mid_workers_cpa = 11; // CPA
+Q.mid_workers_su = 0;
+Q.mid_workers_sa = 0;
+Q.mid_workers_dpa = 0;
+Q.mid_workers_scp = 0;
+Q.mid_workers_ga = 0;
+Q.mid_workers_ba = 0;
+Q.mid_workers_nlp = 0;
+Q.mid_workers_ulcpa = 0;
+Q.mid_workers_nlpa = 0;
+Q.mid_workers_ncpa = 0;
+Q.mid_workers_dp = 0;
+Q.mid_workers_eea = 0;
+Q.mid_workers_ia = 0;
+Q.mid_workers_ap = 0;
+
+// Old workers tend to be very economically left, thanks to united-front campaigns by the CPA, SU, and SA. However, due to social regressivism among this group, Those who don't vote Socialist will either vote BA, because of their moderate unionism, or the NCPA, because of their high levels of social regressivism
+Q.old_workers_cpa = 15; // CPA
+Q.old_workers_su = 0;
+Q.old_workers_sa = 0;
+Q.old_workers_dpa = 0;
+Q.old_workers_scp = 0;
+Q.old_workers_ga = 0;
+Q.old_workers_ba = 0;
+Q.old_workers_nlp = 0;
+Q.old_workers_ulcpa = 0;
+Q.old_workers_nlpa = 0;
+Q.old_workers_ncpa = 0;
+Q.old_workers_dp = 0;
+Q.old_workers_eea = 0;
+Q.old_workers_ia = 0;
+Q.old_workers_ap = 0;
+
+// Highly progressive, but certainly not Socialist. DPA, SU, and GA are very popular among this group
+Q.young_middle_cpa = 4; // CPA
+Q.young_middle_su = 0;
+Q.young_middle_sa = 0;
+Q.young_middle_dpa = 0;
+Q.young_middle_scp = 0;
+Q.young_middle_ga = 0;
+Q.young_middle_ba = 0;
+Q.young_middle_nlp = 0;
+Q.young_middle_ulcpa = 0;
+Q.young_middle_nlpa = 0;
+Q.young_middle_ncpa = 0;
+Q.young_middle_dp = 0;
+Q.young_middle_eea = 0;
+Q.young_middle_ia = 0;
+Q.young_middle_ap = 0;
+
+// Much more progressive, but tends towards the DPA or GA, if not the NLP
+Q.mid_middle_cpa = 7; // CPA
+Q.mid_middle_su = 0;
+Q.mid_middle_sa = 0;
+Q.mid_middle_dpa = 0;
+Q.mid_middle_scp = 0;
+Q.mid_middle_ga = 0;
+Q.mid_middle_ba = 0;
+Q.mid_middle_nlp = 0;
+Q.mid_middle_ulcpa = 0;
+Q.mid_middle_nlpa = 0;
+Q.mid_middle_ncpa = 0;
+Q.mid_middle_dp = 0;
+Q.mid_middle_eea = 0;
+Q.mid_middle_ia = 0;
+Q.mid_middle_ap = 0;
+
+// Literally nothing. I'll give them 1% for petit-bourgeois adventurists and the very rare progressive in this group.
+Q.old_middle_cpa = 1; // CPA
+Q.old_middle_su = 0;
+Q.old_middle_sa = 0;
+Q.old_middle_dpa = 0;
+Q.old_middle_scp = 0;
+Q.old_middle_ga = 0;
+Q.old_middle_ba = 0;
+Q.old_middle_nlp = 0;
+Q.old_middle_ulcpa = 0;
+Q.old_middle_nlpa = 0;
+Q.old_middle_ncpa = 0;
+Q.old_middle_dp = 0;
+Q.old_middle_eea = 0;
+Q.old_middle_ia = 0;
+Q.old_middle_ap = 0;
+
+// More progressive, but still not as progressive
+Q.young_rural_cpa = 8; // CPA
+Q.young_rural_su = 0;
+Q.young_rural_sa = 0;
+Q.young_rural_dpa = 0;
+Q.young_rural_scp = 0;
+Q.young_rural_ga = 0;
+Q.young_rural_ba = 0;
+Q.young_rural_nlp = 0;
+Q.young_rural_ulcpa = 0;
+Q.young_rural_nlpa = 0;
+Q.young_rural_ncpa = 0;
+Q.young_rural_dp = 0;
+Q.young_rural_eea = 0;
+Q.young_rural_ia = 0;
+Q.young_rural_ap = 0;
+
+// Far less progressive than their predecessors
+Q.mid_rural_cpa = 6; // CPA
+Q.mid_rural_su = 0;
+Q.mid_rural_sa = 0;
+Q.mid_rural_dpa = 0;
+Q.mid_rural_scp = 0;
+Q.mid_rural_ga = 0;
+Q.mid_rural_ba = 0;
+Q.mid_rural_nlp = 0;
+Q.mid_rural_ulcpa = 0;
+Q.mid_rural_nlpa = 0;
+Q.mid_rural_ncpa = 0;
+Q.mid_rural_dp = 0;
+Q.mid_rural_eea = 0;
+Q.mid_rural_ia = 0;
+Q.mid_rural_ap = 0;
+
+// Old rural are surprisingly leftist, at least economically. This is due to many peasant strikes being suppressed by the broader establishment parties. Therefore, the CPA, SU, and DP have high polls among this group. This group also treats the AP with distrust, due to their association with the establishment parties
+Q.old_rural_cpa = 30; // CPA
+Q.old_rural_su = 0;
+Q.old_rural_sa = 0;
+Q.old_rural_dpa = 0;
+Q.old_rural_scp = 0;
+Q.old_rural_ga = 0;
+Q.old_rural_ba = 0;
+Q.old_rural_nlp = 0;
+Q.old_rural_ulcpa = 0;
+Q.old_rural_nlpa = 0;
+Q.old_rural_ncpa = 0;
+Q.old_rural_dp = 0;
+Q.old_rural_eea = 0;
+Q.old_rural_ia = 0;
+Q.old_rural_ap = 0;
+
+// Young aged catholics prefer the SA over the CPA due to the SA's catholic reach-out attempts.
+Q.young_cath_cpa = 2; // CPA
+Q.young_cath_su = 0;
+Q.young_cath_sa = 0;
+Q.young_cath_dpa = 0;
+Q.young_cath_scp = 0;
+Q.young_cath_ga = 0;
+Q.young_cath_ba = 0;
+Q.young_cath_nlp = 0;
+Q.young_cath_ulcpa = 0;
+Q.young_cath_nlpa = 0;
+Q.young_cath_ncpa = 0;
+Q.young_cath_dp = 0;
+Q.young_cath_eea = 0;
+Q.young_cath_ia = 0;
+Q.young_cath_ap = 0;
+
+// Mid aged catholics prefer the SU over the CPA if they're radicals, due to recent structural reforms allowing for minority groups to have a louder say in union matters.
+Q.mid_cath_cpa = 1; // CPA
+Q.mid_cath_su = 0;
+Q.mid_cath_sa = 0;
+Q.mid_cath_dpa = 0;
+Q.mid_cath_scp = 0;
+Q.mid_cath_ga = 0;
+Q.mid_cath_ba = 0;
+Q.mid_cath_nlp = 0;
+Q.mid_cath_ulcpa = 0;
+Q.mid_cath_nlpa = 0;
+Q.mid_cath_ncpa = 0;
+Q.mid_cath_dp = 0;
+Q.mid_cath_eea = 0;
+Q.mid_cath_ia = 0;
+Q.mid_cath_ap = 0;
+
+// Old catholics tend to be very regressive
+Q.old_cath_cpa = 0; // CPA
+Q.old_cath_su = 0;
+Q.old_cath_sa = 0;
+Q.old_cath_dpa = 0;
+Q.old_cath_scp = 0;
+Q.old_cath_ga = 0;
+Q.old_cath_ba = 0;
+Q.old_cath_nlp = 0;
+Q.old_cath_ulcpa = 0;
+Q.old_cath_nlpa = 0;
+Q.old_cath_ncpa = 0;
+Q.old_cath_dp = 0;
+Q.old_cath_eea = 0;
+Q.old_cath_ia = 0;
+Q.old_cath_ap = 0;
+
+// Young unemployed should be radical
+Q.young_unemployed_cpa = 40; // CPA
+Q.young_unemployed_su = 0;
+Q.young_unemployed_sa = 0;
+Q.young_unemployed_dpa = 0;
+Q.young_unemployed_scp = 0;
+Q.young_unemployed_ga = 0;
+Q.young_unemployed_ba = 0;
+Q.young_unemployed_nlp = 0;
+Q.young_unemployed_ulcpa = 0;
+Q.young_unemployed_nlpa = 0;
+Q.young_unemployed_ncpa = 0;
+Q.young_unemployed_dp = 0;
+Q.young_unemployed_eea = 0;
+Q.young_unemployed_ia = 0;
+Q.young_unemployed_ap = 0;
+
+// Mid unemployed - most would vote EEA.
+Q.mid_unemployed_cpa = 20; // CPA
+Q.mid_unemployed_su = 0;
+Q.mid_unemployed_sa = 0;
+Q.mid_unemployed_dpa = 0;
+Q.mid_unemployed_scp = 0;
+Q.mid_unemployed_ga = 0;
+Q.mid_unemployed_ba = 0;
+Q.mid_unemployed_nlp = 0;
+Q.mid_unemployed_ulcpa = 0;
+Q.mid_unemployed_nlpa = 0;
+Q.mid_unemployed_ncpa = 0;
+Q.mid_unemployed_dp = 0;
+Q.mid_unemployed_eea = 0;
+Q.mid_unemployed_ia = 0;
+Q.mid_unemployed_ap = 0;
+
+// Old unemployed - high support for EEA.
+Q.old_unemployed_cpa = 13; // CPA
+Q.old_unemployed_su = 0;
+Q.old_unemployed_sa = 0;
+Q.old_unemployed_dpa = 0;
+Q.old_unemployed_scp = 0;
+Q.old_unemployed_ga = 0;
+Q.old_unemployed_ba = 0;
+Q.old_unemployed_nlp = 0;
+Q.old_unemployed_ulcpa = 0;
+Q.old_unemployed_nlpa = 0;
+Q.old_unemployed_ncpa = 0;
+Q.old_unemployed_dp = 0;
+Q.old_unemployed_eea = 0;
+Q.old_unemployed_ia = 0;
+Q.old_unemployed_ap = 0;
+
+// Dulars like to vote for minority or small parties - IA, DP, SCP are go-to's for them
+Q.young_dular_cpa = 4; // CPA
+Q.young_dular_su = 0;
+Q.young_dular_sa = 0;
+Q.young_dular_dpa = 0;
+Q.young_dular_scp = 0;
+Q.young_dular_ga = 0;
+Q.young_dular_ba = 0;
+Q.young_dular_nlp = 0;
+Q.young_dular_ulcpa = 0;
+Q.young_dular_nlpa = 0;
+Q.young_dular_ncpa = 0;
+Q.young_dular_dp = 0;
+Q.young_dular_eea = 0;
+Q.young_dular_ia = 0;
+Q.young_dular_ap = 0; 
+// section
+Q.mid_dular_cpa = 3;
+Q.mid_dular_su = 0;
+Q.mid_dular_sa = 0;
+Q.mid_dular_dpa = 0;
+Q.mid_dular_scp = 0;
+Q.mid_dular_ga = 0;
+Q.mid_dular_ba = 0;
+Q.mid_dular_nlp = 0;
+Q.mid_dular_ulcpa = 0;
+Q.mid_dular_nlpa = 0;
+Q.mid_dular_ncpa = 0;
+Q.mid_dular_dp = 0;
+Q.mid_dular_eea = 0;
+Q.mid_dular_ia = 0;
+Q.mid_dular_ap = 0;
+// Section 
+Q.old_dular_cpa = 1;
+Q.old_dular_su = 0;
+Q.old_dular_sa = 0;
+Q.old_dular_dpa = 0;
+Q.old_dular_scp = 0;
+Q.old_dular_ga = 0;
+Q.old_dular_ba = 0;
+Q.old_dular_nlp = 0;
+Q.old_dular_ulcpa = 0;
+Q.old_dular_nlpa = 0;
+Q.old_dular_ncpa = 0;
+Q.old_dular_dp = 0;
+Q.old_dular_eea = 0;
+Q.old_dular_ia = 0;
+Q.old_dular_ap = 0;
+
 Q.population_millions = 200; // Should higher population make higher taxes? Might be a bit complicated 
 Q.bd_rate = 0.01; // Multiply population by this number + 1
 Q.education_level = 0; // -3 to +3 - nonexistent, very poor, poor, average (0), decent, very good, outstanding
