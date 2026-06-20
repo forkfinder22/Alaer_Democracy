@@ -283,7 +283,7 @@ Q.young_rural_ia = 30;
 Q.young_rural_ap = 15;
 
 // Far less progressive than their predecessors
-Q.mid_rural_cpa = 1; // CPA
+Q.mid_rural_cpa = 1; 
 Q.mid_rural_su = 1;
 Q.mid_rural_sa = 0;
 Q.mid_rural_dpa = 0;
@@ -300,7 +300,7 @@ Q.mid_rural_ia = 21;
 Q.mid_rural_ap = 21;
 
 // Old rural are surprisingly leftist, at least economically. This is due to many peasant strikes being suppressed by the broader establishment parties. Therefore, the CPA, SU, and DP have high polls among this group. This group also treats the AP with distrust, due to their association with the establishment parties
-Q.old_rural_cpa = 30; // CPA
+Q.old_rural_cpa = 30; 
 Q.old_rural_su = 20;
 Q.old_rural_sa = 3;
 Q.old_rural_dpa = 0;

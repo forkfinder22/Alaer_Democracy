@@ -60,6 +60,22 @@ Work & Welfare Minister: [+ worwel_minister +] - [+ worwel_minister_party +] <br
 
 = Projected election results
 
+CPA: [+ cpa_votes +]<br>
+SU: [+ su_votes +]<br>
+SA: [+ sa_votes +]<br>
+DPA: [+ dpa_votes +]<br>
+SCP: [+ scp_votes +]<br>
+GA: [+ ga_votes +]<br>
+BA: [+ ba_votes +]<br>
+NLP: [+ nlp_votes +]<br>
+ULCPA: [+ ulcpa_votes +]<br>
+NLPA: [+ nlpa_votes +]<br>
+NCPA: [+ ncpa_votes +]<br>
+DP: [+ dp_votes +]<br>
+EEA: [+ eea_votes +]<br>
+IA: [+ ia_votes +]<br>
+AP: [+ ap_votes +]<br>
+
 @testing
 
 = Testing 
