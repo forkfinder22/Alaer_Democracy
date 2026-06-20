@@ -60,21 +60,21 @@ Work & Welfare Minister: [+ worwel_minister +] - [+ worwel_minister_party +] <br
 
 = Projected election results
 
-CPA: [+ cpa_votes +]<br>
-SU: [+ su_votes +]<br>
-SA: [+ sa_votes +]<br>
-DPA: [+ dpa_votes +]<br>
-SCP: [+ scp_votes +]<br>
-GA: [+ ga_votes +]<br>
-BA: [+ ba_votes +]<br>
-NLP: [+ nlp_votes +]<br>
-ULCPA: [+ ulcpa_votes +]<br>
-NLPA: [+ nlpa_votes +]<br>
-NCPA: [+ ncpa_votes +]<br>
-DP: [+ dp_votes +]<br>
-EEA: [+ eea_votes +]<br>
-IA: [+ ia_votes +]<br>
-AP: [+ ap_votes +]<br>
+<ia>**CPA**</ia>: [+ cpa_votes +]%<br>
+<ba>**SU**</ba>: [+ su_votes +]%<br>
+<sa>**SA**</sa>: [+ sa_votes +]%<br>
+<dpa>**DPA**</dpa>: [+ dpa_votes +]%<br>
+<scp>**SCP**</scp>: [+ scp_votes +]%<br>
+<ga>**GA**</ga>: [+ ga_votes +]%<br>
+<ba>**BA**</ba>: [+ ba_votes +]%<br>
+<nlp>**NLP**</nlp>: [+ nlp_votes +]%<br>
+<ulcpa>**ULCPA**</ulcpa>: [+ ulcpa_votes +]%<br>
+<nlpa>**NLPA**</nlpa>: [+ nlpa_votes +]%<br>
+<ncpa>**NCPA**</ncpa>: [+ ncpa_votes +]%<br>
+<dp>**DP**</dp>: [+ dp_votes +]%<br>
+<eea>**EEA**</eea>: [+ eea_votes +]%<br>
+<ia>**IA**</ia>: [+ ia_votes +]%<br>
+<ap>**AP**</ap>: [+ ap_votes +]%<br>
 
 @testing
 

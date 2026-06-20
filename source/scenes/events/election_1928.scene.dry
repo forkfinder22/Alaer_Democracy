@@ -69,112 +69,121 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 // get change arrows and signs
 
 
-// The largest party can only be the NSDAP or the SPD.
-Q.largest_party = 'SPD';
-if (Q.nsdap_r >= Q.spd_r && Q.nsdap_r >= Q.kpd_r) {
-    Q.largest_party = 'NSDAP';
-}
-
-if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
-    Q.largest_party = 'KPD';
-}
+// Largest Party.
 
 // coalitions
 
 Q.leverage = 0
 
 Q.coalition_dissent = 0;
-Q.wip_in_government = 0;
-Q.in_wip_coalition = 0;
-Q.in_wip_minority_government = 0;
-Q.wip_toleration = 0;
-Q.wip_caretaker = 0;
-// wip
-Q.foreign_minister_party = 'DVP';
-Q.interior_minister_party = 'Z';
-Q.justice_minister_party = 'I';
-Q.labor_minister_party = 'Z';
-Q.reichswehr_minister_party = 'I';
-Q.economic_minister_party = Q.ddp_name;
-Q.finance_minister_party = 'DVP';
-Q.agriculture_minister_party = 'Z';
+// Set each party_in_government to 0
+Q.in_government = 0;
+// Set each in_coalition-name_coalition to zero
+Q.in_coalition = 0;
+Q.in_minority_government = 0;
+Q.in_toleration = 0;
+Q.caretaker_gov = 0;
 
 
-//wipppp
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {
     election_result[party] = Q[party + '_r'];
 }
 Q.election_records.push(election_result);
 !}
-on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and nsdap_r >= 15)
 on-display: {!
 data = [
     {
-        "id": "kpd",
-        "legend": "KPD",
-        "name": "KPD",
-        "seats": Math.round(Q.kpd_r*5),
-    }
+        "id": "cpa",
+        "legend": "CPA",
+        "name": "CPA",
+        "seats": Math.round(Q.cpa_r*5),
+    },
+    {
+        "id": "su",
+        "legend": "SU",
+        "name": "SU",
+        "seats": Math.round(Q.su_r*5),
+    },
+    {
+        "id": "sa",
+        "legend": "SA",
+        "name": "SA",
+        "seats": Math.round(Q.sa_r*5),
+    },
+    {
+        "id": "dpa",
+        "legend": "DPA",
+        "name": "DPA",
+        "seats": Math.round(Q.dpa_r*5),
+    },
+    {
+        "id": "scp",
+        "legend": "SCP",
+        "name": "SCP",
+        "seats": Math.round(Q.scp_r*5),
+    },
+    {
+        "id": "ga",
+        "legend": "GA",
+        "name": "GA",
+        "seats": Math.round(ga_r*5),
+    },
+    {
+        "id": "ba",
+        "legend": "BA",
+        "name": "BA",
+        "seats": Math.round(Q.ba_r*5),
+    },
+    {
+        "id": "nlp",
+        "legend": "NLP",
+        "name": "NLP",
+        "seats": Math.round(Q.nlp_r*5),
+    },
+    {
+        "id": "ulcpa",
+        "legend": "ULCPA",
+        "name": "ULCPA",
+        "seats": Math.round(Q.ulcpa_r*5),
+    },
+    {
+        "id": "nlpa",
+        "legend": "NLPA",
+        "name": "NLPA",
+        "seats": Math.round(Q.nlpa_r*5),
+    },
+    {
+        "id": "ncpa",
+        "legend": "NCPA",
+        "name": "NCPA",
+        "seats": Math.round(Q.ncpa_r*5),
+    },
+    {
+        "id": "dp",
+        "legend": "DP",
+        "name": "DP",
+        "seats": Math.round(Q.dp_r*5),
+    },
+    {
+        "id": "eea",
+        "legend": "EEA",
+        "name": "EEA",
+        "seats": Math.round(Q.eea_r*5),
+    },
+    {
+        "id": "ia",
+        "legend": "IA",
+        "name": "IA",
+        "seats": Math.round(Q.ia_r*5),
+    },
+    {
+        "id": "ap",
+        "legend": "AP",
+        "name": "AP",
+        "seats": Math.round(Q.ap_r*5),
+    },
 ];
-if (Q.sapd_formed && Q.sapd_r) {
-    data.push({
-            "id": "sapd",
-            "legend": "SAPD",
-            "name": "SAPD",
-            "seats": Math.round(Q.sapd_r*5),
-            });
-}
-data = data.concat([
-    {
-        "id": "spd",
-        "legend": "SPD",
-        "name": "SPD",
-        "seats": Math.round(Q.spd_r*5),
-    },
-    {
-        "id": "ddp",
-        "legend": Q.ddp_name,
-        "name": Q.ddp_name,
-        "seats": Math.round(Q.ddp_r*5),
-    },
-    {
-        "id": "z",
-        "legend": "Center",
-        "name": "Center",
-        "seats": Math.round((Q.z_r - 3)*5),
-    },
-    {
-        "id": "bvp",
-        "legend": "BVP",
-        "name": "BVP",
-        "seats": Math.round(3*5),
-    },
-    {
-        "id": "dvp",
-        "legend": "DVP",
-        "name": "DVP",
-        "seats": Math.round(Q.dvp_r*5),
-    },
-    {
-        "id": "other",
-        "legend": "Other",
-        "name": "Other",
-        "seats": Math.round(Q.other_r*5),
-    },
-    {
-        "id": "dnvp",
-        "legend": "DNVP",
-        "name": "DNVP",
-        "seats": Math.round(Q.dnvp_r*5),
-    },
-    {
-        "id": "nsdap",
-        "legend": "NSDAP",
-        "name": "NSDAP",
-        "seats": Math.round(Q.nsdap_r*5),
-    },
-]);
 
 if (window && d3) {
     var width = 500; 
