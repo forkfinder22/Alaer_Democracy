@@ -139,7 +139,6 @@ Q.transport_minister_party = "<sa>SA</sa>"
 Q.worwel_minister = "<na>N/A</na>"
 Q.worwel_minister_party = "<dpa>DPA</dpa>"
 // Election stuff
-Q.in_election = 1;
 Q.next_election_year = 0;
 Q.next_election_month = 12;
 Q.next_election_time = 12;
@@ -858,6 +857,8 @@ Q.avg_dpww = 6; // Days per workweek, avg
 // Parliament Speaker
 // Attorney General
 // Party Variables
+
+Q.timers = ['']
 
 !}
 
