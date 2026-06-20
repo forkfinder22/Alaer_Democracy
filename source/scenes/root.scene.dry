@@ -471,6 +471,23 @@ Q.old_dular_eea = 3;
 Q.old_dular_ia = 5;
 Q.old_dular_ap = 0;
 
+// Most parties didn't exist before the Civil War - Parties were effectively just advisory bodies to the president, so most Indpendent & Left-leaning parties didn't exist on the Parliamentary scale. Also voters of left-leaning aprties like the DPA would be tracked, and sometimes taken out, further disincentivising voting for them
+Q.old_cpa_r = 0;
+Q.old_su_r = 0;
+Q.old_sa_r = 0;
+Q.old_dpa_r = 1;
+Q.old_scp_r = 3;
+Q.old_ga_r = 0;
+Q.old_ba_r = 0;
+Q.old_nlp_r = 40; // A lot of leftists that did vote would votre for the NLP, as they were the most left-leaning "legitimate" party
+Q.old_ulcpa_r = 37; // ULCPA had splits into the NLPA and NCPA, pretty united and such, but these splits were because the ULCPA official party line support the Democratic forces, and the NCPA/NLPA didn't split at the same time, so they became seperate parties
+Q.old_nlpa_r = 0;
+Q.old_ncpa_r = 0;
+Q.old_dp_r = 0; // the Dular State only joined Alär after the civil war - They were similar to Ethiopia with Italy, where italy failed to take ethiopia in war, just like Monarchist Alär. In a referendum, the Dulars decided to join Alär, due to the clear economic benefits
+Q.old_eea_r = 0;
+Q.old_ia_r = 13; // Independents have always been around 
+Q.old_ap_r = 10;
+
 Q.population_millions = 200; // Should higher population make higher taxes? Might be a bit complicated 
 Q.bd_rate = 0.01; // Multiply population by this number + 1
 Q.education_level = 0; // -3 to +3 - nonexistent, very poor, poor, average (0), decent, very good, outstanding
