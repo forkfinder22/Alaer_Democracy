@@ -140,8 +140,8 @@ Q.worwel_minister = "<na>N/A</na>"
 Q.worwel_minister_party = "<dpa>DPA</dpa>"
 // Election stuff
 Q.next_election_year = 0;
-Q.next_election_month = 12;
-Q.next_election_time = 12;
+Q.next_election_month = 6;
+Q.next_election_time = 6;
 
 Q.young_workers = 14;
 Q.mid_workers = 10;

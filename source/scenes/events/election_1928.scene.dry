@@ -211,7 +211,21 @@ go-to: coalition_menu
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}WIP: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#cc0000'> </div> !}CPA: {!</td><td>!} [+ cpa_r +]% {!</td><td>!} [+ str_change_cpa +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#8a212b'> </div> !}SU: {!</td><td>!} [+ su_r +]% {!</td><td>!} [+ str_change_su +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#e59900'> </div> !}SA: {!</td><td>!} [+ sa_r +]% {!</td><td>!} [+ str_change_sa +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#56add0'> </div> !}DPA: {!</td><td>!} [+ dpa_r +]% {!</td><td>!} [+ str_change_dpa +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#ffac07'> </div> !}SCP: {!</td><td>!} [+ scp_r +]% {!</td><td>!} [+ str_change_scp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#007000'> </div> !}GA: {!</td><td>!} [+ ga_r +]% {!</td><td>!} [+ str_change_ga +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#4d95e7'> </div> !}BA: {!</td><td>!} [+ ba_r +]% {!</td><td>!} [+ str_change_ba +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#a1a36d'> </div> !}NLP: {!</td><td>!} [+ nlp_r +]% {!</td><td>!} [+ str_change_nlp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#D1C371'> </div> !}ULCPA: {!</td><td>!} [+ ulcpa_r +]% {!</td><td>!} [+ str_change_ulcpa +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#7a7c52'> </div> !}NLPA: {!</td><td>!} [+ nlpa_r +]% {!</td><td>!} [+ str_change_nlpa +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#0101a3'> </div> !}NCPA: {!</td><td>!} [+ ncpa_r +]% {!</td><td>!} [+ str_change_ncpa +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#cacaca'> </div> !}DP: {!</td><td>!} [+ dp_r +]% {!</td><td>!} [+ str_change_dp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#ffd700'> </div> !}EEA: {!</td><td>!} [+ eea_r +]% {!</td><td>!} [+ str_change_eea +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#808080'> </div> !}IA: {!</td><td>!} [+ ia_r +]% {!</td><td>!} [+ str_change_ia +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#226b22'> </div> !}AP: {!</td><td>!} [+ ap_r +]% {!</td><td>!} [+ str_change_ap +] {!</td></tr>!}
 
 {!</table>!}
 
