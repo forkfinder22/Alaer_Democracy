@@ -60,8 +60,8 @@ Work & Welfare Minister: [+ worwel_minister +] - [+ worwel_minister_party +] <br
 
 = Projected election results
 
-<ia>**CPA**</ia>: [+ cpa_votes +]%<br>
-<ba>**SU**</ba>: [+ su_votes +]%<br>
+<cpa>**CPA**</cpa>: [+ cpa_votes +]%<br>
+<su>**SU**</su>: [+ su_votes +]%<br>
 <sa>**SA**</sa>: [+ sa_votes +]%<br>
 <dpa>**DPA**</dpa>: [+ dpa_votes +]%<br>
 <scp>**SCP**</scp>: [+ scp_votes +]%<br>
