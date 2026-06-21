@@ -11,10 +11,11 @@ Grand Coaltion: [+ grand_coalition +]%
 - @grand_coalition
 
 @grand_coalition
-title: We can form a Grand Coalition.
+title: A Grand Coalition is formed!
 view-if: grand_coalition >= 50
 subtitle: <sa>SA</sa> + <dpa>DPA</dpa> + <scp>SCP</scp> + <ga>GA</ga> + <ba>BA</ba> + <nlp>NLP</nlp> + <dp>DP</dp> + <eea>EEA</eea> + <ia>IA</ia> ([+ grand_coalition +]%)
-on-arrival: in_grand_coalition = 1; in_popular_front = 0; in_left_front = 0
+on-arrival: sa_in_government = 1; dpa_in_government = 1; scp_in_government = 1; ga_in_government = 1; ba_in_government = 1; nlp_in_government = 1; dp_in_government = 1; eea_in_government = 1; ia_in_government = 1; grand_coalition = 1
+go-to: ministries if (party == "CPA" and cpa_in_government = 0)
 
 @ministries
 
