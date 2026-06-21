@@ -126,7 +126,7 @@ data = [
         "id": "ga",
         "legend": "GA",
         "name": "GA",
-        "seats": Math.round(ga_r*5),
+        "seats": Math.round(Q.ga_r*5),
     },
     {
         "id": "ba",
