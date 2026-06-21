@@ -1,0 +1,37 @@
+title: debug
+on-arrival: constitution_builder_seen = 1
+new-page: false
+
+Now that the elections have finished, it is time to decide how Alär will be governed. While it is very unlikely for Alär's constitution to have many radically-aligned articles within it, concessions may be made. [? if antidemocratic_coalition < 50: The Moderate parties hold a majority, so this should procede smoothly ?]. <br>
+A note to the player: For the sake of time, and this game being interesting, the Constitution Builder will only cover the important articles. Things like "All legislative powers herein granted shall be vested..." are skipped over, and brain-breaking legal talk will also be converted into something more understandable to the average player 
+
+- @skip: I've seen this before - skip to a reasonable consitution
+- @build: It's time to write the constitution
+
+@skip
+on-arrival: articles = "1 Billion"
+
+Ok then.
+
+- @coalition_builder: Time to determine the governing coalition
+
+// cb stands for Constitution Builder. Just to make sure it doesn't route to a scene called "article 1", if I add that in the future
+@build
+go-to: cb_article_1
+
+@cb_article_1
+
+First up, the issue of issue.
+
+- @yes_cb1: We love issues!
+- @no_cb1: We hate issues!
+
+@yes_cb1
+on-arrival: article_1 = 1
+
+- @coalition_builder
+
+@no_cb1
+on-arrival: article_1 = 0
+
+- @coalition_builder
