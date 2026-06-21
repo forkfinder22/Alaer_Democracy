@@ -15,7 +15,7 @@ Ok then.
 
 - @coalition_builder: Time to determine the governing coalition
 
-// cb stands for Constitution Builder. Just to make sure it doesn't route to a scene called "article 1", if I add that in the future
+### cb stands for Constitution Builder. Just to make sure it doesn't route to a scene called "article 1", if I add that in the future
 @build
 go-to: cb_article_1
 
