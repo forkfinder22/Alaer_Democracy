@@ -253,59 +253,59 @@ on-arrival: {!
                 }
                 if (!Q.eduhel_minister_party == "CPA") {
                     Q.eduhel_minister = "WIP"
-                    Q.eduhel_minister_party = "IA"
+                    Q.eduhel_minister_party = "<ia>IA</ia>"
                 }
                 if (!Q.envtec_minister_party == "CPA") {
                     Q.envtec_minister = "WIP"
-                    Q.envtec_minister_party = "GA"
+                    Q.envtec_minister_party = "<ga>GA</ga>"
                 }
                 if (!Q.fiscal_minister_party == "CPA") {
                     Q.fiscal_minister = "WIP"
-                    Q.fiscal_minister_party = "NLP"
+                    Q.fiscal_minister_party = "<nlp>NLP</nlp>"
                 }
                 if (!Q.interior_minister_party == "CPA") {
                     Q.interior_minister = "WIP"
-                    Q.interior_minister_party = "BA"
+                    Q.interior_minister_party = "<ba>BA</ba>"
                 }
                 if (!Q.judiciary_minister_party == "CPA") {
                     Q.judiciary_minister = "WIP"
-                    Q.judiciary_minister_party = "SCP"
+                    Q.judiciary_minister_party = "<scp>SCP</scp>"
                 }
                 if (!Q.military_minister_party == "CPA") {
                     Q.military_minister = "WIP"
-                    Q.military_minister_party = "IA"
+                    Q.military_minister_party = "<ia>IA</ia>"
                 }
                 if (!Q.postal_minister_party == "CPA") {
                     Q.postal_minister = "WIP"
-                    Q.postal_minister_party = "SA"
+                    Q.postal_minister_party = "<sa>SA</sa>"
                 }
                 if (!Q.pubcom_minister_party == "CPA") {
                     Q.pubcom_minister = "WIP"
-                    Q.pubcom_minister_party = "NLP"
+                    Q.pubcom_minister_party = "<nlp>NLP</nlp>"
                 }
                 if (!Q.pubuti_minister_party == "CPA") {
                     Q.pubuti_minister = "WIP"
-                    Q.pubuti_minister_party = "DPA"
+                    Q.pubuti_minister_party = "<dpa>DPA</dpa>"
                 }
                 if (!Q.pubpla_minister_party == "CPA") {
                     Q.pubpla_minister = "WIP"
-                    Q.pubpla_minister_party = "SA"
+                    Q.pubpla_minister_party = "<sa>SA</sa>"
                 }
                 if (!Q.resources_minister_party == "CPA") {
                     Q.resources_minister = "WIP"
-                    Q.resources_minister_party = "IA"
+                    Q.resources_minister_party = "<ia>IA</ia>"
                 }
                 if (!Q.social_minister_party == "CPA") {
                     Q.social_minister = "WIP"
-                    Q.social_minister_party = "DP"
+                    Q.social_minister_party = "<dp>DP</dp>"
                 }
                 if (!Q.transport_minister_party == "CPA") {
                     Q.transport_minister = "WIP"
-                    Q.transport_minister_party = "GA"
+                    Q.transport_minister_party = "<ga>GA</ga>"
                 }
                 if (!Q.worwel_minister_party == "CPA") {
                     Q.worwel_minister = "WIP"
-                    Q.worwel_minister_party = "SA"
+                    Q.worwel_minister_party = "<sa>SA</sa>"
                 }
             }
         }
