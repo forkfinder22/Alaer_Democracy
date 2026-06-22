@@ -15,9 +15,56 @@ title: A Grand Coalition is formed!
 view-if: grand_coalition >= 50
 subtitle: <sa>SA</sa> + <dpa>DPA</dpa> + <scp>SCP</scp> + <ga>GA</ga> + <ba>BA</ba> + <nlp>NLP</nlp> + <dp>DP</dp> + <eea>EEA</eea> + <ia>IA</ia> ([+ grand_coalition +]%)
 on-arrival: sa_in_government = 1; dpa_in_government = 1; scp_in_government = 1; ga_in_government = 1; ba_in_government = 1; nlp_in_government = 1; dp_in_government = 1; eea_in_government = 1; ia_in_government = 1; grand_coalition = 1
-go-to: ministries if (party == "CPA" and cpa_in_government = 0)
+go-to: ministries if party == "SA" or party == "DPA" or party == "SCP" or party == "GA" or party == "BA" or party == "NLP" or party == "DP" or party == "EEA" or party == "IA"; ministries_result if party == "CPA" or party == "ULCPA" or party == "NLPA" or party == "NCPA" or party == "AP"
 
 @ministries
+on-arrival: {! 
+// Using a Dendry-JS on-arrvial block for commenting
+    Q.custom_ministers = 1
+    // You should also be able to choose your minister for a ministry from a couple options, different ones providing different passive buffs related to the ministry
+    // Keep in mind that all of these assume the player did not select the ministry in question
+    // Crisis ministers are usually given to a multi-platform, left leaning party, like the DPA or SCP, or the BA. The right-wing parties do not particularly care, unless there is an ongoing crisis and they have an economic plan, while the Left parties generally take it so that the Right-wing parties won't have it if a crisis does happen. If neither side wants it, it is given to the BA, as they are seen as the most "responsible" party.
+    // For the Grand Coalition, lets give it to the DPA
+    // Culture ministers will always be the SCP or DP, if available, as these parties, along with the GA and IA, would call a VONC if it would be possible to succeed a VONC. In a coalition without the SCP or DP, its generally given to the most centrist party.
+    // For the Grand Coalition, this is given to the SCP, so that the DP can take Social Affairs
+    // Everybody wants to be an economic minister, so whoever has the most leverage. I need to add a leverage calculations for the non-player parties. The player can always take the economic ministry if they have leverage, but it costs a decent amount of leverage, and more if another party has more leverage than you. This cost is reduced for the SA, NLP, and ULCPA, and especially the EEA 
+    // For the Grand Coalition, it should be whoever has the highest Economic leverage, either the NLP or EEA (Which gets a bonus amount of leverage)
+    // Education and Health is usually given to the DPA or IA. If this is not possible, the party in the coalition with the most relative centrism (i.e., in a coalition of the CPA, SU, and SA, this would be the SU) gets it.
+    // For the Grand Coalition, its given to the IA
+    // Environment and Technoloy is given to the GA. If this is not possible, it depends on the coalition. For coalitions that lean left, the most right-wing is selected, for coalitions that lean right, the most left-wing is selected
+    // Fiscal ministry is the exact same as the Economic ministry in terms of minister selection
+    // For the Grand Coalition, whoever has the highest Economic Leverage, but the EEA doesn't get a bonus 
+    // Interior and Justice are coalition dependent
+    // For the Grand coalition, SCP gets Justice, and BA gets interior
+    // For the military, the right-wing parties refuse to give it to a left-wing party if a right wing party is in the coalition. 
+    // For a Grand Coaliton, an IA compromise candidate will be selected
+    // Postal ministry is coaliton dependent
+    // for Grand, its SA
+    // Public Communications is Coalition dependent
+    // for Grand, its NLP
+    // for Public Utility, coalition dependent
+    // For grand, DPA 
+    // Public PlanningL the Left wing parties like Public Planing
+    // For grand, SA
+    // Resources is AP, then IA, then EEA, then GA, then CPA
+    // For grand, IA
+    // Social affairs, DP, then SCP, then DPA, then SA, then BA, the NLP, then ULCPA
+    // For grand, DP
+    // For transport, it leans centre. GA, then BA, then NLP, then EEA, then IA, then DPA, then ULCPA
+    // For Grand, GA
+    // Work and Welfare is always given to the left-most, otherwise the left most parties would leave the coalition
+    // For Grand, SA
+    // Grand Coalition Ministries Per Party:
+        // SA: 2
+        // DPA: 2
+        // SCP: 2
+        // GA: 2
+        // BA: 1
+        // NLP: 1 + (likely 1, fiscal/economic)
+        // DP: 1
+        // IA: 3
+        // EEA: likely 1, economic 
+!}
 
 We can pick from any number of ministries. Controlling a ministry allows us to directly effect policy in that area. [? if in_left_front : Any ministry that we do not take will be given to the KPD. ?] [? if in_left_front and reichswehr_minister_party == "KPD" : If the KPD controls the Reichswehr Ministry, the army will most likely revolt. ?]
 
@@ -127,6 +174,7 @@ Julius Leber of the SPD has been appointed Reichswehr Minister.
 title: No more ministries.
 subtitle: [? if leverage >= 10 : We still have some more leverage to gain ministries. ?][? if leverage < 10 : We do not have much leverage left. ?]
 tags: mins_1928
+go-to: ministries_result
 
 This coalition arrangement is tolerable to all.
 
@@ -185,3 +233,35 @@ view-if: reichswehr_minister_party = "SPD"
 on-arrival: reichswehr_minister_party = "I"; reichswehr_minister = "Groener"; leverage += 15;
 tags: drop_mins_1928
 go-to: ministries
+
+@ministries_result
+on-arrival: {!
+    if (Q.party == "CPA"){
+        if (Q.custom_ministers) {
+            if (Q.grand_coalition) {
+                if (!Q.crisis_minister_party == "CPA") {
+                    Q.crisis_minister = "WIP"
+                    Q.crisis_minister_party = "DPA"
+                }
+            }
+        }
+    }
+!}
+
+Crisis Minister: [+ crisis_minister +] - [+ crisis_minister_party +] 
+Culture Minister: [+ culture_minister +] - [+ culture_minister_party +] 
+Economic Minister: [+ economic_minister +] - [+ economic_minister_party +] 
+Education & Health Minister: [+ eduhel_minister +] - [+ eduhel_minister_party +] 
+Environment & Technology Minister: [+ envtec_minister +] - [+ envtec_minister_party +] 
+Fiscal Minister: [+ fiscal_minister +] - [+ fiscal_minister_party +] 
+Interior Minister: [+ interior_minister +] - [+ interior_minister_party +] 
+Judiciary Minister: [+ judiciary_minister +] - [+ judiciary_minister_party +] 
+Military Minister: [+ military_minister +] - [+ military_minister_party +] 
+Postal Minister: [+ postal_minister +] - [+ postal_minister_party +] 
+Public Communications Minister: [+ pubcom_minister +] - [+ pubcom_minister_party +] 
+Public Utility Minister: [+ pubuti_minister +] - [+ pubuti_minister_party +] 
+Public Planning Minister: [+ pubpla_minister +] - [+ pubpla_minister_party +] 
+Resources Minister: [+ resources_minister +] - [+ resources_minister_party +] 
+Social Affairs Minister: [+ social_minister +] - [+ social_minister_party +] 
+Transport Minister: [+ transport_minister +] - [+ transport_minister_party +] 
+Work & Welfare Minister: [+ worwel_minister +] - [+ worwel_minister_party +] 

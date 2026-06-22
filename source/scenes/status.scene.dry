@@ -15,7 +15,7 @@ Coalition: [? if coalition = 1 : N/A - <span class="tip-wrap">Broad-Spectrum<spa
 Ministers: <br><br>
 Crisis Minister: [+ crisis_minister +] - [+ crisis_minister_party +] <br>
 Culture Minister: [+ culture_minister +] - [+ culture_minister_party +] <br>
-Economic Minister: [+ economic_minister +] - [+ economic_minister_party +] <br?
+Economic Minister: [+ economic_minister +] - [+ economic_minister_party +] <br>
 Education & Health Minister: [+ eduhel_minister +] - [+ eduhel_minister_party +] <br>
 Environment & Technology Minister: [+ envtec_minister +] - [+ envtec_minister_party +] <br>
 Fiscal Minister: [+ fiscal_minister +] - [+ fiscal_minister_party +] <br>

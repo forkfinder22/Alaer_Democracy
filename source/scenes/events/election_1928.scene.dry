@@ -86,6 +86,7 @@ Q.in_minority_government = 0;
 Q.in_toleration = 0;
 Q.caretaker_gov = 0;
 Q.antidemocratic_coalition = (Q.cpa_r + Q.su_r + Q.ncpa_r);
+Q.custom_ministers = 0;
 
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
