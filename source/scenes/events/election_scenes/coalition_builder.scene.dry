@@ -27,13 +27,13 @@ on-arrival: {!
     // For the Grand Coalition, lets give it to the DPA
     // Culture ministers will always be the SCP or DP, if available, as these parties, along with the GA and IA, would call a VONC if it would be possible to succeed a VONC. In a coalition without the SCP or DP, its generally given to the most centrist party.
     // For the Grand Coalition, this is given to the SCP, so that the DP can take Social Affairs
-    // Everybody wants to be an economic minister, so whoever has the most leverage. I need to add a leverage calculations for the non-player parties. The player can always take the economic ministry if they have leverage, but it costs a decent amount of leverage, and more if another party has more leverage than you. This cost is reduced for the SA, NLP, and ULCPA, and especially the EEA 
-    // For the Grand Coalition, it should be whoever has the highest Economic leverage, either the NLP or EEA (Which gets a bonus amount of leverage)
+    // Economic ministry 
+    // For grand, EEA 
     // Education and Health is usually given to the DPA or IA. If this is not possible, the party in the coalition with the most relative centrism (i.e., in a coalition of the CPA, SU, and SA, this would be the SU) gets it.
     // For the Grand Coalition, its given to the IA
     // Environment and Technoloy is given to the GA. If this is not possible, it depends on the coalition. For coalitions that lean left, the most right-wing is selected, for coalitions that lean right, the most left-wing is selected
-    // Fiscal ministry is the exact same as the Economic ministry in terms of minister selection
-    // For the Grand Coalition, whoever has the highest Economic Leverage, but the EEA doesn't get a bonus 
+    // Fiscal ministry
+    // For the Grand Coalition, NLP
     // Interior and Justice are coalition dependent
     // For the Grand coalition, SCP gets Justice, and BA gets interior
     // For the military, the right-wing parties refuse to give it to a left-wing party if a right wing party is in the coalition. 
@@ -60,10 +60,10 @@ on-arrival: {!
         // SCP: 2
         // GA: 2
         // BA: 1
-        // NLP: 1 + (likely 1, fiscal/economic)
+        // NLP: 2 
         // DP: 1
         // IA: 3
-        // EEA: likely 1, economic 
+        // EEA: 1 
 !}
 
 We can pick from any number of ministries. Controlling a ministry allows us to directly effect policy in that area. [? if in_left_front : Any ministry that we do not take will be given to the KPD. ?] [? if in_left_front and reichswehr_minister_party == "KPD" : If the KPD controls the Reichswehr Ministry, the army will most likely revolt. ?]
@@ -241,7 +241,71 @@ on-arrival: {!
             if (Q.grand_coalition) {
                 if (!Q.crisis_minister_party == "CPA") {
                     Q.crisis_minister = "WIP"
-                    Q.crisis_minister_party = "DPA"
+                    Q.crisis_minister_party = "<dpa>DPA</dpa>"
+                }
+                if (!Q.culture_minister_party == "CPA") {
+                    Q.culture_minister = "WIP"
+                    Q.culture_minister_party = "<scp>SCP</scp>"
+                }
+                if (!Q.economic_minister_party == "CPA") {
+                    Q.economic_minister = "WIP"
+                    Q.economic_minister_party = "<eea>EEA</eea>"
+                }
+                if (!Q.eduhel_minister_party == "CPA") {
+                    Q.eduhel_minister = "WIP"
+                    Q.eduhel_minister_party = "IA"
+                }
+                if (!Q.envtec_minister_party == "CPA") {
+                    Q.envtec_minister = "WIP"
+                    Q.envtec_minister_party = "GA"
+                }
+                if (!Q.fiscal_minister_party == "CPA") {
+                    Q.fiscal_minister = "WIP"
+                    Q.fiscal_minister_party = "NLP"
+                }
+                if (!Q.interior_minister_party == "CPA") {
+                    Q.interior_minister = "WIP"
+                    Q.interior_minister_party = "BA"
+                }
+                if (!Q.judiciary_minister_party == "CPA") {
+                    Q.judiciary_minister = "WIP"
+                    Q.judiciary_minister_party = "SCP"
+                }
+                if (!Q.military_minister_party == "CPA") {
+                    Q.military_minister = "WIP"
+                    Q.military_minister_party = "IA"
+                }
+                if (!Q.postal_minister_party == "CPA") {
+                    Q.postal_minister = "WIP"
+                    Q.postal_minister_party = "SA"
+                }
+                if (!Q.pubcom_minister_party == "CPA") {
+                    Q.pubcom_minister = "WIP"
+                    Q.pubcom_minister_party = "NLP"
+                }
+                if (!Q.pubuti_minister_party == "CPA") {
+                    Q.pubuti_minister = "WIP"
+                    Q.pubuti_minister_party = "DPA"
+                }
+                if (!Q.pubpla_minister_party == "CPA") {
+                    Q.pubpla_minister = "WIP"
+                    Q.pubpla_minister_party = "SA"
+                }
+                if (!Q.resources_minister_party == "CPA") {
+                    Q.resources_minister = "WIP"
+                    Q.resources_minister_party = "IA"
+                }
+                if (!Q.social_minister_party == "CPA") {
+                    Q.social_minister = "WIP"
+                    Q.social_minister_party = "DP"
+                }
+                if (!Q.transport_minister_party == "CPA") {
+                    Q.transport_minister = "WIP"
+                    Q.transport_minister_party = "GA"
+                }
+                if (!Q.worwel_minister_party == "CPA") {
+                    Q.worwel_minister = "WIP"
+                    Q.worwel_minister_party = "SA"
                 }
             }
         }
@@ -249,19 +313,35 @@ on-arrival: {!
 !}
 
 Crisis Minister: [+ crisis_minister +] - [+ crisis_minister_party +] 
+
 Culture Minister: [+ culture_minister +] - [+ culture_minister_party +] 
+
 Economic Minister: [+ economic_minister +] - [+ economic_minister_party +] 
+
 Education & Health Minister: [+ eduhel_minister +] - [+ eduhel_minister_party +] 
+
 Environment & Technology Minister: [+ envtec_minister +] - [+ envtec_minister_party +] 
+
 Fiscal Minister: [+ fiscal_minister +] - [+ fiscal_minister_party +] 
+
 Interior Minister: [+ interior_minister +] - [+ interior_minister_party +] 
+
 Judiciary Minister: [+ judiciary_minister +] - [+ judiciary_minister_party +] 
+
 Military Minister: [+ military_minister +] - [+ military_minister_party +] 
+
 Postal Minister: [+ postal_minister +] - [+ postal_minister_party +] 
+
 Public Communications Minister: [+ pubcom_minister +] - [+ pubcom_minister_party +] 
+
 Public Utility Minister: [+ pubuti_minister +] - [+ pubuti_minister_party +] 
+
 Public Planning Minister: [+ pubpla_minister +] - [+ pubpla_minister_party +] 
+
 Resources Minister: [+ resources_minister +] - [+ resources_minister_party +] 
+
 Social Affairs Minister: [+ social_minister +] - [+ social_minister_party +] 
+
 Transport Minister: [+ transport_minister +] - [+ transport_minister_party +] 
+
 Work & Welfare Minister: [+ worwel_minister +] - [+ worwel_minister_party +] 
