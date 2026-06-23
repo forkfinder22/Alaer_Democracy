@@ -73,6 +73,15 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 // Coalitions %
 Q.grand_coalition = (Q.sa_r + Q.dpa_r + Q.scp_r + Q.ga_r + Q.ba_r + Q.nlp_r + Q.dp_r + Q.eea_r + Q.ia_r);
 console.log('grand coal perc: ' + Q.grand_coalition);
+Q.mod_coalition = (Q.scp_r + Q.ga_r + Q.ba_r + Q.nlp_r + Q.dp_r + Q.eea_r + Q.ia_r); 
+Q.ind_coalition = (Q.scp_r + Q.ga_r + Q.dp_r + Q.eea_r + Q.ia_r + Q.ap_r);
+Q.cr_coalition = (Q.ba_r + Q.nlp_r + Q.ulcpa_r + Q.ia_r + Q.eea_r + Q.ap_r);
+Q.rw_coalition = (Q.nlp_r + Q.ulcpa_r + Q.ia_r + Q.ap_r + Q.nlpa_r;)
+Q.cl_coalition = (Q.ba_r + Q.ga_r + Q.scp_r + Q.dpa_r + Q.eea_r + Q.dp_r);
+Q.lw_coalition = (Q.sa_r + Q.dpa_r + Q.scp_r + Q.ga_r + Q.dp_r);
+Q.uf_coalition = (Q.cpa_r + Q.su_r + Q.sa_r);
+Q.pf_coalition = (Q.cpa_r + Q.su_r + Q.sa_r + Q.dpa_r + Q.scp_r + Q.dp_r)
+Q.fr_coaliton = (Q.nlpa_r + Q.ncpa_r)
 //
 
 Q.leverage = 0

@@ -6,7 +6,16 @@ new-page: false
 
 There are some potential coalition arrangements.
 
-Grand Coaltion: [+ grand_coalition +]%
+Grand Coalition: [+ grand_coalition +]%
+Moderate Coalition: [+ mod_coalition +]%
+Independent Coalition: [+ ind_coalition +]%
+Centre-Right Coalition: [+ cr_coalition +]%
+Right-wing Coalition: [+ rw_coalition +]%
+Centre-Left Coalition: [+ cl_coalition +]%
+Left-wing Coalition: [+ lw_coalition +]%
+United-Front Coalition: [+ uf_coalition +]%
+Popular Front Coalition: [+ pf_coalition +]%
+Far-Right Coalition: [+ fr_coaliton +]%
 
 - @grand_coalition
 
