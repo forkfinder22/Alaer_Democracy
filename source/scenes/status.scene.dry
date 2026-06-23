@@ -11,7 +11,7 @@ Player Party: [+ party +]<br>
 President: [+ president +] - [+ president_party +] <br>
 Speaker of Parliament: [+ parliament_speaker +] - [+ parliament_speaker_party +] <br>
 Head of Parliament: [+ head_parliament +] - [+ head_parliament_party +] <br>
-Coalition: [? if coalition = 1 : N/A - <span class="tip-wrap">Broad-Spectrum<span class="tip">Technically there isn't any proper coalition with concessions or agreements towards other parties, but there is enough sympathetic Paraliment members to create a majority caretaker coaltion. Ministries are also assigned to parties, rather than people, and the internally make the decisions</span></span> ?] <br><br>
+Coalition: [? if coalition = "start" : N/A - <span class="tip-wrap">Broad-Spectrum<span class="tip">Technically there isn't any proper coalition with concessions or agreements towards other parties, but there is enough sympathetic Paraliment members to create a majority caretaker coaltion. Ministries are also assigned to parties, rather than people, and the internally make the decisions</span></span> ?][? if coalition = "Grand" : [+ coalition +] Coalition - [+ grand_coalition_r +] - [+ grand_coalition_parties +] ?][? if coalition = "Moderate" : [+ coalition +] Coalition - [+ mod_coalition_r +] - [+ mod_coalition_parties +] ?] <br><br>
 Ministers: <br><br>
 Crisis Minister: [+ crisis_minister +] - [+ crisis_minister_party +] <br>
 Culture Minister: [+ culture_minister +] - [+ culture_minister_party +] <br>

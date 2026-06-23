@@ -18,13 +18,21 @@ Popular Front Coalition: [+ pf_coalition +]%
 Far-Right Coalition: [+ fr_coaliton +]%
 
 - @grand_coalition
+- @moderate_coaliton
 
 @grand_coalition
 title: A Grand Coalition is formed!
 view-if: grand_coalition >= 50
 subtitle: <sa>SA</sa> + <dpa>DPA</dpa> + <scp>SCP</scp> + <ga>GA</ga> + <ba>BA</ba> + <nlp>NLP</nlp> + <dp>DP</dp> + <eea>EEA</eea> + <ia>IA</ia> ([+ grand_coalition +]%)
-on-arrival: sa_in_government = 1; dpa_in_government = 1; scp_in_government = 1; ga_in_government = 1; ba_in_government = 1; nlp_in_government = 1; dp_in_government = 1; eea_in_government = 1; ia_in_government = 1; grand_coalition = 1
+on-arrival: sa_in_government = 1; dpa_in_government = 1; scp_in_government = 1; ga_in_government = 1; ba_in_government = 1; nlp_in_government = 1; dp_in_government = 1; eea_in_government = 1; ia_in_government = 1; in_grand_coalition = 1; grand_coalition_r = grand_coalition; coalition = "Grand"; grand_coalition_parties = "<sa>SA</sa> + <dpa>DPA</dpa> + <scp>SCP</scp> + <ga>GA</ga> + <ba>BA</ba> + <nlp>NLP</nlp> + <dp>DP</dp> + <eea>EEA</eea> + <ia>IA</ia>"
 go-to: ministries if party == "SA" or party == "DPA" or party == "SCP" or party == "GA" or party == "BA" or party == "NLP" or party == "DP" or party == "EEA" or party == "IA"; ministries_result if party == "CPA" or party == "ULCPA" or party == "NLPA" or party == "NCPA" or party == "AP"
+
+@moderate_coalition
+title: A Moderate Coalition is formed!
+view-if: moderate_coalition >= 50
+subtitle: <scp>SCP</scp> + <ga>GA</ga> + <ba>BA</ba> + <nlp>NLP</nlp> + <dp>DP</dp> + <eea>EEA</eea> + <ia>IA</ia> ([+ mod_coalition +]%)
+on-arrival: scp_in_government = 1; ga_in_government = 1; ba_in_government = 1; nlp_in_government = 1; dp_in_government = 1; eea_in_government = 1; ia_in_government = 1; in_mod_coalition = 1; mod_coalition_r = mod_coalition; coalition = "Moderate"; mod_coalition_parties = "<scp>SCP</scp> + <ga>GA</ga> + <ba>BA</ba> + <nlp>NLP</nlp> + <dp>DP</dp> + <eea>EEA</eea> + <ia>IA</ia>"
+go-to: ministries if party == "SCP" or party == "GA" or party == "BA" or party == "NLP" or party == "DP" or party == "EEA" or party == "IA"; ministries_result if party == "CPA" or party == "ULCPA" or party == "NLPA" or party == "NCPA" or party == "AP" or party == "SA" or party == "DPA"
 
 @ministries
 on-arrival: {! 
