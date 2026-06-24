@@ -257,77 +257,327 @@ on-arrival: {!
         if (Q.custom_ministers) {
             if (Q.grand_coalition) {
                 if (!Q.crisis_minister_party == "CPA") {
-                    Q.crisis_minister = "WIP"
+                    Q.crisis_minister = "TBD"
                     Q.crisis_minister_party = "<dpa>DPA</dpa>"
                 }
                 if (!Q.culture_minister_party == "CPA") {
-                    Q.culture_minister = "WIP"
+                    Q.culture_minister = "TBD"
                     Q.culture_minister_party = "<scp>SCP</scp>"
                 }
                 if (!Q.economic_minister_party == "CPA") {
-                    Q.economic_minister = "WIP"
+                    Q.economic_minister = "TBD"
                     Q.economic_minister_party = "<eea>EEA</eea>"
                 }
                 if (!Q.eduhel_minister_party == "CPA") {
-                    Q.eduhel_minister = "WIP"
+                    Q.eduhel_minister = "TBD"
                     Q.eduhel_minister_party = "<ia>IA</ia>"
                 }
                 if (!Q.envtec_minister_party == "CPA") {
-                    Q.envtec_minister = "WIP"
+                    Q.envtec_minister = "TBD"
                     Q.envtec_minister_party = "<ga>GA</ga>"
                 }
                 if (!Q.fiscal_minister_party == "CPA") {
-                    Q.fiscal_minister = "WIP"
+                    Q.fiscal_minister = "TBD"
                     Q.fiscal_minister_party = "<nlp>NLP</nlp>"
                 }
                 if (!Q.interior_minister_party == "CPA") {
-                    Q.interior_minister = "WIP"
+                    Q.interior_minister = "TBD"
                     Q.interior_minister_party = "<ba>BA</ba>"
                 }
                 if (!Q.judiciary_minister_party == "CPA") {
-                    Q.judiciary_minister = "WIP"
+                    Q.judiciary_minister = "TBD"
                     Q.judiciary_minister_party = "<scp>SCP</scp>"
                 }
                 if (!Q.military_minister_party == "CPA") {
-                    Q.military_minister = "WIP"
+                    Q.military_minister = "TBD"
                     Q.military_minister_party = "<ia>IA</ia>"
                 }
                 if (!Q.postal_minister_party == "CPA") {
-                    Q.postal_minister = "WIP"
+                    Q.postal_minister = "TBD"
                     Q.postal_minister_party = "<sa>SA</sa>"
                 }
                 if (!Q.pubcom_minister_party == "CPA") {
-                    Q.pubcom_minister = "WIP"
+                    Q.pubcom_minister = "TBD"
                     Q.pubcom_minister_party = "<nlp>NLP</nlp>"
                 }
                 if (!Q.pubuti_minister_party == "CPA") {
-                    Q.pubuti_minister = "WIP"
+                    Q.pubuti_minister = "TBD"
                     Q.pubuti_minister_party = "<dpa>DPA</dpa>"
                 }
                 if (!Q.pubpla_minister_party == "CPA") {
-                    Q.pubpla_minister = "WIP"
+                    Q.pubpla_minister = "TBD"
                     Q.pubpla_minister_party = "<sa>SA</sa>"
                 }
                 if (!Q.resources_minister_party == "CPA") {
-                    Q.resources_minister = "WIP"
+                    Q.resources_minister = "TBD"
                     Q.resources_minister_party = "<ia>IA</ia>"
                 }
                 if (!Q.social_minister_party == "CPA") {
-                    Q.social_minister = "WIP"
+                    Q.social_minister = "TBD"
                     Q.social_minister_party = "<dp>DP</dp>"
                 }
                 if (!Q.transport_minister_party == "CPA") {
-                    Q.transport_minister = "WIP"
+                    Q.transport_minister = "TBD"
                     Q.transport_minister_party = "<ga>GA</ga>"
                 }
                 if (!Q.worwel_minister_party == "CPA") {
-                    Q.worwel_minister = "WIP"
+                    Q.worwel_minister = "TBD"
                     Q.worwel_minister_party = "<sa>SA</sa>"
                 }
             }
         }
     }
+/// HoP leverage determiners
+/// The more power, the more leverage
+1:25 PMif (Q.cpa_in_government) {
+    Q.cpa_leverage_hop = Q.cpa_r
+    if (Q.worwel_minister_party == "CPA") {
+        Q.cpa_leverage_hop += 5
+    }
+    if (Q.economic_minister_party == "CPA") {
+        Q.cpa_leverage_hop += 5
+    }
+    if (Q.cpa_r > 15) {
+        Q.cpa_leverage_hop += 10
+    }
+    if (Q.cpa_r < 10) {
+        Q.cpa_leverage_hop -= 5
+    }
+}
+if (Q.su_in_government) {
+    Q.su_leverage_hop = Q.su_r
+    if (Q.worwel_minister_party == "SU") {
+        Q.su_leverage_hop += 5
+    }
+    if (Q.economic_minister_party == "SU") {
+        Q.su_leverage_hop += 5
+    }
+    if (Q.su_r > 15) {
+        Q.su_leverage_hop += 10
+    }
+    if (Q.su_r < 10) {
+        Q.su_leverage_hop -= 5
+    }
+}
+if (Q.sa_in_government) {
+    Q.sa_leverage_hop = Q.sa_r
+    if (Q.worwel_minister_party == "SA") {
+        Q.sa_leverage_hop += 5
+    }
+    if (Q.crisis_minister_party == "SA") {
+        Q.sa_leverage_hop += 5
+    }
+    if (Q.economic_minister_party == "SA") {
+        Q.sa_leverage_hop += 5
+    }
+    if (Q.sa_r > 15) {
+        Q.sa_leverage_hop += 10
+    }
+    if (Q.sa_r < 10) {
+        Q.sa_leverage_hop -= 5
+    }
+}
+if (Q.dpa_in_government) {
+    Q.dpa_leverage_hop = Q.dpa_r
+    if (Q.worwel_minister_party == "DPA") {
+        Q.dpa_leverage_hop += 5
+    }
+    if (Q.crisis_minister_party == "DPA") {
+        Q.dpa_leverage_hop += 5
+    }
+    if (Q.culture_minister_party == "DPA") {
+        Q.dpa_leverage_hop += 5
+    }
+    if (Q.dpa_r > 15) {
+        Q.dpa_leverage_hop += 10
+    }
+    if (Q.dpa_r < 10) {
+        Q.dpa_leverage_hop -= 5
+    }
+}
+if (Q.scp_in_government) {
+    Q.scp_leverage_hop = Q.scp_r
+    if (Q.worwel_minister_party == "SCP") {
+        Q.scp_leverage_hop += 5
+    }
+    if (Q.culture_minister_party == "SCP") {
+        Q.scp_leverage_hop += 5
+    }
+    if (Q.scp_r > 15) {
+        Q.scp_leverage_hop += 10
+    }
+    if (Q.scp_r < 10) {
+        Q.scp_leverage_hop -= 5
+    }
+}
+if (Q.ga_in_government) {
+    Q.ga_leverage_hop = Q.ga_r
+    if (Q.ga_r > 15) {
+        Q.ga_leverage_hop += 10
+    }
+    if (Q.ga_r < 10) {
+        Q.ga_leverage_hop -= 5
+    }
+}
+if (Q.ba_in_government) {
+    Q.ba_leverage_hop = Q.ba_r
+    if (Q.fiscal_minister_party == "BA") {
+        Q.ba_leverage_hop += 5
+    }
+    if (Q.worwel_minister_party == "BA") {
+        Q.ba_leverage_hop += 5
+    }
+    if (Q.ba_r > 15) {
+        Q.ba_leverage_hop += 10
+    }
+    if (Q.ba_r < 10) {
+        Q.ba_leverage_hop -= 5
+    }
+}
+if (Q.nlp_in_government) {
+    Q.nlp_leverage_hop = Q.nlp_r
+    if (Q.fiscal_minister_party == "NLP") {
+        Q.nlp_leverage_hop += 5
+    }
+    if (Q.economic_minister_party == "NLP") {
+        Q.nlp_leverage_hop += 5
+    }
+    if (Q.nlp_r > 15) {
+        Q.nlp_leverage_hop += 10
+    }
+    if (Q.nlp_r < 10) {
+        Q.nlp_leverage_hop -= 5
+    }
+}
+if (Q.ulcpa_in_government) {
+    Q.ulcpa_leverage_hop = Q.ulcpa_r
+    if (Q.ulcpa_r > 15) {
+        Q.ulcpa_leverage_hop += 10
+    }
+    if (Q.ulcpa_r < 10) {
+        Q.ulcpa_leverage_hop -= 5
+    }
+}
+if (Q.nlpa_in_government) {
+    Q.nlpa_leverage_hop = Q.nlpa_r
+    if (Q.resources_minister_party == "NLPA") {
+        Q.nlpa_leverage_hop += 5
+    }
+    if (Q.fiscal_minister_party == "NLPA") {
+        Q.nlpa_leverage_hop += 5
+    }
+    if (Q.economic_minister_party == "NLPA") {
+        Q.nlpa_leverage_hop += 5
+    }
+    if (Q.nlpa_r > 15) {
+        Q.nlpa_leverage_hop += 10
+    }
+    if (Q.nlpa_r < 10) {
+        Q.nlpa_leverage_hop -= 5
+    }
+}
+if (Q.ncpa_in_government) {
+    Q.ncpa_leverage_hop = Q.ncpa_r
+    if (Q.resources_minister_party == "NCPA") {
+        Q.ncpa_leverage_hop += 5
+    }
+    if (Q.ncpa_r > 15) {
+        Q.ncpa_leverage_hop += 10
+    }
+    if (Q.ncpa_r < 10) {
+        Q.ncpa_leverage_hop -= 5
+    }
+}
+if (Q.dp_in_government) {
+    Q.dp_leverage_hop = Q.dp_r
+    if (Q.resources_minister_party == "DP") {
+        Q.dp_leverage_hop += 5
+    }
+    if (Q.culture_minister_party == "DP") {
+        Q.dp_leverage_hop += 5
+    }
+    if (Q.dp_r > 15) {
+        Q.dp_leverage_hop += 10
+    }
+    if (Q.dp_r < 10) {
+        Q.dp_leverage_hop -= 5
+    }
+}
+if (Q.eea_in_government) {
+    Q.eea_leverage_hop = Q.eea_r
+    if (Q.resources_minister_party == "EEA") {
+        Q.eea_leverage_hop += 5
+    }
+    if (Q.fiscal_minister_party == "EEA") {
+        Q.eea_leverage_hop += 5
+    }
+    if (Q.worwel_minister_party == "EEA") {
+        Q.eea_leverage_hop += 5
+    }
+    if (Q.economic_minister_party == "EEA") {
+        Q.eea_leverage_hop += 5
+    }
+    if (Q.eea_r > 15) {
+        Q.eea_leverage_hop += 10
+    }
+    if (Q.eea_r < 10) {
+        Q.eea_leverage_hop -= 5
+    }
+}
+if (Q.ia_in_government) {
+    Q.ia_leverage_hop = Q.ia_r
+    if (Q.resources_minister_party == "IA") {
+        Q.ia_leverage_hop += 5
+    }
+    if (Q.fiscal_minister_party == "IA") {
+        Q.ia_leverage_hop += 5
+    }
+    if (Q.crisis_minister_party == "IA") {
+        Q.ia_leverage_hop += 5
+    }
+    if (Q.ia_r > 15) {
+        Q.ia_leverage_hop += 10
+    }
+    if (Q.ia_r < 10) {
+        Q.ia_leverage_hop -= 5
+    }
+}
+if (Q.ap_in_government) {
+    Q.ap_leverage_hop = Q.ap_r
+    if (Q.resources_minister_party == "AP") {
+        Q.ap_leverage_hop += 5
+    }
+    if (Q.ap_r > 15) {
+        Q.ap_leverage_hop += 10
+    }
+    if (Q.ap_r < 10) {
+        Q.ap_leverage_hop -= 5
+    }
+}
 !}
+
+Now, the Head of Parliament and the Speaker is to be decided <br>
+(insert party leverages here)
+
+- @speaker
+- @chancellor
+- @final_ministries
+
+@chancellor
+
+- @chan1: The Left-Wing choice, Uncooperative McPurist
+- @chan2: The Moderate choice, Fence McSitter
+- @chan3: The Right-Wing choice, Austerity McMoneybags
+
+@speaker
+
+- @chan1: The traditional choice, Heinrich Weiß (SA)
+- @chan2: The well-written Author Name, persuasive leader of the GA
+- @chan3: The unorthodox but passionate Guy Person, of the EEA
+- @chan4: Perhaps a speaker from a party not in the coalition, which may be the deciding factor in important future votes.
+
+@final_ministries
+view-if: (custom_ministers = 1 and speaker_selected = 1 and chancellor_selected = 1) or custom_ministers = 0
 
 Crisis Minister: [+ crisis_minister +] - [+ crisis_minister_party +] 
 

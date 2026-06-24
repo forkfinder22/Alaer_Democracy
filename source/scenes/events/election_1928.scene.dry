@@ -241,3 +241,5 @@ go-to: coalition_builder if constitution_builder_seen; constitution_builder if n
 {!<tr><td><div class="box" style='background-color:#226b22'> </div> !}AP: {!</td><td>!} [+ ap_r +]% {!</td><td>!} [+ str_change_ap +] {!</td></tr>!}
 
 {!</table>!}
+
+[? if n_elections = 0 : While the Parliament is currently extremely split, parties will over time form electoral alliances, and party mergers, which will solidify the parliament into something far more stable ?]
