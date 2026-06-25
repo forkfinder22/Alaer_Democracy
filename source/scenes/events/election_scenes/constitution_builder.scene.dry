@@ -33,7 +33,7 @@ The President is granted the ability to rule by Decree, sack the Head of Parliam
 
 - @cb_art_22
 
-@no_cb1
+@no_cb15
 on-arrival: article_15 = 0
 
 The President is granted the ability to approve or disapprove laws - Disapproved laws must be sent back to parliament, where a 66% vote is required to counter-veto the bill, and force it to pass. Additionally, instead of approving or disapproving a bill, the president may decide to institute a national referendum, where the bill needs more "yes" signatures than "no" signatures, to pass the law.
