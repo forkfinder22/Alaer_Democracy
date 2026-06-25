@@ -569,12 +569,40 @@ Now, the Head of Parliament and the Speaker is to be decided <br>
 - @chan2: The Moderate choice, Fence McSitter
 - @chan3: The Right-Wing choice, Austerity McMoneybags
 
+@chan1
+
+- @final_ministries
+
+@chan2
+
+- @final_ministries
+
+@chan3
+
+- @final_ministries
+
 @speaker
 
-- @chan1: The traditional choice, Heinrich Weiß (SA)
-- @chan2: The well-written Author Name, persuasive leader of the GA
-- @chan3: The unorthodox but passionate Guy Person, of the EEA
-- @chan4: Perhaps a speaker from a party not in the coalition, which may be the deciding factor in important future votes.
+- @speak1: The traditional choice, Heinrich Weiß (SA)
+- @speak2: The well-written Author Name, persuasive leader of the GA
+- @speak3: The unorthodox but passionate Guy Person, of the EEA
+- @speak4: Perhaps a speaker from a party not in the coalition, which may be the deciding factor in important future votes.
+
+@speak1
+
+- @final_ministries
+
+@speak2
+
+- @final_ministries
+
+@speak3
+
+- @final_ministries
+
+@speak4
+
+- @final_ministries
 
 @final_ministries
 view-if: (custom_ministers = 1 and speaker_selected = 1 and chancellor_selected = 1) or custom_ministers = 0
