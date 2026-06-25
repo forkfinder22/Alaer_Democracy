@@ -26,7 +26,7 @@ First up, Article 15, the issue of Presidential Powers.
 - @yes_cb15: We need a strong president.
 - @no_cb15: We should limit presidential powers, using the president more as a figurehead, and a diplomat.
 
-@yes_cb1
+@yes_cb15
 on-arrival: article_15 = 1
 
 The President is granted the ability to rule by Decree, sack the Head of Parliament, dissolve parliament, suspend a law from reaching Parliament for up to 60 days, and may create a minority government of no les than 35% of parliament, if parlaimentary elections have lead to a deadlocked legislature three times in a row. This minority government pretends as though it has a majority, and rules for 6 months instead of 48.
