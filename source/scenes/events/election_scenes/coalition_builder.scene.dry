@@ -559,8 +559,8 @@ if (Q.ap_in_government) {
 Now, the Head of Parliament and the Speaker is to be decided <br>
 (insert party leverages here)
 
-- @speaker
-- @chancellor
+- @speaker: Who shall be the Speaker?
+- @chancellor: Who shall be the Head of Parliament
 - @final_ministries
 
 @chancellor
@@ -605,6 +605,7 @@ Now, the Head of Parliament and the Speaker is to be decided <br>
 - @final_ministries
 
 @final_ministries
+title: Final Result
 view-if: (custom_ministers = 1 and speaker_selected = 1 and chancellor_selected = 1) or custom_ministers = 0
 
 Crisis Minister: [+ crisis_minister +] - [+ crisis_minister_party +] 
