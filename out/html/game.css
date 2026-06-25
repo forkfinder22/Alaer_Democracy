@@ -577,13 +577,13 @@ table {
 
 /* Stolen code from DNVP mod */
 
-.tip-wrap {
+tip-wrap {
     position: relative;
     display: inline;
     cursor: help;
     text-decoration: underline dotted;
 }
-.tip-wrap .tip {
+tip-wrap tip {
     display: none;
     position: absolute;
     bottom: 125%;
@@ -599,7 +599,7 @@ table {
     box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
     color: #000;
 }
-.tip-wrap:hover .tip {
+tip-wrap:hover tip {
     display: block;
 }
 
