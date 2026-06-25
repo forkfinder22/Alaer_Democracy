@@ -81,6 +81,6 @@ Work & Welfare Minister: [+ worwel_minister +] - [+ worwel_minister_party +] <br
 
 @country
 
-<tip-wrap><img src="img/Alär_flag.png" width="400" height="200"><tip>The Alär flag is composed of 4 horizontal stripes in colours of Blue, Green, Orange, and Gray. The blue represents the sky, the green represents the land, the orange represents the Alärian people, and the gray representing the resources under Alär land. Upon the flag, there lays 14 stars. These stars represent the amount fo states within Alär. The three, 12-pointed silver stars represent the Dular states. The six, bright orange stars, represent the Urban-dominated states, and the 5, darker orange stars represent the Rural-dominated states. </tip></tip-wrap>
+<tip-wrap><img src="img/Alär_flag.png" width="400" height="200"><tip>The Alär flag is composed of 4 horizontal stripes in colours of Blue, Green, Orange, and Gray. The blue represents the sky, the green represents the land, the orange represents the Alärian people, and the gray representing the resources under Alär land. Upon the flag, there lays 14 stars. These stars represent the amount fo states within Alär. The three, 12-pointed silver stars represent the Dular states. The six, bright orange stars, represent the Urban-dominated states, and the 5, darker orange stars represent the Rural-dominated states. </tip></tip-wrap><br><br>
 
 <tip-wrap onclick="window.dendryUI.dendryEngine.goToScene('states_menu')><img src="img/oriale.png" width="300" height="100"><tip>Click to go to the states menu</tip></tip-wrap>
