@@ -1,9 +1,9 @@
 title: Next month
-set-bg: img/oriale.jpg
-on-arrival: scene_var = 1
+set-bg: img/Oriale.jpg
+on-arrival: in_main = 1
 on-departure: {!
-    Q.scene_var = 0
-    console.log('text ' + Q.scene_var)
+    Q.in_main = 0
+    console.log('in_main: ' + Q.in_main)
 !}
 
 - @party
