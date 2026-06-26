@@ -138,6 +138,8 @@ Q.transport_minister = "<na>N/A</na>"
 Q.transport_minister_party = "<sa>SA</sa>"
 Q.worwel_minister = "<na>N/A</na>"
 Q.worwel_minister_party = "<dpa>DPA</dpa>"
+Q.default_minister_text = "To be chosen"
+Q.default_ministry_text = "<na>N/A</na>
 // Election stuff
 Q.next_election_year = 0;
 Q.next_election_month = 6;
